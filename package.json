@@ -8,7 +8,7 @@
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/bitfriend/heswap-toolkit/tree/master/packages/heswap-uikit",
+  "repository": "https://github.com/bitfriend/heswap-uikit.git",
   "license": "MIT",
   "scripts": {
     "start": "yarn storybook",
