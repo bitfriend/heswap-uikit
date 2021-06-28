@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import PancakeToggle from "./PancakeToggle";
+import HeswapToggle from "./HeswapToggle";
 
 export default {
-  title: "Components/PancakeToggle",
-  component: PancakeToggle,
+  title: "Components/HeswapToggle",
+  component: HeswapToggle,
 };
 
 export const Default: React.FC = () => {
@@ -14,10 +14,10 @@ export const Default: React.FC = () => {
   return (
     <>
       <div style={{ marginBottom: "32px" }}>
-        <PancakeToggle checked={isChecked} onChange={toggle} />
+        <HeswapToggle checked={isChecked} onChange={toggle} />
       </div>
       <div>
-        <PancakeToggle checked={isChecked} onChange={toggle} scale="sm" />
+        <HeswapToggle checked={isChecked} onChange={toggle} scale="sm" />
       </div>
     </>
   );

@@ -1,6 +1,6 @@
 import { InputHTMLAttributes } from "react";
 
-export type PancakeToggleTheme = {
+export type HeswapToggleTheme = {
   handleBackground: string;
   handleShadow: string;
 };
@@ -12,7 +12,7 @@ export const scales = {
 
 export type Scales = typeof scales[keyof typeof scales];
 
-export interface PancakeToggleProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface HeswapToggleProps extends InputHTMLAttributes<HTMLInputElement> {
   scale?: Scales;
   checked?: boolean;
 }
@@ -26,13 +26,13 @@ export interface InputProps {
 }
 
 export const scaleKeys = {
-  pancakeSize: "pancakeSize",
+  heswapSize: "heswapSize",
   travelDistance: "travelDistance",
   toggleHeight: "toggleHeight",
   toggleWidth: "toggleWidth",
-  pancakeThickness: "pancakeThickness",
-  pancakeTwoOffset: "pancakeTwoOffset",
-  pancakeThreeOffset: "pancakeThreeOffset",
+  heswapThickness: "heswapThickness",
+  heswapTwoOffset: "heswapTwoOffset",
+  heswapThreeOffset: "heswapThreeOffset",
   butterTop: "butterTop",
   butterLeft: "butterLeft",
   butterWidth: "butterWidth",

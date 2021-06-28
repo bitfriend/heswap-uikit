@@ -1,5 +1,5 @@
 /**
- * @see https://github.com/pancakeswap/pancake-frontend/blob/develop/src/config/constants/tokens.ts
+ * @see https://github.com/heswap/heswap-frontend/blob/develop/src/config/constants/tokens.ts
  */
 declare const tokens: {
     cake: {

@@ -1,6 +1,6 @@
 import { AlertTheme } from "../components/Alert/types";
 import { CardTheme } from "../components/Card/types";
-import { PancakeToggleTheme } from "../components/PancakeToggle/types";
+import { HeswapToggleTheme } from "../components/HeswapToggle/types";
 import { RadioTheme } from "../components/Radio/types";
 import { ToggleTheme } from "../components/Toggle/types";
 import { TooltipTheme } from "../components/Tooltip/types";
@@ -8,7 +8,7 @@ import { NavTheme } from "../widgets/Menu/types";
 import { ModalTheme } from "../widgets/Modal/types";
 import { Colors, Breakpoints, MediaQueries, Spacing, Shadows, Radii, ZIndices } from "./types";
 
-export interface PancakeTheme {
+export interface HeswapTheme {
   siteWidth: number;
   isDark: boolean;
   alert: AlertTheme;
@@ -16,7 +16,7 @@ export interface PancakeTheme {
   card: CardTheme;
   nav: NavTheme;
   modal: ModalTheme;
-  pancakeToggle: PancakeToggleTheme;
+  heswapToggle: HeswapToggleTheme;
   radio: RadioTheme;
   toggle: ToggleTheme;
   tooltip: TooltipTheme;
