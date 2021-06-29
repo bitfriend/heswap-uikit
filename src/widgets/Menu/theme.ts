@@ -11,8 +11,10 @@ export const darkNav: NavTheme = {
 
 export const lightSidebar: SidebarTheme = {
   background: lightColors.backgroundAlt,
+  footerBackground: lightColors.backgroundAlt,
 };
 
 export const darkSidebar: SidebarTheme = {
   background: darkColors.backgroundAlt,
+  footerBackground: lightColors.backgroundAlt,
 };

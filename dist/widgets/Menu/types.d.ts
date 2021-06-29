@@ -21,6 +21,7 @@ export interface NavTheme {
 }
 export interface SidebarTheme {
     background: string;
+    footerBackground: string;
 }
 export interface LinkStatus {
     text: string;

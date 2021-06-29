@@ -3030,9 +3030,11 @@ var darkNav = {
 };
 var lightSidebar = {
     background: lightColors.backgroundAlt,
+    footerBackground: lightColors.backgroundAlt,
 };
 var darkSidebar = {
     background: darkColors.backgroundAlt,
+    footerBackground: lightColors.backgroundAlt,
 };
 
 var light$1 = {
@@ -3905,7 +3907,7 @@ var LangSelector$1 = React.memo(LangSelector, function (prev, next) { return pre
 
 var Container = styled.div(templateObject_1$8 || (templateObject_1$8 = __makeTemplateObject(["\n  flex: none;\n  padding: 8px 4px;\n  background-color: ", ";\n  border-top: solid 2px rgba(133, 133, 133, 0.1);\n"], ["\n  flex: none;\n  padding: 8px 4px;\n  background-color: ", ";\n  border-top: solid 2px rgba(133, 133, 133, 0.1);\n"])), function (_a) {
     var theme = _a.theme;
-    return theme.nav.background;
+    return theme.sidebar.footerBackground;
 });
 var SettingsEntry = styled.div(templateObject_2$4 || (templateObject_2$4 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
 var SocialEntry = styled.div(templateObject_3$1 || (templateObject_3$1 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"])), MENU_ENTRY_HEIGHT);
