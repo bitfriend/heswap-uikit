@@ -3795,7 +3795,7 @@ var Container = styled__default['default'].div(templateObject_1$8 || (templateOb
     var theme = _a.theme;
     return theme.sidebar.footerBackground;
 });
-var RowWrapper = styled__default['default'].div(templateObject_2$4 || (templateObject_2$4 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n"], ["\n  display: flex;\n  align-items: center;\n"])));
+var RowWrapper = styled__default['default'].div(templateObject_2$4 || (templateObject_2$4 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  margin-bottom: 16px;\n  :not(:last-child) {\n    margin-bottom: 16px;\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  margin-bottom: 16px;\n  :not(:last-child) {\n    margin-bottom: 16px;\n  }\n"])));
 var IconWrapper = styled__default['default'].div(templateObject_3$1 || (templateObject_3$1 = __makeTemplateObject(["\n  margin-right: 8px;\n  width: 24px;\n  height: 24px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 8px;\n  background-color: rgb(29, 200, 114);\n"], ["\n  margin-right: 8px;\n  width: 24px;\n  height: 24px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 8px;\n  background-color: rgb(29, 200, 114);\n"])));
 var PanelFooter = function (_a) {
     var isPushed = _a.isPushed, pushNav = _a.pushNav;
@@ -3805,7 +3805,16 @@ var PanelFooter = function (_a) {
                 React__default['default'].createElement(Icon$1d, null))));
     }
     return (React__default['default'].createElement(Container, null,
-        React__default['default'].createElement(Text, { color: "#fff" }, "Live Trading Deals"),
+        React__default['default'].createElement(Text, { color: "#fff", marginBottom: "12px" }, "Live Trading Deals"),
+        React__default['default'].createElement(RowWrapper, null,
+            React__default['default'].createElement(IconWrapper, null,
+                React__default['default'].createElement(Icon$1t, { color: "#fff" })),
+            React__default['default'].createElement("div", { style: { flex: 1 } },
+                React__default['default'].createElement(Text, { small: true, color: "#fff" }, "Swap"),
+                React__default['default'].createElement(Text, { small: true, color: "rgb(116, 155, 216)" }, "10:15:16 PM")),
+            React__default['default'].createElement("div", { style: { flex: 1, textAlign: 'right' } },
+                React__default['default'].createElement(Text, { small: true, color: "#fff" }, "USD/BTC"),
+                React__default['default'].createElement(Text, { small: true, color: "rgb(29, 200, 114)" }, "$2,198.35"))),
         React__default['default'].createElement(RowWrapper, null,
             React__default['default'].createElement(IconWrapper, null,
                 React__default['default'].createElement(Icon$1t, { color: "#fff" })),

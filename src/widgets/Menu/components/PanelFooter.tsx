@@ -19,6 +19,10 @@ const Container = styled.div`
 const RowWrapper = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 16px;
+  :not(:last-child) {
+    margin-bottom: 16px;
+  }
 `;
 
 const IconWrapper = styled.div`
@@ -48,7 +52,20 @@ const PanelFooter: React.FC<Props> = ({
 
   return (
     <Container>
-      <Text color="#fff">Live Trading Deals</Text>
+      <Text color="#fff" marginBottom="12px">Live Trading Deals</Text>
+      <RowWrapper>
+        <IconWrapper>
+          <AutoRenewIcon color="#fff" />
+        </IconWrapper>
+        <div style={{ flex: 1 }}>
+          <Text small color="#fff">Swap</Text>
+          <Text small color="rgb(116, 155, 216)">10:15:16 PM</Text>
+        </div>
+        <div style={{ flex: 1, textAlign: 'right' }}>
+          <Text small color="#fff">USD/BTC</Text>
+          <Text small color="rgb(29, 200, 114)">$2,198.35</Text>
+        </div>
+      </RowWrapper>
       <RowWrapper>
         <IconWrapper>
           <AutoRenewIcon color="#fff" />
