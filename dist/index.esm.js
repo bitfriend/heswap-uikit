@@ -2963,14 +2963,14 @@ var darkColors = __assign(__assign(__assign({}, baseColors), additionalColors), 
         gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
     } });
 
-var light$7 = {
+var light$6 = {
     background: lightColors.backgroundAlt,
 };
-var dark$7 = {
+var dark$6 = {
     background: darkColors.backgroundAlt,
 };
 
-var light$6 = {
+var light$5 = {
     background: lightColors.backgroundAlt,
     boxShadow: shadows.level1,
     boxShadowActive: shadows.active,
@@ -2984,7 +2984,7 @@ var light$6 = {
     },
     dropShadow: "drop-shadow(0px 1px 4px rgba(25, 19, 38, 0.15))",
 };
-var dark$6 = {
+var dark$5 = {
     background: darkColors.backgroundAlt,
     boxShadow: shadows.level1,
     boxShadowActive: shadows.active,
@@ -2999,20 +2999,13 @@ var dark$6 = {
     dropShadow: "drop-shadow(0px 1px 4px rgba(25, 19, 38, 0.15))",
 };
 
-var light$5 = {
+var light$4 = {
     handleBackground: lightColors.backgroundAlt,
     handleShadow: lightColors.textDisabled,
 };
-var dark$5 = {
-    handleBackground: darkColors.backgroundAlt,
-    handleShadow: darkColors.textDisabled,
-};
-
-var light$4 = {
-    handleBackground: lightColors.backgroundAlt,
-};
 var dark$4 = {
     handleBackground: darkColors.backgroundAlt,
+    handleShadow: darkColors.textDisabled,
 };
 
 var light$3 = {
@@ -3023,9 +3016,22 @@ var dark$3 = {
 };
 
 var light$2 = {
-    background: lightColors.backgroundAlt,
+    handleBackground: lightColors.backgroundAlt,
 };
 var dark$2 = {
+    handleBackground: darkColors.backgroundAlt,
+};
+
+var lightNav = {
+    background: lightColors.backgroundAlt,
+};
+var darkNav = {
+    background: darkColors.backgroundAlt,
+};
+var lightSidebar = {
+    background: lightColors.backgroundAlt,
+};
+var darkSidebar = {
     background: darkColors.backgroundAlt,
 };
 
@@ -3047,9 +3053,9 @@ var dark = {
     boxShadow: "0px 0px 2px rgba(0, 0, 0, 0.2), 0px 4px 12px -8px rgba(14, 14, 44, 0.1)",
 };
 
-var darkTheme = __assign(__assign({}, base), { isDark: true, alert: dark$7, colors: darkColors, card: dark$6, toggle: dark$3, nav: dark$2, modal: dark$1, heswapToggle: dark$5, radio: dark$4, tooltip: dark });
+var darkTheme = __assign(__assign({}, base), { isDark: true, alert: dark$6, colors: darkColors, card: dark$5, toggle: dark$2, nav: darkNav, sidebar: darkSidebar, modal: dark$1, heswapToggle: dark$4, radio: dark$3, tooltip: dark });
 
-var lightTheme = __assign(__assign({}, base), { isDark: false, alert: light$7, colors: lightColors, card: light$6, toggle: light$3, nav: light$2, modal: light$1, heswapToggle: light$5, radio: light$4, tooltip: light });
+var lightTheme = __assign(__assign({}, base), { isDark: false, alert: light$6, colors: lightColors, card: light$5, toggle: light$2, nav: lightNav, sidebar: lightSidebar, modal: light$1, heswapToggle: light$4, radio: light$3, tooltip: light });
 
 var Arrow = styled.div(templateObject_1$i || (templateObject_1$i = __makeTemplateObject(["\n  &,\n  &::before {\n    position: absolute;\n    width: 10px;\n    height: 10px;\n    border-radius: 2px;\n    z-index: -1;\n  }\n\n  &::before {\n    content: \"\";\n    transform: rotate(45deg);\n    background: ", ";\n  }\n"], ["\n  &,\n  &::before {\n    position: absolute;\n    width: 10px;\n    height: 10px;\n    border-radius: 2px;\n    z-index: -1;\n  }\n\n  &::before {\n    content: \"\";\n    transform: rotate(45deg);\n    background: ", ";\n  }\n"])), function (_a) {
     var theme = _a.theme;

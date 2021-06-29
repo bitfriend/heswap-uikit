@@ -4,7 +4,7 @@ import { HeswapToggleTheme } from "../components/HeswapToggle/types";
 import { RadioTheme } from "../components/Radio/types";
 import { ToggleTheme } from "../components/Toggle/types";
 import { TooltipTheme } from "../components/Tooltip/types";
-import { NavTheme } from "../widgets/Menu/types";
+import { NavTheme, SidebarTheme } from "../widgets/Menu/types";
 import { ModalTheme } from "../widgets/Modal/types";
 import { Colors, Breakpoints, MediaQueries, Spacing, Shadows, Radii, ZIndices } from "./types";
 
@@ -15,6 +15,7 @@ export interface HeswapTheme {
   colors: Colors;
   card: CardTheme;
   nav: NavTheme;
+  sidebar: SidebarTheme;
   modal: ModalTheme;
   heswapToggle: HeswapToggleTheme;
   radio: RadioTheme;

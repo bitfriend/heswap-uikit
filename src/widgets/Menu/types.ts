@@ -24,6 +24,10 @@ export interface NavTheme {
   background: string;
 }
 
+export interface SidebarTheme {
+  background: string;
+}
+
 export interface LinkStatus {
   text: string;
   color: keyof Colors;
