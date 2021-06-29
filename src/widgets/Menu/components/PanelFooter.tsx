@@ -1,13 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { CogIcon } from "../../../components/Svg";
+import { AutoRenewIcon, CogIcon } from "../../../components/Svg";
+import { Text } from "../../../components/Text";
 import IconButton from "../../../components/Button/IconButton";
-import { MENU_ENTRY_HEIGHT } from "../config";
 import { PanelProps, PushedProps } from "../types";
-import CakePrice from "./CakePrice";
-import ThemeSwitcher from "./ThemeSwitcher";
-import SocialLinks from "./SocialLinks";
-import LangSelector from "./LangSelector";
 
 interface Props extends PanelProps, PushedProps {}
 
@@ -20,31 +16,25 @@ const Container = styled.div`
   border-top: solid 2px rgba(133, 133, 133, 0.1);
 `;
 
-const SettingsEntry = styled.div`
+const RowWrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: ${MENU_ENTRY_HEIGHT}px;
-  padding: 0 8px;
 `;
 
-const SocialEntry = styled.div`
+const IconWrapper = styled.div`
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  height: ${MENU_ENTRY_HEIGHT}px;
-  padding: 0 16px;
+  border-radius: 8px;
+  background-color: rgb(29, 200, 114);
 `;
 
 const PanelFooter: React.FC<Props> = ({
   isPushed,
   pushNav,
-  toggleTheme,
-  isDark,
-  cakePriceUsd,
-  currentLang,
-  langs,
-  setLang,
 }) => {
   if (!isPushed) {
     return (
@@ -58,14 +48,20 @@ const PanelFooter: React.FC<Props> = ({
 
   return (
     <Container>
-      <SocialEntry>
-        <CakePrice cakePriceUsd={cakePriceUsd} />
-        <SocialLinks />
-      </SocialEntry>
-      <SettingsEntry>
-        <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} />
-        <LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />
-      </SettingsEntry>
+      <Text color="#fff">Live Trading Deals</Text>
+      <RowWrapper>
+        <IconWrapper>
+          <AutoRenewIcon color="#fff" />
+        </IconWrapper>
+        <div style={{ flex: 1 }}>
+          <Text small color="#fff">Swap</Text>
+          <Text small color="rgb(116, 155, 216)">10:15:16 PM</Text>
+        </div>
+        <div style={{ flex: 1, textAlign: 'right' }}>
+          <Text small color="#fff">USD/BTC</Text>
+          <Text small color="rgb(29, 200, 114)">$2,198.35</Text>
+        </div>
+      </RowWrapper>
     </Container>
   );
 };

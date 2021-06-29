@@ -28,6 +28,7 @@ const LinkLabel = styled.div<{ isPushed: boolean }>`
 
 const MenuEntry = styled.div<Props>`
   cursor: pointer;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   height: ${MENU_ENTRY_HEIGHT}px;
@@ -35,7 +36,6 @@ const MenuEntry = styled.div<Props>`
   font-size: ${({ secondary }) => (secondary ? "14px" : "16px")};
   background-color: ${({ isActive }) => (isActive ? "rgb(28, 50, 84)" : "transparent")};
   color: ${({ theme }) => theme.colors.textSubtle};
-  box-shadow: ${({ isActive, theme }) => (isActive ? `inset 4px 0px 0px ${theme.colors.primary}` : "none")};
 
   a {
     display: flex;
@@ -49,7 +49,7 @@ const MenuEntry = styled.div<Props>`
   }
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0.75;
   }
 
   // Safari fix
