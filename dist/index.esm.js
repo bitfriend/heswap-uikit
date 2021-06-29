@@ -4109,7 +4109,7 @@ var Avatar = function (_a) {
 var templateObject_1$4, templateObject_2$1;
 
 var Wrapper = styled.div(templateObject_1$3 || (templateObject_1$3 = __makeTemplateObject(["\n  position: relative;\n  width: 100%;\n"], ["\n  position: relative;\n  width: 100%;\n"])));
-var StyledNav = styled.nav(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  position: fixed;\n  top: ", ";\n  left: ", "px;\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: calc(100% - ", "px);\n  height: ", "px;\n  background-color: ", ";\n  border-bottom: solid 2px rgba(133, 133, 133, 0.1);\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  top: ", ";\n  left: ", "px;\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: calc(100% - ", "px);\n  height: ", "px;\n  background-color: ", ";\n  border-bottom: solid 2px rgba(133, 133, 133, 0.1);\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
+var StyledNav = styled.nav(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  position: fixed;\n  top: ", ";\n  left: ", "px;\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: calc(100% - ", "px);\n  height: ", "px;\n  background-color: ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  top: ", ";\n  left: ", "px;\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: calc(100% - ", "px);\n  height: ", "px;\n  background-color: ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
     var showMenu = _a.showMenu;
     return (showMenu ? 0 : "-" + MENU_HEIGHT + "px");
 }, function (_a) {
@@ -4119,8 +4119,8 @@ var StyledNav = styled.nav(templateObject_2 || (templateObject_2 = __makeTemplat
     var isPushed = _a.isPushed;
     return (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED);
 }, MENU_HEIGHT, function (_a) {
-    var theme = _a.theme;
-    return theme.nav.background;
+    var bgColor = _a.bgColor;
+    return bgColor;
 });
 var StyledFlex = styled(Flex)(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  flex: 1;\n  justify-content: flex-end;\n"], ["\n  flex: 1;\n  justify-content: flex-end;\n"])));
 var BodyWrapper = styled.div(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n"], ["\n  position: relative;\n  display: flex;\n"])));
@@ -4147,6 +4147,7 @@ var Menu = function (_a) {
     var isMobile = isXl === false;
     var _b = useState(!isMobile), isPushed = _b[0], setIsPushed = _b[1];
     var _c = useState(true), showMenu = _c[0], setShowMenu = _c[1];
+    var _d = useState('transparent'), navColor = _d[0], setNavColor = _d[1];
     var refPrevOffset = useRef(window.pageYOffset);
     useEffect(function () {
         var handleScroll = function () {
@@ -4156,12 +4157,14 @@ var Menu = function (_a) {
             // Always show the menu when user reach the top
             if (isTopOfPage) {
                 setShowMenu(true);
+                setNavColor('transparent');
             }
             // Avoid triggering anything at the bottom because of layout shift
             else if (!isBottomOfPage) {
                 if (currentOffset < refPrevOffset.current) {
                     // Has scroll up
                     setShowMenu(true);
+                    setNavColor('rgb(7, 22, 45)');
                 }
                 else {
                     // Has scroll down
@@ -4177,7 +4180,7 @@ var Menu = function (_a) {
         };
     }, []);
     return (React.createElement(Wrapper, null,
-        React.createElement(StyledNav, { isPushed: isPushed, showMenu: showMenu }, !!login && !!logout && (React.createElement(StyledFlex, null,
+        React.createElement(StyledNav, { isPushed: isPushed, showMenu: showMenu, bgColor: navColor }, !!login && !!logout && (React.createElement(StyledFlex, null,
             React.createElement(UserBlock$1, { account: account, login: login, logout: logout }),
             profile && React.createElement(Avatar, { profile: profile })))),
         React.createElement(BodyWrapper, null,

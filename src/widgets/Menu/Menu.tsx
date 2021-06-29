@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   width: 100%;
 `;
 
-const StyledNav = styled.nav<{ isPushed: boolean, showMenu: boolean }>`
+const StyledNav = styled.nav<{ isPushed: boolean, showMenu: boolean, bgColor: string }>`
   position: fixed;
   top: ${({ showMenu }) => (showMenu ? 0 : `-${MENU_HEIGHT}px`)};
   left: ${({ isPushed }) => (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED)}px;
@@ -27,8 +27,7 @@ const StyledNav = styled.nav<{ isPushed: boolean, showMenu: boolean }>`
   padding-right: 16px;
   width: calc(100% - ${({ isPushed }) => (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED)}px);
   height: ${MENU_HEIGHT}px;
-  background-color: ${({ theme }) => theme.nav.background};
-  border-bottom: solid 2px rgba(133, 133, 133, 0.1);
+  background-color: ${({ bgColor }) => bgColor};
   z-index: 20;
   transform: translate3d(0, 0, 0);
 `;
@@ -83,6 +82,7 @@ const Menu: React.FC<NavProps> = ({
   const isMobile = isXl === false;
   const [isPushed, setIsPushed] = useState(!isMobile);
   const [showMenu, setShowMenu] = useState(true);
+  const [navColor, setNavColor] = useState('transparent');
   const refPrevOffset = useRef(window.pageYOffset);
 
   useEffect(() => {
@@ -93,12 +93,14 @@ const Menu: React.FC<NavProps> = ({
       // Always show the menu when user reach the top
       if (isTopOfPage) {
         setShowMenu(true);
+        setNavColor('transparent');
       }
       // Avoid triggering anything at the bottom because of layout shift
       else if (!isBottomOfPage) {
         if (currentOffset < refPrevOffset.current) {
           // Has scroll up
           setShowMenu(true);
+          setNavColor('rgb(7, 22, 45)');
         } else {
           // Has scroll down
           setShowMenu(false);
@@ -116,7 +118,7 @@ const Menu: React.FC<NavProps> = ({
 
   return (
     <Wrapper>
-      <StyledNav isPushed={isPushed} showMenu={showMenu}>
+      <StyledNav isPushed={isPushed} showMenu={showMenu} bgColor={navColor}>
         {!!login && !!logout && (
           <StyledFlex>
             <UserBlock account={account} login={login} logout={logout} />
