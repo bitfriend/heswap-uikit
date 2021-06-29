@@ -4,7 +4,6 @@ import throttle from "lodash/throttle";
 import Overlay from "../../components/Overlay/Overlay";
 import Flex from "../../components/Box/Flex";
 import { useMatchBreakpoints } from "../../hooks";
-import Logo from "./components/Logo";
 import Panel from "./components/Panel";
 import UserBlock from "./components/UserBlock";
 import { NavProps } from "./types";
@@ -16,22 +15,27 @@ const Wrapper = styled.div`
   width: 100%;
 `;
 
-const StyledNav = styled.nav<{ showMenu: boolean }>`
+const StyledNav = styled.nav<{ isPushed: boolean, showMenu: boolean }>`
   position: fixed;
   top: ${({ showMenu }) => (showMenu ? 0 : `-${MENU_HEIGHT}px`)};
-  left: 0;
+  left: ${({ isPushed }) => (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED)}px;
   transition: top 0.2s;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 8px;
   padding-right: 16px;
-  width: 100%;
+  width: calc(100% - ${({ isPushed }) => (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED)}px);
   height: ${MENU_HEIGHT}px;
   background-color: ${({ theme }) => theme.nav.background};
   border-bottom: solid 2px rgba(133, 133, 133, 0.1);
   z-index: 20;
   transform: translate3d(0, 0, 0);
+`;
+
+const StyledFlex = styled(Flex)`
+  flex: 1;
+  justify-content: flex-end;
 `;
 
 const BodyWrapper = styled.div`
@@ -110,30 +114,20 @@ const Menu: React.FC<NavProps> = ({
     };
   }, []);
 
-  // Find the home link if provided
-  const homeLink = links.find((link) => link.label === "Home");
-
   return (
     <Wrapper>
-      <StyledNav showMenu={showMenu}>
-        <Logo
-          isPushed={isPushed}
-          togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
-          isDark={isDark}
-          href={homeLink?.href ?? "/"}
-        />
+      <StyledNav isPushed={isPushed} showMenu={showMenu}>
         {!!login && !!logout && (
-          <Flex>
+          <StyledFlex>
             <UserBlock account={account} login={login} logout={logout} />
             {profile && <Avatar profile={profile} />}
-          </Flex>
+          </StyledFlex>
         )}
       </StyledNav>
       <BodyWrapper>
         <Panel
           isPushed={isPushed}
           isMobile={isMobile}
-          showMenu={showMenu}
           isDark={isDark}
           toggleTheme={toggleTheme}
           langs={langs}

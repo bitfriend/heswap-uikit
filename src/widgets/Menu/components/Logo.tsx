@@ -13,6 +13,11 @@ interface Props {
   href: string;
 }
 
+const StyledFlex = styled(Flex)`
+  padding-top: 7px;
+  padding-bottom: 7px;
+`;
+
 const blink = keyframes`
   0%,  100% { transform: scaleY(1); } 
   50% { transform:  scaleY(0.1); } 
@@ -58,7 +63,7 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   );
 
   return (
-    <Flex>
+    <StyledFlex>
       <MenuButton aria-label="Toggle menu" onClick={togglePush} mr="24px">
         {isPushed ? (
           <HamburgerCloseIcon width="24px" color="textSubtle" />
@@ -75,7 +80,7 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
           {innerLogo}
         </StyledLink>
       )}
-    </Flex>
+    </StyledFlex>
   );
 };
 
