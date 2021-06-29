@@ -41,7 +41,7 @@ const StyledLogo = styled(Logo)`
 `;
 
 const Panel: React.FC<Props> = (props) => {
-  const { isDark, isPushed, pushNav, links } = props;
+  const { isPushed, pushNav, links } = props;
 
   // Find the home link if provided
   const homeLink = links.find((link) => link.label === "Home");
@@ -51,7 +51,7 @@ const Panel: React.FC<Props> = (props) => {
       <StyledLogo
         isPushed={isPushed}
         togglePush={() => pushNav(!isPushed)}
-        isDark={isDark}
+        isDark
         href={homeLink?.href ?? "/"}
       />
       <PanelBody {...props} />
