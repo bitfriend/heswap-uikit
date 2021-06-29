@@ -20,9 +20,6 @@ const RowWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 16px;
-  :not(:last-child) {
-    margin-bottom: 16px;
-  }
 `;
 
 const IconWrapper = styled.div`
@@ -53,7 +50,7 @@ const PanelFooter: React.FC<Props> = ({
   return (
     <Container>
       <Text color="#fff" marginBottom="12px">Live Trading Deals</Text>
-      <RowWrapper>
+      <RowWrapper style={{ marginBottom: '16px' }}>
         <IconWrapper>
           <AutoRenewIcon color="#fff" />
         </IconWrapper>
