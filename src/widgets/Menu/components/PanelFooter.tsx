@@ -19,7 +19,6 @@ const Container = styled.div`
 const RowWrapper = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 16px;
 `;
 
 const IconWrapper = styled.div`
