@@ -77,6 +77,7 @@ const StyledButton = styled(Button)`
 `;
 
 const StyledCheck = styled(FaCheckCircle)`
+  margin-right: 8px;
   fill: ${({ theme }) => theme.colors.success}
 `;
 

@@ -4159,7 +4159,7 @@ var MobileOnlyOverlay = styled__default['default'](Overlay)(templateObject_6 || 
     return theme.mediaQueries.nav;
 });
 var StyledButton = styled__default['default'](Button)(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  color: #fff;\n"], ["\n  color: #fff;\n"])));
-var StyledCheck = styled__default['default'](fa.FaCheckCircle)(templateObject_8 || (templateObject_8 = __makeTemplateObject(["\n  fill: ", "\n"], ["\n  fill: ", "\n"])), function (_a) {
+var StyledCheck = styled__default['default'](fa.FaCheckCircle)(templateObject_8 || (templateObject_8 = __makeTemplateObject(["\n  margin-right: 8px;\n  fill: ", "\n"], ["\n  margin-right: 8px;\n  fill: ", "\n"])), function (_a) {
     var theme = _a.theme;
     return theme.colors.success;
 });
