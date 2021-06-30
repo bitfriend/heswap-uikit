@@ -3369,7 +3369,7 @@ var Logo$4 = function (_a) {
         React.createElement("path", { className: "left-eye", d: "M9.11817 15.2485C9.11817 16.2833 8.55896 17.1221 7.86914 17.1221C7.17932 17.1221 6.62012 16.2833 6.62012 15.2485C6.62012 14.2138 7.17932 13.375 7.86914 13.375C8.55896 13.375 9.11817 14.2138 9.11817 15.2485Z", fill: "#633001" }),
         React.createElement("path", { className: "right-eye", d: "M17.7363 15.2485C17.7363 16.2833 17.1771 17.1221 16.4873 17.1221C15.7975 17.1221 15.2383 16.2833 15.2383 15.2485C15.2383 14.2138 15.7975 13.375 16.4873 13.375C17.1771 13.375 17.7363 14.2138 17.7363 15.2485Z", fill: "#633001" })));
 };
-var AppLogo$1 = React.memo(Logo$4, function (prev, next) { return prev.isDark === next.isDark; });
+var LogoWithText$1 = React.memo(Logo$4, function (prev, next) { return prev.isDark === next.isDark; });
 
 var Icon$o = function (props) {
     return (React.createElement(Svg, __assign({ viewBox: "0 0 24 24" }, props),
@@ -3500,7 +3500,7 @@ var Icon$7 = function (props) {
 
 var IconModule = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    AppLogoIcon: AppLogo$1,
+    AppLogoIcon: LogoWithText$1,
     FarmIcon: Icon$o,
     GroupsIcon: Icon$n,
     HamburgerIcon: Icon$m,
@@ -4328,7 +4328,7 @@ var Logo = function (_a) {
     var isAbsoluteUrl = href.startsWith("http");
     var innerLogo = (React.createElement(React.Fragment, null,
         React.createElement(Icon$13, { className: "mobile-icon" }),
-        React.createElement(LogoWithText, { className: "desktop-icon", isDark: isDark })));
+        React.createElement(LogoWithText$1, { className: "desktop-icon", isDark: isDark })));
     return (React.createElement(StyledFlex$1, null,
         React.createElement(MenuButton, { "aria-label": "Toggle menu", onClick: togglePush, mr: "24px" }, isPushed ? (React.createElement(Icon$l, { width: "24px", style: { fill: '#fff' } })) : (React.createElement(Icon$m, { width: "24px", style: { fill: '#fff' } }))),
         isAbsoluteUrl ? (React.createElement(StyledLink, { as: "a", href: href, "aria-label": "Heswap home page" }, innerLogo)) : (React.createElement(StyledLink, { to: href, "aria-label": "Heswap home page" }, innerLogo))));
