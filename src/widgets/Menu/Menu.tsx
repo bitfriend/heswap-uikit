@@ -1,6 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import throttle from "lodash/throttle";
+import {
+  FaCheckCircle,
+  FaMediumM,
+  FaTelegramPlane,
+  FaTwitter,
+  FaYoutube,
+} from 'react-icons/fa';
 import Overlay from "../../components/Overlay/Overlay";
 import Flex from "../../components/Box/Flex";
 import { useMatchBreakpoints } from "../../hooks";
@@ -9,6 +16,7 @@ import UserBlock from "./components/UserBlock";
 import { NavProps } from "./types";
 import Avatar from "./components/Avatar";
 import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
+import { Button, IconButton } from '../../components/Button';
 
 const Wrapper = styled.div`
   position: relative;
@@ -62,6 +70,14 @@ const MobileOnlyOverlay = styled(Overlay)`
   ${({ theme }) => theme.mediaQueries.nav} {
     display: none;
   }
+`;
+
+const StyledButton = styled(Button)`
+  color: #fff;
+`;
+
+const StyledCheck = styled(FaCheckCircle)`
+  fill: ${({ theme }) => theme.colors.success}
 `;
 
 const Menu: React.FC<NavProps> = ({
@@ -119,8 +135,28 @@ const Menu: React.FC<NavProps> = ({
   return (
     <Wrapper>
       <StyledNav isPushed={isPushed} showMenu={showMenu} bgColor={navColor}>
+        <Flex>
+          <IconButton variant="text">
+            <FaTelegramPlane fill="rgb(116, 155, 216)" size="24px" />
+          </IconButton>
+          <IconButton variant="text">
+            <FaTwitter fill="rgb(116, 155, 216)" size="24px" />
+          </IconButton>
+          <IconButton variant="text">
+            <FaMediumM fill="rgb(116, 155, 216)" size="24px" />
+          </IconButton>
+          <IconButton variant="text">
+            <FaYoutube fill="rgb(116, 155, 216)" size="24px" />
+          </IconButton>
+        </Flex>
         {!!login && !!logout && (
           <StyledFlex>
+            <StyledButton
+              variant="text"
+              startIcon={<StyledCheck />}
+            >
+              Certik Audit
+            </StyledButton>
             <UserBlock account={account} login={login} logout={logout} />
             {profile && <Avatar profile={profile} />}
           </StyledFlex>

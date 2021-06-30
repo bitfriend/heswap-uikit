@@ -61,6 +61,7 @@
     "prettier": "^2.3.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
     "rollup": "^2.47.0",
     "styled-components": "^5.2.0",
@@ -72,6 +73,7 @@
   "peerDependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "4.x",
     "react-router-dom": "^5.2.0",
     "styled-components": "^5.2.3"
   },

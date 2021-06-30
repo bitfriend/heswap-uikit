@@ -8,6 +8,7 @@ import debounce from 'lodash/debounce';
 import { createPortal } from 'react-dom';
 import { usePopper } from 'react-popper';
 import throttle from 'lodash/throttle';
+import { FaCheckCircle, FaTelegramPlane, FaTwitter, FaMediumM, FaYoutube } from 'react-icons/fa';
 import { Link as Link$1, NavLink, useLocation } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
@@ -230,7 +231,7 @@ var getOpacity = function (_a) {
     var _b = _a.$isLoading, $isLoading = _b === void 0 ? false : _b;
     return $isLoading ? ".5" : "1";
 };
-var StyledButton$1 = styled.button(templateObject_1$Z || (templateObject_1$Z = __makeTemplateObject(["\n  align-items: center;\n  border: 0;\n  border-radius: 16px;\n  box-shadow: 0px -1px 0px 0px rgba(14, 14, 44, 0.4) inset;\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  justify-content: center;\n  letter-spacing: 0.03em;\n  line-height: 1;\n  opacity: ", ";\n  outline: 0;\n  transition: background-color 0.2s, opacity 0.2s;\n\n  &:hover:not(:disabled):not(.heswap-button--disabled):not(.heswap-button--disabled):not(:active) {\n    opacity: 0.65;\n  }\n\n  &:active:not(:disabled):not(.heswap-button--disabled):not(.heswap-button--disabled) {\n    opacity: 0.85;\n    transform: translateY(1px);\n    box-shadow: none;\n  }\n\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"], ["\n  align-items: center;\n  border: 0;\n  border-radius: 16px;\n  box-shadow: 0px -1px 0px 0px rgba(14, 14, 44, 0.4) inset;\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  justify-content: center;\n  letter-spacing: 0.03em;\n  line-height: 1;\n  opacity: ", ";\n  outline: 0;\n  transition: background-color 0.2s, opacity 0.2s;\n\n  &:hover:not(:disabled):not(.heswap-button--disabled):not(.heswap-button--disabled):not(:active) {\n    opacity: 0.65;\n  }\n\n  &:active:not(:disabled):not(.heswap-button--disabled):not(.heswap-button--disabled) {\n    opacity: 0.85;\n    transform: translateY(1px);\n    box-shadow: none;\n  }\n\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"])), getOpacity, getDisabledStyles, variant$1({
+var StyledButton$2 = styled.button(templateObject_1$Z || (templateObject_1$Z = __makeTemplateObject(["\n  align-items: center;\n  border: 0;\n  border-radius: 16px;\n  box-shadow: 0px -1px 0px 0px rgba(14, 14, 44, 0.4) inset;\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  justify-content: center;\n  letter-spacing: 0.03em;\n  line-height: 1;\n  opacity: ", ";\n  outline: 0;\n  transition: background-color 0.2s, opacity 0.2s;\n\n  &:hover:not(:disabled):not(.heswap-button--disabled):not(.heswap-button--disabled):not(:active) {\n    opacity: 0.65;\n  }\n\n  &:active:not(:disabled):not(.heswap-button--disabled):not(.heswap-button--disabled) {\n    opacity: 0.85;\n    transform: translateY(1px);\n    box-shadow: none;\n  }\n\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"], ["\n  align-items: center;\n  border: 0;\n  border-radius: 16px;\n  box-shadow: 0px -1px 0px 0px rgba(14, 14, 44, 0.4) inset;\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  justify-content: center;\n  letter-spacing: 0.03em;\n  line-height: 1;\n  opacity: ", ";\n  outline: 0;\n  transition: background-color 0.2s, opacity 0.2s;\n\n  &:hover:not(:disabled):not(.heswap-button--disabled):not(.heswap-button--disabled):not(:active) {\n    opacity: 0.65;\n  }\n\n  &:active:not(:disabled):not(.heswap-button--disabled):not(.heswap-button--disabled) {\n    opacity: 0.85;\n    transform: translateY(1px);\n    box-shadow: none;\n  }\n\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"])), getOpacity, getDisabledStyles, variant$1({
     prop: "scale",
     variants: scaleVariants$1,
 }), variant$1({
@@ -249,7 +250,7 @@ var Button = function (props) {
     if (isDisabled && !isLoading) {
         classNames.push("heswap-button--disabled");
     }
-    return (React.createElement(StyledButton$1, __assign({ "$isLoading": isLoading, className: classNames.join(" "), disabled: isDisabled }, internalProps, rest),
+    return (React.createElement(StyledButton$2, __assign({ "$isLoading": isLoading, className: classNames.join(" "), disabled: isDisabled }, internalProps, rest),
         React.createElement(React.Fragment, null,
             isValidElement(startIcon) &&
                 cloneElement(startIcon, {
@@ -1987,14 +1988,14 @@ var BarBackground = styled.div(templateObject_6$2 || (templateObject_6$2 = __mak
     var theme = _a.theme, disabled = _a.disabled;
     return theme.colors[disabled ? "textDisabled" : "inputSecondary"];
 });
-var BarProgress = styled.div(templateObject_7$1 || (templateObject_7$1 = __makeTemplateObject(["\n  background-color: ", ";\n  filter: ", ";\n  height: 10px;\n  position: absolute;\n  top: 18px;\n"], ["\n  background-color: ", ";\n  filter: ", ";\n  height: 10px;\n  position: absolute;\n  top: 18px;\n"])), function (_a) {
+var BarProgress = styled.div(templateObject_7$2 || (templateObject_7$2 = __makeTemplateObject(["\n  background-color: ", ";\n  filter: ", ";\n  height: 10px;\n  position: absolute;\n  top: 18px;\n"], ["\n  background-color: ", ";\n  filter: ", ";\n  height: 10px;\n  position: absolute;\n  top: 18px;\n"])), function (_a) {
     var theme = _a.theme;
     return theme.colors.primary;
 }, function (_a) {
     var disabled = _a.disabled;
     return (disabled ? "grayscale(100%)" : "none");
 });
-var templateObject_1$r, templateObject_2$f, templateObject_3$9, templateObject_4$6, templateObject_5$4, templateObject_6$2, templateObject_7$1;
+var templateObject_1$r, templateObject_2$f, templateObject_3$9, templateObject_4$6, templateObject_5$4, templateObject_6$2, templateObject_7$2;
 
 var Slider = function (_a) {
     var name = _a.name, min = _a.min, max = _a.max, value = _a.value, onValueChanged = _a.onValueChanged, valueLabel = _a.valueLabel, _b = _a.step, step = _b === void 0 ? "any" : _b, _c = _a.disabled, disabled = _c === void 0 ? false : _c, props = __rest(_a, ["name", "min", "max", "value", "onValueChanged", "valueLabel", "step", "disabled"]);
@@ -2141,7 +2142,7 @@ var ChildrenRightWrapper = styled(ChildrenWrapper)(templateObject_5$1 || (templa
     return theme.mediaQueries.md;
 });
 var Wrapper$2 = styled.div(templateObject_6$1 || (templateObject_6$1 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  align-items: center;\n"], ["\n  position: relative;\n  display: flex;\n  align-items: center;\n"])));
-var StepNumber = styled.div(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  box-shadow: 0px 1px 4px rgba(25, 19, 38, 0.15);\n  background-color: ", ";\n  border: 2px solid ", ";\n  border-radius: ", ";\n  color: ", ";\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: 600;\n  font-size: 32px;\n  width: 48px;\n  height: 48px;\n  z-index: 1;\n  ", " {\n    font-size: 40px;\n    width: 80px;\n    height: 80px;\n  }\n"], ["\n  box-shadow: 0px 1px 4px rgba(25, 19, 38, 0.15);\n  background-color: ", ";\n  border: 2px solid ", ";\n  border-radius: ", ";\n  color: ", ";\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: 600;\n  font-size: 32px;\n  width: 48px;\n  height: 48px;\n  z-index: 1;\n  ", " {\n    font-size: 40px;\n    width: 80px;\n    height: 80px;\n  }\n"])), function (_a) {
+var StepNumber = styled.div(templateObject_7$1 || (templateObject_7$1 = __makeTemplateObject(["\n  box-shadow: 0px 1px 4px rgba(25, 19, 38, 0.15);\n  background-color: ", ";\n  border: 2px solid ", ";\n  border-radius: ", ";\n  color: ", ";\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: 600;\n  font-size: 32px;\n  width: 48px;\n  height: 48px;\n  z-index: 1;\n  ", " {\n    font-size: 40px;\n    width: 80px;\n    height: 80px;\n  }\n"], ["\n  box-shadow: 0px 1px 4px rgba(25, 19, 38, 0.15);\n  background-color: ", ";\n  border: 2px solid ", ";\n  border-radius: ", ";\n  color: ", ";\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: 600;\n  font-size: 32px;\n  width: 48px;\n  height: 48px;\n  z-index: 1;\n  ", " {\n    font-size: 40px;\n    width: 80px;\n    height: 80px;\n  }\n"])), function (_a) {
     var theme = _a.theme, status = _a.status;
     return theme.colors[status === "current" ? "secondary" : "invertedContrast"];
 }, function (_a) {
@@ -2168,7 +2169,7 @@ var Step = function (_a) {
             index < numberOfSteps - 1 && React.createElement(Connector, { status: status })),
         React.createElement(ChildrenRightWrapper, { isVisible: isIndexPair }, children)));
 };
-var templateObject_1$n, templateObject_2$c, templateObject_3$6, templateObject_4$3, templateObject_5$1, templateObject_6$1, templateObject_7;
+var templateObject_1$n, templateObject_2$c, templateObject_3$6, templateObject_4$3, templateObject_5$1, templateObject_6$1, templateObject_7$1;
 
 var byTextAscending = function (getTextProperty) {
     return function (objectA, objectB) {
@@ -4069,14 +4070,14 @@ var useWalletModal = function (login, logout, account) {
     return { onPresentConnectModal: onPresentConnectModal, onPresentAccountModal: onPresentAccountModal };
 };
 
-var StyledButton = styled(Button)(templateObject_1$5 || (templateObject_1$5 = __makeTemplateObject(["\n  align-items: center;\n  border: none;\n  border-radius: 8px;\n  box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;\n  cursor: pointer;\n  display: inline-flex;\n  font-size: 14px;\n  font-weight: 600;\n  height: 40px;\n  justify-content: center;\n  letter-spacing: 0.03em;\n  line-height: 1;\n  opacity: 1;\n  outline: 0px;\n  padding: 0px 16px;\n  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;\n"], ["\n  align-items: center;\n  border: none;\n  border-radius: 8px;\n  box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;\n  cursor: pointer;\n  display: inline-flex;\n  font-size: 14px;\n  font-weight: 600;\n  height: 40px;\n  justify-content: center;\n  letter-spacing: 0.03em;\n  line-height: 1;\n  opacity: 1;\n  outline: 0px;\n  padding: 0px 16px;\n  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;\n"])));
+var StyledButton$1 = styled(Button)(templateObject_1$5 || (templateObject_1$5 = __makeTemplateObject(["\n  align-items: center;\n  border: none;\n  border-radius: 8px;\n  box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;\n  cursor: pointer;\n  display: inline-flex;\n  font-size: 14px;\n  font-weight: 600;\n  height: 40px;\n  justify-content: center;\n  letter-spacing: 0.03em;\n  line-height: 1;\n  opacity: 1;\n  outline: 0px;\n  padding: 0px 16px;\n  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;\n"], ["\n  align-items: center;\n  border: none;\n  border-radius: 8px;\n  box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;\n  cursor: pointer;\n  display: inline-flex;\n  font-size: 14px;\n  font-weight: 600;\n  height: 40px;\n  justify-content: center;\n  letter-spacing: 0.03em;\n  line-height: 1;\n  opacity: 1;\n  outline: 0px;\n  padding: 0px 16px;\n  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;\n"])));
 var UserBlock = function (_a) {
     var account = _a.account, login = _a.login, logout = _a.logout;
     var _b = useWalletModal(login, logout, account), onPresentConnectModal = _b.onPresentConnectModal, onPresentAccountModal = _b.onPresentAccountModal;
     var accountEllipsis = account ? account.substring(0, 4) + "..." + account.substring(account.length - 4) : null;
-    return (React.createElement("div", null, account ? (React.createElement(StyledButton, { scale: "sm", variant: "tertiary", onClick: function () {
+    return (React.createElement("div", null, account ? (React.createElement(StyledButton$1, { scale: "sm", variant: "tertiary", onClick: function () {
             onPresentAccountModal();
-        } }, accountEllipsis)) : (React.createElement(StyledButton, { scale: "sm", onClick: function () {
+        } }, accountEllipsis)) : (React.createElement(StyledButton$1, { scale: "sm", onClick: function () {
             onPresentConnectModal();
         } }, "Connect wallet"))));
 };
@@ -4143,6 +4144,11 @@ var MobileOnlyOverlay = styled(Overlay)(templateObject_6 || (templateObject_6 = 
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 });
+var StyledButton = styled(Button)(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  color: #fff;\n"], ["\n  color: #fff;\n"])));
+var StyledCheck = styled(FaCheckCircle)(templateObject_8 || (templateObject_8 = __makeTemplateObject(["\n  fill: ", "\n"], ["\n  fill: ", "\n"])), function (_a) {
+    var theme = _a.theme;
+    return theme.colors.success;
+});
 var Menu = function (_a) {
     var account = _a.account, login = _a.login, logout = _a.logout, isDark = _a.isDark, toggleTheme = _a.toggleTheme, langs = _a.langs, setLang = _a.setLang, currentLang = _a.currentLang, cakePriceUsd = _a.cakePriceUsd, links = _a.links, profile = _a.profile, children = _a.children;
     var isXl = useMatchBreakpoints().isXl;
@@ -4182,15 +4188,26 @@ var Menu = function (_a) {
         };
     }, []);
     return (React.createElement(Wrapper, null,
-        React.createElement(StyledNav, { isPushed: isPushed, showMenu: showMenu, bgColor: navColor }, !!login && !!logout && (React.createElement(StyledFlex, null,
-            React.createElement(UserBlock$1, { account: account, login: login, logout: logout }),
-            profile && React.createElement(Avatar, { profile: profile })))),
+        React.createElement(StyledNav, { isPushed: isPushed, showMenu: showMenu, bgColor: navColor },
+            React.createElement(Flex, null,
+                React.createElement(IconButton, { variant: "text" },
+                    React.createElement(FaTelegramPlane, { fill: "rgb(116, 155, 216)", size: "24px" })),
+                React.createElement(IconButton, { variant: "text" },
+                    React.createElement(FaTwitter, { fill: "rgb(116, 155, 216)", size: "24px" })),
+                React.createElement(IconButton, { variant: "text" },
+                    React.createElement(FaMediumM, { fill: "rgb(116, 155, 216)", size: "24px" })),
+                React.createElement(IconButton, { variant: "text" },
+                    React.createElement(FaYoutube, { fill: "rgb(116, 155, 216)", size: "24px" }))),
+            !!login && !!logout && (React.createElement(StyledFlex, null,
+                React.createElement(StyledButton, { variant: "text", startIcon: React.createElement(StyledCheck, null) }, "Certik Audit"),
+                React.createElement(UserBlock$1, { account: account, login: login, logout: logout }),
+                profile && React.createElement(Avatar, { profile: profile })))),
         React.createElement(BodyWrapper, null,
             React.createElement(Panel, { isPushed: isPushed, isMobile: isMobile, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, pushNav: setIsPushed, links: links }),
             React.createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children),
             React.createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" }))));
 };
-var templateObject_1$3, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6;
+var templateObject_1$3, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7, templateObject_8;
 
 var types = {
     SUCCESS: "success",
