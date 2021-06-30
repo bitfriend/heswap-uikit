@@ -43,6 +43,7 @@ const StyledNav = styled.nav<{ isPushed: boolean, showMenu: boolean, bgColor: st
 const StyledFlex = styled(Flex)`
   flex: 1;
   justify-content: flex-end;
+  align-items: center;
 `;
 
 const BodyWrapper = styled.div`
