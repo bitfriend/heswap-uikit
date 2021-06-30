@@ -168,7 +168,6 @@ const Menu: React.FC<NavProps> = ({
         <AppPanel
           isPushed={isPushed}
           isMobile={isMobile}
-          showMenu={showMenu}
           isDark={isDark}
           toggleTheme={toggleTheme}
           langs={langs}

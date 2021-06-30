@@ -7,14 +7,11 @@ import { SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "../config";
 import { PanelProps, PushedProps } from "../types";
 
 interface Props extends PanelProps, PushedProps {
-  showMenu: boolean;
   isMobile: boolean;
 }
 
-const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
+const StyledPanel = styled.div<{ isPushed: boolean }>`
   position: fixed;
-  padding-top: ${({ showMenu }) => (showMenu ? "80px" : 0)};
-  margin-top: ${({ showMenu }) => (showMenu ? "-80px" : 0)};
   top: 0;
   left: 0;
   display: flex;
@@ -44,13 +41,13 @@ const StyledLogo = styled(AppLogo)`
 `;
 
 const Panel: React.FC<Props> = (props) => {
-  const { isPushed, pushNav, showMenu, links } = props;
+  const { isPushed, pushNav, links } = props;
 
   // Find the home link if provided
   const homeLink = links.find((link) => link.label === "Home");
 
   return (
-    <StyledPanel isPushed={isPushed} showMenu={showMenu}>
+    <StyledPanel isPushed={isPushed}>
       <StyledLogo
         isPushed={isPushed}
         togglePush={() => pushNav(!isPushed)}
