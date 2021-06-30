@@ -4,7 +4,7 @@ import { dark as darkCard } from "../components/Card/theme";
 import { dark as darkHeswapToggle } from "../components/HeswapToggle/theme";
 import { dark as darkRadio } from "../components/Radio/theme";
 import { dark as darkToggle } from "../components/Toggle/theme";
-import { darkNav, darkSidebar } from "../widgets/Menu/theme";
+import { darkTopBar, darkLeftBar } from "../widgets/Menu/theme";
 import { dark as darkModal } from "../widgets/Modal/theme";
 import { dark as darkTooltip } from "../components/Tooltip/theme";
 import base from "./base";
@@ -17,8 +17,8 @@ const darkTheme: DefaultTheme = {
   colors: darkColors,
   card: darkCard,
   toggle: darkToggle,
-  nav: darkNav,
-  sidebar: darkSidebar,
+  topBar: darkTopBar,
+  leftBar: darkLeftBar,
   modal: darkModal,
   heswapToggle: darkHeswapToggle,
   radio: darkRadio,

@@ -1,25 +1,24 @@
 import React from "react";
 import styled from "styled-components";
-import PanelBody from "./PanelBody";
-import PanelFooter from "./PanelFooter";
+import AppLogo from "./AppLogo";
+import AppPanelBody from "./AppPanelBody";
+import AppPanelFooter from "./AppPanelFooter";
 import { SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "../config";
 import { PanelProps, PushedProps } from "../types";
 
 interface Props extends PanelProps, PushedProps {
-  showMenu: boolean;
   isMobile: boolean;
 }
 
-const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
+const StyledPanel = styled.div<{ isPushed: boolean }>`
   position: fixed;
-  padding-top: ${({ showMenu }) => (showMenu ? "80px" : 0)};
   top: 0;
   left: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-shrink: 0;
-  background-color: ${({ theme }) => theme.topBar.background};
+  background-color: ${({ theme }) => theme.leftBar.background};
   width: ${({ isPushed }) => (isPushed ? `${SIDEBAR_WIDTH_FULL}px` : 0)};
   height: 100%;
   transition: padding-top 0.2s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -35,12 +34,28 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   }
 `;
 
+const StyledLogo = styled(AppLogo)`
+  padding-top: 7px;
+  padding-bottom: 7px;
+  height: 64px;
+`;
+
 const Panel: React.FC<Props> = (props) => {
-  const { isPushed, showMenu } = props;
+  const { isPushed, pushNav, links } = props;
+
+  // Find the home link if provided
+  const homeLink = links.find((link) => link.label === "Home");
+
   return (
-    <StyledPanel isPushed={isPushed} showMenu={showMenu}>
-      <PanelBody {...props} />
-      <PanelFooter {...props} />
+    <StyledPanel isPushed={isPushed}>
+      <StyledLogo
+        isPushed={isPushed}
+        togglePush={() => pushNav(!isPushed)}
+        isDark
+        href={homeLink?.href ?? "/"}
+      />
+      <AppPanelBody {...props} />
+      <AppPanelFooter {...props} />
     </StyledPanel>
   );
 };

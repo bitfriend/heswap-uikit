@@ -20,11 +20,11 @@ export interface PushedProps {
   pushNav: (isPushed: boolean) => void;
 }
 
-export interface NavTheme {
+export interface TopBarTheme {
   background: string;
 }
 
-export interface SidebarTheme {
+export interface LeftBarTheme {
   background: string;
   footerBackground: string;
 }

@@ -1,20 +1,20 @@
 import { darkColors, lightColors } from "../../theme/colors";
-import { NavTheme, SidebarTheme } from "./types";
+import { TopBarTheme, LeftBarTheme } from "./types";
 
-export const lightNav: NavTheme = {
+export const lightTopBar: TopBarTheme = {
   background: lightColors.backgroundAlt,
 };
 
-export const darkNav: NavTheme = {
+export const darkTopBar: TopBarTheme = {
   background: darkColors.backgroundAlt,
 };
 
-export const lightSidebar: SidebarTheme = {
+export const lightLeftBar: LeftBarTheme = {
   background: lightColors.backgroundAlt,
   footerBackground: lightColors.backgroundAlt,
 };
 
-export const darkSidebar: SidebarTheme = {
+export const darkLeftBar: LeftBarTheme = {
   background: darkColors.backgroundAlt,
   footerBackground: lightColors.backgroundAlt,
 };

@@ -7,30 +7,27 @@ import { TooltipTheme } from "../components/Tooltip/types";
 import { TopBarTheme, LeftBarTheme } from "../widgets/Menu/types";
 import { ModalTheme } from "../widgets/Modal/types";
 import { Colors, Breakpoints, MediaQueries, Spacing, Shadows, Radii, ZIndices } from "./types";
-
 export interface HeswapTheme {
-  siteWidth: number;
-  isDark: boolean;
-  alert: AlertTheme;
-  colors: Colors;
-  card: CardTheme;
-  topBar: TopBarTheme;
-  leftBar: LeftBarTheme;
-  modal: ModalTheme;
-  heswapToggle: HeswapToggleTheme;
-  radio: RadioTheme;
-  toggle: ToggleTheme;
-  tooltip: TooltipTheme;
-  breakpoints: Breakpoints;
-  mediaQueries: MediaQueries;
-  spacing: Spacing;
-  shadows: Shadows;
-  radii: Radii;
-  zIndices: ZIndices;
+    siteWidth: number;
+    isDark: boolean;
+    alert: AlertTheme;
+    colors: Colors;
+    card: CardTheme;
+    topBar: TopBarTheme;
+    leftBar: LeftBarTheme;
+    modal: ModalTheme;
+    heswapToggle: HeswapToggleTheme;
+    radio: RadioTheme;
+    toggle: ToggleTheme;
+    tooltip: TooltipTheme;
+    breakpoints: Breakpoints;
+    mediaQueries: MediaQueries;
+    spacing: Spacing;
+    shadows: Shadows;
+    radii: Radii;
+    zIndices: ZIndices;
 }
-
 export { default as dark } from "./dark";
 export { default as light } from "./light";
-
 export { lightColors } from "./colors";
 export { darkColors } from "./colors";
