@@ -4301,22 +4301,25 @@ var Menu$1 = function (_a) {
 var templateObject_1$a, templateObject_2$5, templateObject_3$3, templateObject_4$2, templateObject_5$1;
 
 var blink = keyframes(templateObject_1$9 || (templateObject_1$9 = __makeTemplateObject(["\n  0%,  100% { transform: scaleY(1); } \n  50% { transform:  scaleY(0.1); } \n"], ["\n  0%,  100% { transform: scaleY(1); } \n  50% { transform:  scaleY(0.1); } \n"])));
-var StyledLink = styled(Link$1)(templateObject_2$4 || (templateObject_2$4 = __makeTemplateObject(["\n  height: 64px;\n  padding-left: 16px;\n  padding-right: 16px;\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 32px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    display: none;\n    ", " {\n      display: flex;\n    }\n  }\n  .right-eye {\n    animation-delay: 20ms;\n  }\n  &:hover {\n    .left-eye,\n    .right-eye {\n      transform-origin: center 60%;\n      animation-name: ", ";\n      animation-duration: 350ms;\n      animation-iteration-count: 1;\n    }\n  }\n"], ["\n  height: 64px;\n  padding-left: 16px;\n  padding-right: 16px;\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 32px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    display: none;\n    ", " {\n      display: flex;\n    }\n  }\n  .right-eye {\n    animation-delay: 20ms;\n  }\n  &:hover {\n    .left-eye,\n    .right-eye {\n      transform-origin: center 60%;\n      animation-name: ", ";\n      animation-duration: 350ms;\n      animation-iteration-count: 1;\n    }\n  }\n"])), function (_a) {
+var StyledLink = styled(Link$1)(templateObject_2$4 || (templateObject_2$4 = __makeTemplateObject(["\n  height: 64px;\n  padding-left: 16px;\n  padding-right: 16px;\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 32px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    display: none;\n    ", " {\n      display: flex;\n      padding: ", ";\n    }\n  }\n  .right-eye {\n    animation-delay: 20ms;\n  }\n  &:hover {\n    .left-eye,\n    .right-eye {\n      transform-origin: center 60%;\n      animation-name: ", ";\n      animation-duration: 350ms;\n      animation-iteration-count: 1;\n    }\n  }\n"], ["\n  height: 64px;\n  padding-left: 16px;\n  padding-right: 16px;\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 32px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    display: none;\n    ", " {\n      display: flex;\n      padding: ", ";\n    }\n  }\n  .right-eye {\n    animation-delay: 20ms;\n  }\n  &:hover {\n    .left-eye,\n    .right-eye {\n      transform-origin: center 60%;\n      animation-name: ", ";\n      animation-duration: 350ms;\n      animation-iteration-count: 1;\n    }\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 }, function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.nav;
+}, function (_a) {
+    var isPushed = _a.isPushed;
+    return isPushed ? 0 : '0 16px';
 }, blink);
 var Logo = function (_a) {
     var isPushed = _a.isPushed, href = _a.href;
     var isAbsoluteUrl = href.startsWith("http");
     var innerLogo = (React.createElement(React.Fragment, null,
         React.createElement(Icon$13, { className: "mobile-icon" }),
-        React.createElement(Flex, { className: "desktop-icon", justifyContent: "center", alignItems: "center", paddingX: isPushed ? 0 : '16px' },
+        React.createElement(Flex, { className: "desktop-icon", justifyContent: "center", alignItems: "center" },
             React.createElement(Icon$13, { marginRight: "24px" }),
             isPushed && (React.createElement(Text, { color: "#fff", fontSize: "26px", fontWeight: "600" }, "heswap")))));
-    return (React.createElement(Flex, { justifyContent: "center", alignItems: "center" }, isAbsoluteUrl ? (React.createElement(StyledLink, { as: "a", href: href, "aria-label": "Heswap home page" }, innerLogo)) : (React.createElement(StyledLink, { to: href, "aria-label": "Heswap home page" }, innerLogo))));
+    return (React.createElement(Flex, { justifyContent: "center", alignItems: "center" }, isAbsoluteUrl ? (React.createElement(StyledLink, { as: "a", isPushed: isPushed, href: href, "aria-label": "Heswap home page" }, innerLogo)) : (React.createElement(StyledLink, { isPushed: isPushed, to: href, "aria-label": "Heswap home page" }, innerLogo))));
 };
 var AppLogo = React.memo(Logo, function (prev, next) { return prev.isPushed === next.isPushed; });
 var templateObject_1$9, templateObject_2$4;
