@@ -36,7 +36,7 @@ const PanelFooter: React.FC<Props> = ({
 }) => {
   return (
     <Container style={{
-      display: isPushed ? 'none' : 'block'
+      display: isPushed ? 'block' : 'none'
     }}>
       <Text color="#fff" marginBottom="12px">Live Trading Deals</Text>
       <RowWrapper style={{ marginBottom: '16px' }}>

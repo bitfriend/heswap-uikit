@@ -1,10 +1,11 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { IconButton } from '../../../components/Button';
 import { LogoIcon } from "../../../components/Svg";
 import Flex from "../../../components/Box/Flex";
-import { HamburgerIcon, HamburgerCloseIcon, AppLogoIcon as LogoWithText } from "../icons";
-import MenuButton from "./MenuButton";
+import { AppLogoIcon as LogoWithText } from "../icons";
 
 interface Props {
   isPushed: boolean;
@@ -16,6 +17,7 @@ interface Props {
 const StyledFlex = styled(Flex)`
   padding-top: 7px;
   padding-bottom: 7px;
+  position: relative;
 `;
 
 const blink = keyframes`
@@ -53,6 +55,11 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const StyledButton = styled(IconButton)`
+  position: absolute;
+  right: -12px;
+`;
+
 const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
@@ -64,13 +71,6 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
 
   return (
     <StyledFlex>
-      <MenuButton aria-label="Toggle menu" onClick={togglePush} mr="24px">
-        {isPushed ? (
-          <HamburgerCloseIcon width="24px" style={{ fill: '#fff' }} />
-        ) : (
-          <HamburgerIcon width="24px" style={{ fill: '#fff' }} />
-        )}
-      </MenuButton>
       {isAbsoluteUrl ? (
         <StyledLink as="a" href={href} aria-label="Heswap home page">
           {innerLogo}
@@ -80,6 +80,13 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
           {innerLogo}
         </StyledLink>
       )}
+      <StyledButton onClick={togglePush}>
+        {isPushed ? (
+          <FaChevronLeft width="16px" style={{ fill: '#fff' }} />
+        ) : (
+          <FaChevronRight width="16px" style={{ fill: '#fff' }} />
+        )}
+      </StyledButton>
     </StyledFlex>
   );
 };
