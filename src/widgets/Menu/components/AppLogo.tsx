@@ -66,7 +66,7 @@ const Logo: React.FC<Props> = ({ isPushed, href }) => {
   );
 
   return (
-    <Flex justifyContent="center" alignItems="center">
+    <Flex height="64px" justifyContent="center" alignItems="center">
       {isAbsoluteUrl ? (
         <StyledLink as="a" href={href} aria-label="Heswap home page">
           {innerLogo}

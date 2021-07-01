@@ -57,10 +57,8 @@ const StyledFlex = styled(Flex)`
   align-items: center;
 `;
 
-const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
+const Inner = styled.div`
   flex-grow: 1;
-  margin-top: ${({ showMenu }) => (showMenu ? `${MENU_HEIGHT}px` : 0)};
-  transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translate3d(0, 0, 0);
   max-width: 100%;
   position: relative;
@@ -191,7 +189,7 @@ const Menu: React.FC<NavProps> = ({
             </StyledFlex>
           )}
         </StyledNav>
-        <Inner isPushed={isPushed} showMenu={showMenu}>
+        <Inner>
           {children}
         </Inner>
         <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" />

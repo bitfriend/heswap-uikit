@@ -34,12 +34,6 @@ const StyledPanel = styled.div<{ isPushed: boolean }>`
   }
 `;
 
-const StyledLogo = styled(AppLogo)`
-  padding-top: 7px;
-  padding-bottom: 7px;
-  height: 64px;
-`;
-
 const Panel: React.FC<Props> = (props) => {
   const { isPushed, links } = props;
 
@@ -48,7 +42,7 @@ const Panel: React.FC<Props> = (props) => {
 
   return (
     <StyledPanel isPushed={isPushed}>
-      <StyledLogo
+      <AppLogo
         isPushed={isPushed}
         href={homeLink?.href ?? "/"}
       />
