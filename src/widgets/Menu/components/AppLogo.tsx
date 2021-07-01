@@ -57,10 +57,7 @@ const Logo: React.FC<Props> = ({ isPushed, href }) => {
         justifyContent="center"
         alignItems="center"
       >
-        <LogoIcon
-          paddingX={isPushed ? 0 : '16px'}
-          marginRight={isPushed ? '24px' : 0}
-        />
+        <LogoIcon marginRight={isPushed ? '24px' : 0} />
         {isPushed && (
           <Text color="#fff" fontSize="26px" fontWeight="600">heswap</Text>
         )}

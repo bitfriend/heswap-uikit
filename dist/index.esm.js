@@ -4314,7 +4314,7 @@ var Logo = function (_a) {
     var innerLogo = (React.createElement(React.Fragment, null,
         React.createElement(Icon$13, { className: "mobile-icon" }),
         React.createElement(Flex, { className: "desktop-icon", justifyContent: "center", alignItems: "center" },
-            React.createElement(Icon$13, { paddingX: isPushed ? 0 : '16px', marginRight: isPushed ? '24px' : 0 }),
+            React.createElement(Icon$13, { marginRight: isPushed ? '24px' : 0 }),
             isPushed && (React.createElement(Text, { color: "#fff", fontSize: "26px", fontWeight: "600" }, "heswap")))));
     return (React.createElement(Flex, { justifyContent: "center", alignItems: "center" }, isAbsoluteUrl ? (React.createElement(StyledLink, { as: "a", href: href, "aria-label": "Heswap home page" }, innerLogo)) : (React.createElement(StyledLink, { to: href, "aria-label": "Heswap home page" }, innerLogo))));
 };
