@@ -1,8 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import { IconButton } from '../../../components/Button';
 import { LogoIcon } from "../../../components/Svg";
 import Flex from "../../../components/Box/Flex";
 import { AppLogoIcon as LogoWithText } from "../icons";
@@ -10,7 +8,6 @@ import { AppLogoIcon as LogoWithText } from "../icons";
 interface Props {
   isPushed: boolean;
   isDark: boolean;
-  togglePush: () => void;
   href: string;
 }
 
@@ -55,12 +52,7 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const StyledButton = styled(IconButton)`
-  position: absolute;
-  right: -12px;
-`;
-
-const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
+const Logo: React.FC<Props> = ({ isDark, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
@@ -80,13 +72,6 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
           {innerLogo}
         </StyledLink>
       )}
-      <StyledButton onClick={togglePush}>
-        {isPushed ? (
-          <FaChevronLeft width="16px" style={{ fill: '#fff' }} />
-        ) : (
-          <FaChevronRight width="16px" style={{ fill: '#fff' }} />
-        )}
-      </StyledButton>
     </StyledFlex>
   );
 };
