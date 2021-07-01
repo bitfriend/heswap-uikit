@@ -50,7 +50,6 @@ const Panel: React.FC<Props> = (props) => {
     <StyledPanel isPushed={isPushed}>
       <StyledLogo
         isPushed={isPushed}
-        isDark
         href={homeLink?.href ?? "/"}
       />
       <AppPanelBody {...props} />

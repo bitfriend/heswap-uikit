@@ -3,11 +3,10 @@ import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
 import { LogoIcon } from "../../../components/Svg";
 import { Flex } from "../../../components/Box";
-import { AppLogoIcon as LogoWithText } from "../icons";
+import { Text } from "../../../components/Text";
 
 interface Props {
   isPushed: boolean;
-  isDark: boolean;
   href: string;
 }
 
@@ -29,7 +28,6 @@ const StyledLink = styled(Link)`
     }
   }
   .desktop-icon {
-    width: 160px;
     display: none;
     ${({ theme }) => theme.mediaQueries.nav} {
       display: block;
@@ -49,12 +47,17 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const Logo: React.FC<Props> = ({ isDark, href }) => {
+const Logo: React.FC<Props> = ({ isPushed, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
       <LogoIcon className="mobile-icon" />
-      <LogoWithText className="desktop-icon" isDark={isDark} />
+      <div className="desktop-icon">
+        <LogoIcon marginRight="24px" />
+        {isPushed && (
+          <Text color="#fff" fontSize="26px" fontWeight="600">heswap</Text>
+        )}
+      </div>
     </>
   );
 
@@ -73,4 +76,4 @@ const Logo: React.FC<Props> = ({ isDark, href }) => {
   );
 };
 
-export default React.memo(Logo, (prev, next) => prev.isPushed === next.isPushed && prev.isDark === next.isDark);
+export default React.memo(Logo, (prev, next) => prev.isPushed === next.isPushed);
