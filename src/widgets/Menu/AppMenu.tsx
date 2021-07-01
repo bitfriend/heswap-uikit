@@ -25,10 +25,19 @@ const Wrapper = styled.div`
   width: 100%;
 `;
 
+const BodyWrapper = styled.div<{ isPushed: boolean }>`
+  position: relative;
+  display: flex;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    left: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
+    max-width: ${({ isPushed }) => `calc(100% - ${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px)`};
+    transition: left 0.2s max-width 0.2s;
+  }
+`;
+
 const StyledNav = styled.nav<{ isPushed: boolean, showMenu: boolean, bgColor: string }>`
   position: fixed;
   top: ${({ showMenu }) => (showMenu ? 0 : `-${MENU_HEIGHT}px`)};
-  left: ${({ isPushed }) => (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED)}px;
   transition: top 0.2s;
   display: flex;
   justify-content: space-between;
@@ -48,11 +57,6 @@ const StyledFlex = styled(Flex)`
   align-items: center;
 `;
 
-const BodyWrapper = styled.div`
-  position: relative;
-  display: flex;
-`;
-
 const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   flex-grow: 1;
   margin-top: ${({ showMenu }) => (showMenu ? `${MENU_HEIGHT}px` : 0)};
@@ -60,10 +64,6 @@ const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   transform: translate3d(0, 0, 0);
   max-width: 100%;
   position: relative;
-  ${({ theme }) => theme.mediaQueries.nav} {
-    margin-left: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
-    max-width: ${({ isPushed }) => `calc(100% - ${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px)`};
-  }
 `;
 
 const MobileOnlyOverlay = styled(Overlay)`
@@ -143,47 +143,47 @@ const Menu: React.FC<NavProps> = ({
 
   return (
     <Wrapper>
-      <StyledNav isPushed={isPushed} showMenu={showMenu} bgColor={navColor}>
-        <Flex>
-          <IconButton variant="text">
-            <FaTelegramPlane fill="rgb(116, 155, 216)" size="24px" />
-          </IconButton>
-          <IconButton variant="text">
-            <FaTwitter fill="rgb(116, 155, 216)" size="24px" />
-          </IconButton>
-          <IconButton variant="text">
-            <FaMediumM fill="rgb(116, 155, 216)" size="24px" />
-          </IconButton>
-          <IconButton variant="text">
-            <FaYoutube fill="rgb(116, 155, 216)" size="24px" />
-          </IconButton>
-        </Flex>
-        {!!login && !!logout && (
-          <StyledFlex>
-            <StyledButton
-              variant="text"
-              startIcon={<StyledCheck />}
-            >
-              Certik Audit
-            </StyledButton>
-            <AppUserBlock account={account} login={login} logout={logout} />
-            {profile && <Avatar profile={profile} />}
-          </StyledFlex>
-        )}
-      </StyledNav>
-      <BodyWrapper>
-        <AppPanel
-          isPushed={isPushed}
-          isMobile={isMobile}
-          isDark={isDark}
-          toggleTheme={toggleTheme}
-          langs={langs}
-          setLang={setLang}
-          currentLang={currentLang}
-          cakePriceUsd={cakePriceUsd}
-          pushNav={setIsPushed}
-          links={links}
-        />
+      <AppPanel
+        isPushed={isPushed}
+        isMobile={isMobile}
+        isDark={isDark}
+        toggleTheme={toggleTheme}
+        langs={langs}
+        setLang={setLang}
+        currentLang={currentLang}
+        cakePriceUsd={cakePriceUsd}
+        pushNav={setIsPushed}
+        links={links}
+      />
+      <BodyWrapper isPushed={isPushed}>
+        <StyledNav isPushed={isPushed} showMenu={showMenu} bgColor={navColor}>
+          <Flex>
+            <IconButton variant="text">
+              <FaTelegramPlane fill="rgb(116, 155, 216)" size="24px" />
+            </IconButton>
+            <IconButton variant="text">
+              <FaTwitter fill="rgb(116, 155, 216)" size="24px" />
+            </IconButton>
+            <IconButton variant="text">
+              <FaMediumM fill="rgb(116, 155, 216)" size="24px" />
+            </IconButton>
+            <IconButton variant="text">
+              <FaYoutube fill="rgb(116, 155, 216)" size="24px" />
+            </IconButton>
+          </Flex>
+          {!!login && !!logout && (
+            <StyledFlex>
+              <StyledButton
+                variant="text"
+                startIcon={<StyledCheck />}
+              >
+                Certik Audit
+              </StyledButton>
+              <AppUserBlock account={account} login={login} logout={logout} />
+              {profile && <Avatar profile={profile} />}
+            </StyledFlex>
+          )}
+        </StyledNav>
         <Inner isPushed={isPushed} showMenu={showMenu}>
           {children}
           <StyledChevron onClick={setIsPushed}>

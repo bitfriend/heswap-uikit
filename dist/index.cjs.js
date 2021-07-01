@@ -4505,25 +4505,7 @@ var AppUserBlock = React__default['default'].memo(UserBlock, function (prevProps
 var templateObject_1$4;
 
 var Wrapper = styled__default['default'].div(templateObject_1$3 || (templateObject_1$3 = __makeTemplateObject(["\n  position: relative;\n  width: 100%;\n"], ["\n  position: relative;\n  width: 100%;\n"])));
-var StyledNav = styled__default['default'].nav(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  position: fixed;\n  top: ", ";\n  left: ", "px;\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: calc(100% - ", "px);\n  height: ", "px;\n  background-color: ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  top: ", ";\n  left: ", "px;\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: calc(100% - ", "px);\n  height: ", "px;\n  background-color: ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
-    var showMenu = _a.showMenu;
-    return (showMenu ? 0 : "-" + MENU_HEIGHT + "px");
-}, function (_a) {
-    var isPushed = _a.isPushed;
-    return (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED);
-}, function (_a) {
-    var isPushed = _a.isPushed;
-    return (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED);
-}, MENU_HEIGHT, function (_a) {
-    var bgColor = _a.bgColor;
-    return bgColor;
-});
-var StyledFlex = styled__default['default'](Flex)(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  flex: 1;\n  justify-content: flex-end;\n  align-items: center;\n"], ["\n  flex: 1;\n  justify-content: flex-end;\n  align-items: center;\n"])));
-var BodyWrapper = styled__default['default'].div(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n"], ["\n  position: relative;\n  display: flex;\n"])));
-var Inner = styled__default['default'].div(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n  flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n  position: relative;\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"], ["\n  flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n  position: relative;\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"])), function (_a) {
-    var showMenu = _a.showMenu;
-    return (showMenu ? MENU_HEIGHT + "px" : 0);
-}, function (_a) {
+var BodyWrapper = styled__default['default'].div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  ", " {\n    left: ", ";\n    max-width: ", ";\n    transition: left 0.2s max-width 0.2s;\n  }\n"], ["\n  position: relative;\n  display: flex;\n  ", " {\n    left: ", ";\n    max-width: ", ";\n    transition: left 0.2s max-width 0.2s;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 }, function (_a) {
@@ -4532,6 +4514,21 @@ var Inner = styled__default['default'].div(templateObject_5 || (templateObject_5
 }, function (_a) {
     var isPushed = _a.isPushed;
     return "calc(100% - " + (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) + "px)";
+});
+var StyledNav = styled__default['default'].nav(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  position: fixed;\n  top: ", ";\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: calc(100% - ", "px);\n  height: ", "px;\n  background-color: ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  top: ", ";\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: calc(100% - ", "px);\n  height: ", "px;\n  background-color: ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
+    var showMenu = _a.showMenu;
+    return (showMenu ? 0 : "-" + MENU_HEIGHT + "px");
+}, function (_a) {
+    var isPushed = _a.isPushed;
+    return (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED);
+}, MENU_HEIGHT, function (_a) {
+    var bgColor = _a.bgColor;
+    return bgColor;
+});
+var StyledFlex = styled__default['default'](Flex)(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  flex: 1;\n  justify-content: flex-end;\n  align-items: center;\n"], ["\n  flex: 1;\n  justify-content: flex-end;\n  align-items: center;\n"])));
+var Inner = styled__default['default'].div(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n  flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n  position: relative;\n"], ["\n  flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n  position: relative;\n"])), function (_a) {
+    var showMenu = _a.showMenu;
+    return (showMenu ? MENU_HEIGHT + "px" : 0);
 });
 var MobileOnlyOverlay = styled__default['default'](Overlay)(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  position: fixed;\n  height: 100%;\n\n  ", " {\n    display: none;\n  }\n"], ["\n  position: fixed;\n  height: 100%;\n\n  ", " {\n    display: none;\n  }\n"])), function (_a) {
     var theme = _a.theme;
@@ -4582,22 +4579,22 @@ var Menu = function (_a) {
         };
     }, []);
     return (React__default['default'].createElement(Wrapper, null,
-        React__default['default'].createElement(StyledNav, { isPushed: isPushed, showMenu: showMenu, bgColor: navColor },
-            React__default['default'].createElement(Flex, null,
-                React__default['default'].createElement(IconButton, { variant: "text" },
-                    React__default['default'].createElement(fa.FaTelegramPlane, { fill: "rgb(116, 155, 216)", size: "24px" })),
-                React__default['default'].createElement(IconButton, { variant: "text" },
-                    React__default['default'].createElement(fa.FaTwitter, { fill: "rgb(116, 155, 216)", size: "24px" })),
-                React__default['default'].createElement(IconButton, { variant: "text" },
-                    React__default['default'].createElement(fa.FaMediumM, { fill: "rgb(116, 155, 216)", size: "24px" })),
-                React__default['default'].createElement(IconButton, { variant: "text" },
-                    React__default['default'].createElement(fa.FaYoutube, { fill: "rgb(116, 155, 216)", size: "24px" }))),
-            !!login && !!logout && (React__default['default'].createElement(StyledFlex, null,
-                React__default['default'].createElement(StyledButton, { variant: "text", startIcon: React__default['default'].createElement(StyledCheck, null) }, "Certik Audit"),
-                React__default['default'].createElement(AppUserBlock, { account: account, login: login, logout: logout }),
-                profile && React__default['default'].createElement(Avatar, { profile: profile })))),
-        React__default['default'].createElement(BodyWrapper, null,
-            React__default['default'].createElement(Panel, { isPushed: isPushed, isMobile: isMobile, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, pushNav: setIsPushed, links: links }),
+        React__default['default'].createElement(Panel, { isPushed: isPushed, isMobile: isMobile, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, pushNav: setIsPushed, links: links }),
+        React__default['default'].createElement(BodyWrapper, { isPushed: isPushed },
+            React__default['default'].createElement(StyledNav, { isPushed: isPushed, showMenu: showMenu, bgColor: navColor },
+                React__default['default'].createElement(Flex, null,
+                    React__default['default'].createElement(IconButton, { variant: "text" },
+                        React__default['default'].createElement(fa.FaTelegramPlane, { fill: "rgb(116, 155, 216)", size: "24px" })),
+                    React__default['default'].createElement(IconButton, { variant: "text" },
+                        React__default['default'].createElement(fa.FaTwitter, { fill: "rgb(116, 155, 216)", size: "24px" })),
+                    React__default['default'].createElement(IconButton, { variant: "text" },
+                        React__default['default'].createElement(fa.FaMediumM, { fill: "rgb(116, 155, 216)", size: "24px" })),
+                    React__default['default'].createElement(IconButton, { variant: "text" },
+                        React__default['default'].createElement(fa.FaYoutube, { fill: "rgb(116, 155, 216)", size: "24px" }))),
+                !!login && !!logout && (React__default['default'].createElement(StyledFlex, null,
+                    React__default['default'].createElement(StyledButton, { variant: "text", startIcon: React__default['default'].createElement(StyledCheck, null) }, "Certik Audit"),
+                    React__default['default'].createElement(AppUserBlock, { account: account, login: login, logout: logout }),
+                    profile && React__default['default'].createElement(Avatar, { profile: profile })))),
             React__default['default'].createElement(Inner, { isPushed: isPushed, showMenu: showMenu },
                 children,
                 React__default['default'].createElement(StyledChevron, { onClick: setIsPushed }, isPushed ? (React__default['default'].createElement(fa.FaChevronLeft, { width: "16px", style: { fill: '#fff' } })) : (React__default['default'].createElement(fa.FaChevronRight, { width: "16px", style: { fill: '#fff' } })))),
