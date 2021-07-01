@@ -84,9 +84,13 @@ const StyledCheck = styled(FaCheckCircle)`
   fill: ${({ theme }) => theme.colors.success}
 `;
 
-const StyledChevron = styled(IconButton)`
-  position: absolute;
-  left: -12px;
+const StyledChevron = styled(IconButton)<{ isPushed: boolean }>`
+  position: fixed;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    left: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
+    top: 30px;
+    transition: left 0.2s;
+  }
 `;
 
 const Menu: React.FC<NavProps> = ({
@@ -186,14 +190,14 @@ const Menu: React.FC<NavProps> = ({
         </StyledNav>
         <Inner isPushed={isPushed} showMenu={showMenu}>
           {children}
-          <StyledChevron onClick={setIsPushed}>
-            {isPushed ? (
-              <FaChevronLeft width="16px" style={{ fill: '#fff' }} />
-            ) : (
-              <FaChevronRight width="16px" style={{ fill: '#fff' }} />
-            )}
-          </StyledChevron>
         </Inner>
+        <StyledChevron isPushed={isPushed} onClick={setIsPushed}>
+          {isPushed ? (
+            <FaChevronLeft width="16px" style={{ fill: '#fff' }} />
+          ) : (
+            <FaChevronRight width="16px" style={{ fill: '#fff' }} />
+          )}
+        </StyledChevron>
         <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" />
       </BodyWrapper>
     </Wrapper>
