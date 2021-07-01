@@ -30,7 +30,7 @@ const StyledLink = styled(Link)`
   .desktop-icon {
     display: none;
     ${({ theme }) => theme.mediaQueries.nav} {
-      display: block;
+      display: flex;
     }
   }
   .right-eye {
