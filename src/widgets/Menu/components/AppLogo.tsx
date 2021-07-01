@@ -15,7 +15,7 @@ const blink = keyframes`
   50% { transform:  scaleY(0.1); } 
 `;
 
-const StyledLink = styled(Link)<{ isPushed: boolean }>`
+const StyledLink = styled(Link)`
   height: 64px;
   padding-left: 16px;
   padding-right: 16px;
@@ -31,7 +31,6 @@ const StyledLink = styled(Link)<{ isPushed: boolean }>`
     display: none;
     ${({ theme }) => theme.mediaQueries.nav} {
       display: flex;
-      padding: ${({ isPushed }) => isPushed ? 0 : '0 16px'};
     }
   }
   .right-eye {
@@ -58,7 +57,10 @@ const Logo: React.FC<Props> = ({ isPushed, href }) => {
         justifyContent="center"
         alignItems="center"
       >
-        <LogoIcon marginRight="24px" />
+        <LogoIcon
+          paddingX={isPushed ? 0 : '16px'}
+          marginRight={isPushed ? '24px' : 0}
+        />
         {isPushed && (
           <Text color="#fff" fontSize="26px" fontWeight="600">heswap</Text>
         )}
@@ -69,11 +71,11 @@ const Logo: React.FC<Props> = ({ isPushed, href }) => {
   return (
     <Flex justifyContent="center" alignItems="center">
       {isAbsoluteUrl ? (
-        <StyledLink as="a" isPushed={isPushed} href={href} aria-label="Heswap home page">
+        <StyledLink as="a" href={href} aria-label="Heswap home page">
           {innerLogo}
         </StyledLink>
       ) : (
-        <StyledLink isPushed={isPushed} to={href} aria-label="Heswap home page">
+        <StyledLink to={href} aria-label="Heswap home page">
           {innerLogo}
         </StyledLink>
       )}
