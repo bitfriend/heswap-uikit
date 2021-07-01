@@ -4539,12 +4539,12 @@ var StyledCheck = styled__default['default'](fa.FaCheckCircle)(templateObject_8 
     var theme = _a.theme;
     return theme.colors.success;
 });
-var StyledChevron = styled__default['default'](IconButton)(templateObject_9 || (templateObject_9 = __makeTemplateObject(["\n  position: fixed;\n  ", " {\n    left: ", ";\n    top: 30px;\n    transition: left 0.2s;\n  }\n"], ["\n  position: fixed;\n  ", " {\n    left: ", ";\n    top: 30px;\n    transition: left 0.2s;\n  }\n"])), function (_a) {
+var StyledChevron = styled__default['default'](IconButton)(templateObject_9 || (templateObject_9 = __makeTemplateObject(["\n  z-index: 30; /* z-index of top bar is 20 */\n  position: fixed;\n  ", " {\n    left: ", ";\n    top: 4px;\n    transition: left 0.2s;\n  }\n"], ["\n  z-index: 30; /* z-index of top bar is 20 */\n  position: fixed;\n  ", " {\n    left: ", ";\n    top: 4px;\n    transition: left 0.2s;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 }, function (_a) {
     var isPushed = _a.isPushed;
-    return (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) + "px";
+    return (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) - 12 + "px";
 });
 var Menu = function (_a) {
     var account = _a.account, login = _a.login, logout = _a.logout, isDark = _a.isDark, toggleTheme = _a.toggleTheme, langs = _a.langs, setLang = _a.setLang, currentLang = _a.currentLang, cakePriceUsd = _a.cakePriceUsd, links = _a.links, profile = _a.profile, children = _a.children;
@@ -4603,7 +4603,7 @@ var Menu = function (_a) {
                     profile && React__default['default'].createElement(Avatar, { profile: profile })))),
             React__default['default'].createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children),
             React__default['default'].createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" })),
-        React__default['default'].createElement(StyledChevron, { isPushed: isPushed, onClick: setIsPushed }, isPushed ? (React__default['default'].createElement(fa.FaChevronLeft, { width: "16px", style: { fill: '#fff' } })) : (React__default['default'].createElement(fa.FaChevronRight, { width: "16px", style: { fill: '#fff' } })))));
+        React__default['default'].createElement(StyledChevron, { isPushed: isPushed, onClick: function () { return setIsPushed(function (value) { return !value; }); } }, isPushed ? (React__default['default'].createElement(fa.FaChevronLeft, { width: "16px", style: { fill: '#fff' } })) : (React__default['default'].createElement(fa.FaChevronRight, { width: "16px", style: { fill: '#fff' } })))));
 };
 var templateObject_1$3, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7, templateObject_8, templateObject_9;
 

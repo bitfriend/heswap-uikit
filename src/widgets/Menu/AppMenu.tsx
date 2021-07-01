@@ -85,10 +85,11 @@ const StyledCheck = styled(FaCheckCircle)`
 `;
 
 const StyledChevron = styled(IconButton)<{ isPushed: boolean }>`
+  z-index: 30; /* z-index of top bar is 20 */
   position: fixed;
   ${({ theme }) => theme.mediaQueries.nav} {
-    left: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
-    top: 30px;
+    left: ${({ isPushed }) => `${(isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) - 12}px`};
+    top: 4px;
     transition: left 0.2s;
   }
 `;
@@ -193,7 +194,7 @@ const Menu: React.FC<NavProps> = ({
         </Inner>
         <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" />
       </BodyWrapper>
-      <StyledChevron isPushed={isPushed} onClick={setIsPushed}>
+      <StyledChevron isPushed={isPushed} onClick={() => setIsPushed(value => !value)}>
         {isPushed ? (
           <FaChevronLeft width="16px" style={{ fill: '#fff' }} />
         ) : (
