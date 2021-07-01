@@ -2,7 +2,7 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
 import { LogoIcon } from "../../../components/Svg";
-import Flex from "../../../components/Box/Flex";
+import { Flex } from "../../../components/Box";
 import { AppLogoIcon as LogoWithText } from "../icons";
 
 interface Props {
@@ -11,18 +11,15 @@ interface Props {
   href: string;
 }
 
-const StyledFlex = styled(Flex)`
-  padding-top: 7px;
-  padding-bottom: 7px;
-  position: relative;
-`;
-
 const blink = keyframes`
   0%,  100% { transform: scaleY(1); } 
   50% { transform:  scaleY(0.1); } 
 `;
 
 const StyledLink = styled(Link)`
+  height: 64px;
+  padding-left: 16px;
+  padding-right: 16px;
   display: flex;
   align-items: center;
   .mobile-icon {
@@ -62,7 +59,7 @@ const Logo: React.FC<Props> = ({ isDark, href }) => {
   );
 
   return (
-    <StyledFlex>
+    <Flex justifyContent="center" alignItems="center">
       {isAbsoluteUrl ? (
         <StyledLink as="a" href={href} aria-label="Heswap home page">
           {innerLogo}
@@ -72,7 +69,7 @@ const Logo: React.FC<Props> = ({ isDark, href }) => {
           {innerLogo}
         </StyledLink>
       )}
-    </StyledFlex>
+    </Flex>
   );
 };
 

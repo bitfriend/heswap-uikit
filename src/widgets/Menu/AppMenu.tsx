@@ -10,8 +10,8 @@ import {
   FaTwitter,
   FaYoutube,
 } from 'react-icons/fa';
-import Overlay from "../../components/Overlay/Overlay";
-import Flex from "../../components/Box/Flex";
+import { Overlay } from "../../components/Overlay";
+import { Flex } from "../../components/Box";
 import { useMatchBreakpoints } from "../../hooks";
 import AppPanel from "./components/AppPanel";
 import AppUserBlock from "./components/AppUserBlock";
@@ -85,11 +85,13 @@ const StyledCheck = styled(FaCheckCircle)`
 `;
 
 const StyledChevron = styled(IconButton)<{ isPushed: boolean }>`
+  width: 32px;
+  height: 32px;
   z-index: 30; /* z-index of top bar is 20 */
   position: fixed;
   ${({ theme }) => theme.mediaQueries.nav} {
-    left: ${({ isPushed }) => `${(isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) - 12}px`};
-    top: 4px;
+    left: ${({ isPushed }) => `${(isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) - 16}px`};
+    top: 12px;
     transition: left 0.2s;
   }
 `;

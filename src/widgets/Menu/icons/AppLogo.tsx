@@ -10,7 +10,7 @@ const Logo: React.FC<LogoProps> = ({ isDark, ...props }) => {
   const textColor = isDark ? "#FFFFFF" : "#000000";
   return (
     <Svg viewBox="0 0 160 26" {...props}>
-      <text x={32} y={20} fontSize={24} fill={textColor}>heswap</text>
+      <text x={36} y={20} fontSize={26} fontWeight="600" fill={textColor}>heswap</text>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
