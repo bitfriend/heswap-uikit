@@ -4389,13 +4389,16 @@ var LinkLabelMemo = React__default['default'].memo(LinkLabel, function (prev, ne
 var templateObject_1$8, templateObject_2$3, templateObject_3$2, templateObject_4$1;
 
 var Icons = IconModule;
-var Container$1 = styled__default['default'].div(templateObject_1$7 || (templateObject_1$7 = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  padding: 0 16px;\n"], ["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  padding: 0 16px;\n"])));
+var Container$1 = styled__default['default'].div(templateObject_1$7 || (templateObject_1$7 = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  padding: ", ";\n"], ["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  padding: ", ";\n"])), function (_a) {
+    var isPushed = _a.isPushed;
+    return isPushed ? '0' : '0 16px';
+});
 var PanelBody = function (_a) {
     var isPushed = _a.isPushed, pushNav = _a.pushNav, isMobile = _a.isMobile, links = _a.links;
     var location = reactRouterDom.useLocation();
     // Close the menu when a user clicks a link on mobile
     var handleClick = isMobile ? function () { return pushNav(false); } : undefined;
-    return (React__default['default'].createElement(Container$1, null, links.map(function (entry) {
+    return (React__default['default'].createElement(Container$1, { isPushed: isPushed }, links.map(function (entry) {
         var Icon = Icons[entry.icon];
         var iconElement = React__default['default'].createElement(Icon, { width: "24px", mr: "8px" });
         var calloutClass = entry.calloutClass ? entry.calloutClass : undefined;
@@ -4424,13 +4427,10 @@ var Container = styled__default['default'].div(templateObject_1$6 || (templateOb
 var RowWrapper = styled__default['default'].div(templateObject_2$2 || (templateObject_2$2 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n"], ["\n  display: flex;\n  align-items: center;\n"])));
 var IconWrapper = styled__default['default'].div(templateObject_3$1 || (templateObject_3$1 = __makeTemplateObject(["\n  margin-right: 8px;\n  width: 24px;\n  height: 24px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 8px;\n  background-color: rgb(29, 200, 114);\n"], ["\n  margin-right: 8px;\n  width: 24px;\n  height: 24px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 8px;\n  background-color: rgb(29, 200, 114);\n"])));
 var PanelFooter = function (_a) {
-    var isPushed = _a.isPushed, pushNav = _a.pushNav;
-    if (!isPushed) {
-        return (React__default['default'].createElement(Container, null,
-            React__default['default'].createElement(IconButton, { variant: "text", onClick: function () { return pushNav(true); } },
-                React__default['default'].createElement(Icon$1d, null))));
-    }
-    return (React__default['default'].createElement(Container, null,
+    var isPushed = _a.isPushed;
+    return (React__default['default'].createElement(Container, { style: {
+            display: isPushed ? 'none' : 'block'
+        } },
         React__default['default'].createElement(Text, { color: "#fff", marginBottom: "12px" }, "Live Trading Deals"),
         React__default['default'].createElement(RowWrapper, { style: { marginBottom: '16px' } },
             React__default['default'].createElement(IconWrapper, null,

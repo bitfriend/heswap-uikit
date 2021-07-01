@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { AutoRenewIcon, CogIcon } from "../../../components/Svg";
+import { AutoRenewIcon } from "../../../components/Svg";
 import { Text } from "../../../components/Text";
-import IconButton from "../../../components/Button/IconButton";
 import { PanelProps, PushedProps } from "../types";
 
 interface Props extends PanelProps, PushedProps {}
@@ -33,21 +32,12 @@ const IconWrapper = styled.div`
 `;
 
 const PanelFooter: React.FC<Props> = ({
-  isPushed,
-  pushNav,
+  isPushed
 }) => {
-  if (!isPushed) {
-    return (
-      <Container>
-        <IconButton variant="text" onClick={() => pushNav(true)}>
-          <CogIcon />
-        </IconButton>
-      </Container>
-    );
-  }
-
   return (
-    <Container>
+    <Container style={{
+      display: isPushed ? 'none' : 'block'
+    }}>
       <Text color="#fff" marginBottom="12px">Live Trading Deals</Text>
       <RowWrapper style={{ marginBottom: '16px' }}>
         <IconWrapper>

@@ -4375,13 +4375,16 @@ var LinkLabelMemo = React.memo(LinkLabel, function (prev, next) { return prev.is
 var templateObject_1$8, templateObject_2$3, templateObject_3$2, templateObject_4$1;
 
 var Icons = IconModule;
-var Container$1 = styled.div(templateObject_1$7 || (templateObject_1$7 = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  padding: 0 16px;\n"], ["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  padding: 0 16px;\n"])));
+var Container$1 = styled.div(templateObject_1$7 || (templateObject_1$7 = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  padding: ", ";\n"], ["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  padding: ", ";\n"])), function (_a) {
+    var isPushed = _a.isPushed;
+    return isPushed ? '0' : '0 16px';
+});
 var PanelBody = function (_a) {
     var isPushed = _a.isPushed, pushNav = _a.pushNav, isMobile = _a.isMobile, links = _a.links;
     var location = useLocation();
     // Close the menu when a user clicks a link on mobile
     var handleClick = isMobile ? function () { return pushNav(false); } : undefined;
-    return (React.createElement(Container$1, null, links.map(function (entry) {
+    return (React.createElement(Container$1, { isPushed: isPushed }, links.map(function (entry) {
         var Icon = Icons[entry.icon];
         var iconElement = React.createElement(Icon, { width: "24px", mr: "8px" });
         var calloutClass = entry.calloutClass ? entry.calloutClass : undefined;
@@ -4410,13 +4413,10 @@ var Container = styled.div(templateObject_1$6 || (templateObject_1$6 = __makeTem
 var RowWrapper = styled.div(templateObject_2$2 || (templateObject_2$2 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n"], ["\n  display: flex;\n  align-items: center;\n"])));
 var IconWrapper = styled.div(templateObject_3$1 || (templateObject_3$1 = __makeTemplateObject(["\n  margin-right: 8px;\n  width: 24px;\n  height: 24px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 8px;\n  background-color: rgb(29, 200, 114);\n"], ["\n  margin-right: 8px;\n  width: 24px;\n  height: 24px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 8px;\n  background-color: rgb(29, 200, 114);\n"])));
 var PanelFooter = function (_a) {
-    var isPushed = _a.isPushed, pushNav = _a.pushNav;
-    if (!isPushed) {
-        return (React.createElement(Container, null,
-            React.createElement(IconButton, { variant: "text", onClick: function () { return pushNav(true); } },
-                React.createElement(Icon$1d, null))));
-    }
-    return (React.createElement(Container, null,
+    var isPushed = _a.isPushed;
+    return (React.createElement(Container, { style: {
+            display: isPushed ? 'none' : 'block'
+        } },
         React.createElement(Text, { color: "#fff", marginBottom: "12px" }, "Live Trading Deals"),
         React.createElement(RowWrapper, { style: { marginBottom: '16px' } },
             React.createElement(IconWrapper, null,
