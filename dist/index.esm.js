@@ -4478,7 +4478,7 @@ var AppUserBlock = React.memo(UserBlock, function (prevProps, nextProps) {
 var templateObject_1$4;
 
 var Wrapper = styled.div(templateObject_1$3 || (templateObject_1$3 = __makeTemplateObject(["\n  position: relative;\n  width: 100%;\n"], ["\n  position: relative;\n  width: 100%;\n"])));
-var BodyWrapper = styled.div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  ", " {\n    left: ", ";\n    max-width: ", ";\n    transition: left 0.2s max-width 0.2s;\n  }\n"], ["\n  position: relative;\n  display: flex;\n  ", " {\n    left: ", ";\n    max-width: ", ";\n    transition: left 0.2s max-width 0.2s;\n  }\n"])), function (_a) {
+var BodyWrapper = styled.div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  ", " {\n    left: ", ";\n    max-width: ", ";\n    transition: left 0.2s, max-width 0.2s;\n  }\n"], ["\n  position: relative;\n  display: flex;\n  ", " {\n    left: ", ";\n    max-width: ", ";\n    transition: left 0.2s, max-width 0.2s;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 }, function (_a) {

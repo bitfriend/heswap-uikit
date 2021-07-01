@@ -31,7 +31,7 @@ const BodyWrapper = styled.div<{ isPushed: boolean }>`
   ${({ theme }) => theme.mediaQueries.nav} {
     left: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
     max-width: ${({ isPushed }) => `calc(100% - ${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px)`};
-    transition: left 0.2s max-width 0.2s;
+    transition: left 0.2s, max-width 0.2s;
   }
 `;
 
