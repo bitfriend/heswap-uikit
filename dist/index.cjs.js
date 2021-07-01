@@ -4602,8 +4602,8 @@ var Menu = function (_a) {
                     React__default['default'].createElement(AppUserBlock, { account: account, login: login, logout: logout }),
                     profile && React__default['default'].createElement(Avatar, { profile: profile })))),
             React__default['default'].createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children),
-            React__default['default'].createElement(StyledChevron, { isPushed: isPushed, onClick: setIsPushed }, isPushed ? (React__default['default'].createElement(fa.FaChevronLeft, { width: "16px", style: { fill: '#fff' } })) : (React__default['default'].createElement(fa.FaChevronRight, { width: "16px", style: { fill: '#fff' } }))),
-            React__default['default'].createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" }))));
+            React__default['default'].createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" })),
+        React__default['default'].createElement(StyledChevron, { isPushed: isPushed, onClick: setIsPushed }, isPushed ? (React__default['default'].createElement(fa.FaChevronLeft, { width: "16px", style: { fill: '#fff' } })) : (React__default['default'].createElement(fa.FaChevronRight, { width: "16px", style: { fill: '#fff' } })))));
 };
 var templateObject_1$3, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7, templateObject_8, templateObject_9;
 

@@ -4588,8 +4588,8 @@ var Menu = function (_a) {
                     React.createElement(AppUserBlock, { account: account, login: login, logout: logout }),
                     profile && React.createElement(Avatar, { profile: profile })))),
             React.createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children),
-            React.createElement(StyledChevron, { isPushed: isPushed, onClick: setIsPushed }, isPushed ? (React.createElement(FaChevronLeft, { width: "16px", style: { fill: '#fff' } })) : (React.createElement(FaChevronRight, { width: "16px", style: { fill: '#fff' } }))),
-            React.createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" }))));
+            React.createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" })),
+        React.createElement(StyledChevron, { isPushed: isPushed, onClick: setIsPushed }, isPushed ? (React.createElement(FaChevronLeft, { width: "16px", style: { fill: '#fff' } })) : (React.createElement(FaChevronRight, { width: "16px", style: { fill: '#fff' } })))));
 };
 var templateObject_1$3, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7, templateObject_8, templateObject_9;
 

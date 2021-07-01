@@ -191,15 +191,15 @@ const Menu: React.FC<NavProps> = ({
         <Inner isPushed={isPushed} showMenu={showMenu}>
           {children}
         </Inner>
-        <StyledChevron isPushed={isPushed} onClick={setIsPushed}>
-          {isPushed ? (
-            <FaChevronLeft width="16px" style={{ fill: '#fff' }} />
-          ) : (
-            <FaChevronRight width="16px" style={{ fill: '#fff' }} />
-          )}
-        </StyledChevron>
         <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" />
       </BodyWrapper>
+      <StyledChevron isPushed={isPushed} onClick={setIsPushed}>
+        {isPushed ? (
+          <FaChevronLeft width="16px" style={{ fill: '#fff' }} />
+        ) : (
+          <FaChevronRight width="16px" style={{ fill: '#fff' }} />
+        )}
+      </StyledChevron>
     </Wrapper>
   );
 };
