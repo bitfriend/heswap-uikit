@@ -4313,7 +4313,7 @@ var Logo = function (_a) {
     var isAbsoluteUrl = href.startsWith("http");
     var innerLogo = (React.createElement(React.Fragment, null,
         React.createElement(Icon$13, { className: "mobile-icon" }),
-        React.createElement("div", { className: "desktop-icon" },
+        React.createElement(Flex, { className: "desktop-icon", justifyContent: "center", alignItems: "center", paddingX: isPushed ? 0 : '16px' },
             React.createElement(Icon$13, { marginRight: "24px" }),
             isPushed && (React.createElement(Text, { color: "#fff", fontSize: "26px", fontWeight: "600" }, "heswap")))));
     return (React.createElement(Flex, { justifyContent: "center", alignItems: "center" }, isAbsoluteUrl ? (React.createElement(StyledLink, { as: "a", href: href, "aria-label": "Heswap home page" }, innerLogo)) : (React.createElement(StyledLink, { to: href, "aria-label": "Heswap home page" }, innerLogo))));

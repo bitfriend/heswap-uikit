@@ -52,12 +52,17 @@ const Logo: React.FC<Props> = ({ isPushed, href }) => {
   const innerLogo = (
     <>
       <LogoIcon className="mobile-icon" />
-      <div className="desktop-icon">
+      <Flex
+        className="desktop-icon"
+        justifyContent="center"
+        alignItems="center"
+        paddingX={isPushed ? 0 : '16px'}
+      >
         <LogoIcon marginRight="24px" />
         {isPushed && (
           <Text color="#fff" fontSize="26px" fontWeight="600">heswap</Text>
         )}
-      </div>
+      </Flex>
     </>
   );
 
