@@ -20,7 +20,7 @@ const Container = styled.div<{ isPushed: boolean }>`
   overflow-y: auto;
   overflow-x: hidden;
   height: 100%;
-  padding: ${({ isPushed }) => isPushed ? '0' : '0 16px'};
+  padding: ${({ isPushed }) => isPushed ? '0 16px' : '0'};
 `;
 
 const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {

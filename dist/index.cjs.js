@@ -4391,7 +4391,7 @@ var templateObject_1$8, templateObject_2$3, templateObject_3$2, templateObject_4
 var Icons = IconModule;
 var Container$1 = styled__default['default'].div(templateObject_1$7 || (templateObject_1$7 = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  padding: ", ";\n"], ["\n  display: flex;\n  flex-direction: column;\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  padding: ", ";\n"])), function (_a) {
     var isPushed = _a.isPushed;
-    return isPushed ? '0' : '0 16px';
+    return isPushed ? '0 16px' : '0';
 });
 var PanelBody = function (_a) {
     var isPushed = _a.isPushed, pushNav = _a.pushNav, isMobile = _a.isMobile, links = _a.links;
