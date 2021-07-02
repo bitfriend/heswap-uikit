@@ -10,7 +10,7 @@ const scaleKeyValues = {
     handleTop: "-4px",
     checkedLeft: "calc(100% - 16px)",
     toggleHeight: "16px",
-    toggleWidth: "36px",
+    toggleWidth: "40px",
   },
   md: {
     handleHeight: "32px",
