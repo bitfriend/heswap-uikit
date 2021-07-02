@@ -9,6 +9,6 @@ export const light: ToggleTheme = {
 
 export const dark: ToggleTheme = {
   handleBackground: darkColors.backgroundAlt,
-  checkedHandleColor: lightColors.success,
-  uncheckedHandleColor: lightColors.textSubtle
+  checkedHandleColor: darkColors.success,
+  uncheckedHandleColor: darkColors.textSubtle
 };
