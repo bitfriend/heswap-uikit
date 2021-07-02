@@ -2671,8 +2671,8 @@ var getScale = function (property) {
     };
 };
 var Handle = styled__default['default'].div(templateObject_1$r || (templateObject_1$r = __makeTemplateObject(["\n  background-color: ", ";\n  border-radius: 50%;\n  cursor: pointer;\n  height: ", ";\n  left: ", ";\n  position: absolute;\n  top: ", ";\n  transition: left 200ms ease-in;\n  width: ", ";\n  z-index: 1;\n"], ["\n  background-color: ", ";\n  border-radius: 50%;\n  cursor: pointer;\n  height: ", ";\n  left: ", ";\n  position: absolute;\n  top: ", ";\n  transition: left 200ms ease-in;\n  width: ", ";\n  z-index: 1;\n"])), function (_a) {
-    var theme = _a.theme;
-    return theme.toggle.handleBackground;
+    var theme = _a.theme, checked = _a.checked;
+    return theme.toggle[checked ? "checkedHandleColor" : "uncheckedHandleColor"];
 }, getScale("handleHeight"), getScale("handleLeft"), getScale("handleTop"), getScale("handleWidth"));
 var Input = styled__default['default'].input(templateObject_2$d || (templateObject_2$d = __makeTemplateObject(["\n  cursor: pointer;\n  opacity: 0;\n  height: 100%;\n  position: absolute;\n  width: 100%;\n  z-index: 3;\n\n  &:checked + ", " {\n    left: ", ";\n  }\n\n  &:focus + ", " {\n    box-shadow: ", ";\n  }\n\n  &:hover + ", ":not(:disabled):not(:checked) {\n    box-shadow: ", ";\n  }\n"], ["\n  cursor: pointer;\n  opacity: 0;\n  height: 100%;\n  position: absolute;\n  width: 100%;\n  z-index: 3;\n\n  &:checked + ", " {\n    left: ", ";\n  }\n\n  &:focus + ", " {\n    box-shadow: ", ";\n  }\n\n  &:hover + ", ":not(:disabled):not(:checked) {\n    box-shadow: ", ";\n  }\n"])), Handle, getScale("checkedLeft"), Handle, function (_a) {
     var theme = _a.theme;
@@ -2682,8 +2682,8 @@ var Input = styled__default['default'].input(templateObject_2$d || (templateObje
     return theme.shadows.focus;
 });
 var StyledToggle = styled__default['default'].div(templateObject_3$7 || (templateObject_3$7 = __makeTemplateObject(["\n  align-items: center;\n  background-color: ", ";\n  border-radius: 24px;\n  box-shadow: ", ";\n  cursor: pointer;\n  display: inline-flex;\n  height: ", ";\n  position: relative;\n  transition: background-color 200ms;\n  width: ", ";\n"], ["\n  align-items: center;\n  background-color: ", ";\n  border-radius: 24px;\n  box-shadow: ", ";\n  cursor: pointer;\n  display: inline-flex;\n  height: ", ";\n  position: relative;\n  transition: background-color 200ms;\n  width: ", ";\n"])), function (_a) {
-    var theme = _a.theme, checked = _a.checked;
-    return theme.colors[checked ? "success" : "input"];
+    var theme = _a.theme;
+    return theme.colors.input;
 }, function (_a) {
     var theme = _a.theme;
     return theme.shadows.inset;
@@ -2700,7 +2700,7 @@ var Toggle = function (_a) {
     var isChecked = !!checked;
     return (React__default['default'].createElement(StyledToggle, { checked: isChecked, scale: scale },
         React__default['default'].createElement(Input, __assign({ checked: checked, scale: scale }, props, { type: "checkbox" })),
-        React__default['default'].createElement(Handle, { scale: scale })));
+        React__default['default'].createElement(Handle, { checked: checked, scale: scale })));
 };
 Toggle.defaultProps = {
     scale: scales.MD,
@@ -3032,9 +3032,13 @@ var dark$3 = {
 
 var light$2 = {
     handleBackground: lightColors.backgroundAlt,
+    checkedHandleColor: lightColors.success,
+    uncheckedHandleColor: lightColors.textSubtle
 };
 var dark$2 = {
     handleBackground: darkColors.backgroundAlt,
+    checkedHandleColor: lightColors.success,
+    uncheckedHandleColor: lightColors.textSubtle
 };
 
 var lightTopBar = {

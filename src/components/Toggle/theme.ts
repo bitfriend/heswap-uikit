@@ -3,8 +3,12 @@ import { ToggleTheme } from "./types";
 
 export const light: ToggleTheme = {
   handleBackground: lightColors.backgroundAlt,
+  checkedHandleColor: lightColors.success,
+  uncheckedHandleColor: lightColors.textSubtle
 };
 
 export const dark: ToggleTheme = {
   handleBackground: darkColors.backgroundAlt,
+  checkedHandleColor: lightColors.success,
+  uncheckedHandleColor: lightColors.textSubtle
 };

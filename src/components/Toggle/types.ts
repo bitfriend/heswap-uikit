@@ -2,6 +2,8 @@ import { InputHTMLAttributes } from "react";
 
 export type ToggleTheme = {
   handleBackground: string;
+  checkedHandleColor: string;
+  uncheckedHandleColor: string;
 };
 
 export const scales = {
@@ -18,6 +20,7 @@ export interface ToggleProps extends InputHTMLAttributes<HTMLInputElement> {
 
 export interface HandleProps {
   scale: Scales;
+  checked?: boolean;
 }
 
 export interface InputProps {
