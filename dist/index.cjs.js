@@ -2648,9 +2648,9 @@ var scaleKeyValues = {
     sm: {
         handleHeight: "24px",
         handleWidth: "24px",
-        handleLeft: "-4px",
+        handleLeft: 0,
         handleTop: "-4px",
-        checkedLeft: "calc(100% - 16px)",
+        checkedLeft: "calc(100% - 24px)",
         toggleHeight: "16px",
         toggleWidth: "40px",
     },
