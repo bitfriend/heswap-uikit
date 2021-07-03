@@ -34,7 +34,7 @@ const MenuEntry = styled.div<Props>`
   height: ${MENU_ENTRY_HEIGHT}px;
   padding: ${({ secondary }) => (secondary ? "0 32px" : "0 16px")};
   font-size: ${({ secondary }) => (secondary ? "14px" : "16px")};
-  background-color: ${({ isActive }) => (isActive ? "rgb(28, 50, 84)" : "transparent")};
+  background-color: ${({ isActive, theme }) => (isActive ? theme.colors.inputFocusedBorder : "transparent")};
   color: ${({ theme }) => theme.colors.textSubtle};
 
   a {

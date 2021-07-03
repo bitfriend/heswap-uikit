@@ -12,7 +12,7 @@ const Container = styled.div`
   border-radius: 16px;
   padding: 16px;
   background-color: ${({ theme }) => theme.colors.inputFocusedBorder};
-  border-top: solid 2px rgba(133, 133, 133, 0.1);
+  border-top: ${({ theme }) => `solid 2px ${theme.menu.borderColor}`};
 `;
 
 const RowWrapper = styled.div`
@@ -28,7 +28,7 @@ const IconWrapper = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  background-color: rgb(29, 200, 114);
+  background-color: ${({ theme}) => theme.colors.success};
 `;
 
 const PanelFooter: React.FC<Props> = ({
@@ -46,11 +46,11 @@ const PanelFooter: React.FC<Props> = ({
         </IconWrapper>
         <div style={{ flex: 1 }}>
           <Text small color={theme.colors.backgroundAlt}>Swap</Text>
-          <Text small color="rgb(116, 155, 216)">10:15:16 PM</Text>
+          <Text small color={theme.colors.textSubtle}>10:15:16 PM</Text>
         </div>
         <div style={{ flex: 1, textAlign: 'right' }}>
           <Text small color={theme.colors.backgroundAlt}>USD/BTC</Text>
-          <Text small color="rgb(29, 200, 114)">$2,198.35</Text>
+          <Text small color={theme.colors.success}>$2,198.35</Text>
         </div>
       </RowWrapper>
       <RowWrapper>
@@ -59,11 +59,11 @@ const PanelFooter: React.FC<Props> = ({
         </IconWrapper>
         <div style={{ flex: 1 }}>
           <Text small color={theme.colors.backgroundAlt}>Swap</Text>
-          <Text small color="rgb(116, 155, 216)">10:15:16 PM</Text>
+          <Text small color={theme.colors.textSubtle}>10:15:16 PM</Text>
         </div>
         <div style={{ flex: 1, textAlign: 'right' }}>
           <Text small color={theme.colors.backgroundAlt}>USD/BTC</Text>
-          <Text small color="rgb(29, 200, 114)">$2,198.35</Text>
+          <Text small color={theme.colors.textSubtle}>$2,198.35</Text>
         </div>
       </RowWrapper>
     </Container>
