@@ -57,7 +57,7 @@ const Wrapper = styled.div`
 `;
 
 export const StepNumber = styled.div<StatusProps>`
-  box-shadow: 0px 1px 4px rgba(25, 19, 38, 0.15);
+  box-shadow: ${({ theme }) => theme.shadows.step};
   background-color: ${({ theme, status }) => theme.colors[status === "current" ? "secondary" : "invertedContrast"]};
   border: 2px solid ${({ theme, status }) => (status === "past" ? theme.colors.success : "transparent")};
   border-radius: ${({ theme }) => theme.radii.circle};

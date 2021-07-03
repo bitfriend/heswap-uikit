@@ -2142,7 +2142,10 @@ var ChildrenRightWrapper = styled(ChildrenWrapper)(templateObject_5$2 || (templa
     return theme.mediaQueries.md;
 });
 var Wrapper$3 = styled.div(templateObject_6$1 || (templateObject_6$1 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  align-items: center;\n"], ["\n  position: relative;\n  display: flex;\n  align-items: center;\n"])));
-var StepNumber = styled.div(templateObject_7$1 || (templateObject_7$1 = __makeTemplateObject(["\n  box-shadow: 0px 1px 4px rgba(25, 19, 38, 0.15);\n  background-color: ", ";\n  border: 2px solid ", ";\n  border-radius: ", ";\n  color: ", ";\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: 600;\n  font-size: 32px;\n  width: 48px;\n  height: 48px;\n  z-index: 1;\n  ", " {\n    font-size: 40px;\n    width: 80px;\n    height: 80px;\n  }\n"], ["\n  box-shadow: 0px 1px 4px rgba(25, 19, 38, 0.15);\n  background-color: ", ";\n  border: 2px solid ", ";\n  border-radius: ", ";\n  color: ", ";\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: 600;\n  font-size: 32px;\n  width: 48px;\n  height: 48px;\n  z-index: 1;\n  ", " {\n    font-size: 40px;\n    width: 80px;\n    height: 80px;\n  }\n"])), function (_a) {
+var StepNumber = styled.div(templateObject_7$1 || (templateObject_7$1 = __makeTemplateObject(["\n  box-shadow: ", ";\n  background-color: ", ";\n  border: 2px solid ", ";\n  border-radius: ", ";\n  color: ", ";\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: 600;\n  font-size: 32px;\n  width: 48px;\n  height: 48px;\n  z-index: 1;\n  ", " {\n    font-size: 40px;\n    width: 80px;\n    height: 80px;\n  }\n"], ["\n  box-shadow: ", ";\n  background-color: ", ";\n  border: 2px solid ", ";\n  border-radius: ", ";\n  color: ", ";\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: 600;\n  font-size: 32px;\n  width: 48px;\n  height: 48px;\n  z-index: 1;\n  ", " {\n    font-size: 40px;\n    width: 80px;\n    height: 80px;\n  }\n"])), function (_a) {
+    var theme = _a.theme;
+    return theme.shadows.step;
+}, function (_a) {
     var theme = _a.theme, status = _a.status;
     return theme.colors[status === "current" ? "secondary" : "invertedContrast"];
 }, function (_a) {
@@ -2709,6 +2712,7 @@ var shadows = {
     warning: "0px 0px 0px 1px #ED4B9E, 0px 0px 0px 4px rgba(237, 75, 158, 0.2)",
     focus: "0px 0px 0px 1px #7645D9, 0px 0px 0px 4px rgba(118, 69, 217, 0.6)",
     inset: "inset 0px 2px 2px -1px rgba(74, 74, 104, 0.1)",
+    step: "0px 1px 4px rgba(25, 19, 38, 0.15)",
 };
 var spacing = [0, 4, 8, 16, 24, 32, 48, 64];
 var radii = {
@@ -2977,7 +2981,7 @@ var light$6 = {
         bubblegum: lightColors.gradients.bubblegum,
         violet: lightColors.gradients.violet,
     },
-    dropShadow: "drop-shadow(0px 1px 4px rgba(25, 19, 38, 0.15))",
+    dropShadow: "drop-shadow(" + shadows.step + ")",
 };
 var dark$6 = {
     background: darkColors.backgroundAlt,
@@ -2991,7 +2995,7 @@ var dark$6 = {
         bubblegum: lightColors.gradients.bubblegum,
         violet: darkColors.gradients.violet,
     },
-    dropShadow: "drop-shadow(0px 1px 4px rgba(25, 19, 38, 0.15))",
+    dropShadow: "drop-shadow(" + shadows.step + ")",
 };
 
 var light$5 = {
