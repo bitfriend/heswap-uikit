@@ -24,7 +24,6 @@ export interface MenuTheme {
   borderColor: string;
   topBarColor: string;
   leftBarColor: string;
-  itemColor: string;
 }
 
 export interface LinkStatus {
