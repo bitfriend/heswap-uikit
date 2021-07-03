@@ -4596,7 +4596,7 @@ var Menu = function (_a) {
         React__default['default'].createElement(Panel, { isPushed: isPushed, isMobile: isMobile, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, pushNav: setIsPushed, links: links }),
         React__default['default'].createElement(BodyWrapper, { isPushed: isPushed },
             React__default['default'].createElement(StyledNav, { isPushed: isPushed, showMenu: showMenu, bgColor: navColor },
-                React__default['default'].createElement(Flex, null,
+                React__default['default'].createElement(Flex, { pl: "40px" },
                     React__default['default'].createElement(IconButton, { variant: "text" },
                         React__default['default'].createElement(fa.FaTelegramPlane, { fill: theme.colors.textSubtle, size: "24px" })),
                     React__default['default'].createElement(IconButton, { variant: "text" },

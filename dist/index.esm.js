@@ -4582,7 +4582,7 @@ var Menu = function (_a) {
         React.createElement(Panel, { isPushed: isPushed, isMobile: isMobile, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, pushNav: setIsPushed, links: links }),
         React.createElement(BodyWrapper, { isPushed: isPushed },
             React.createElement(StyledNav, { isPushed: isPushed, showMenu: showMenu, bgColor: navColor },
-                React.createElement(Flex, null,
+                React.createElement(Flex, { pl: "40px" },
                     React.createElement(IconButton, { variant: "text" },
                         React.createElement(FaTelegramPlane, { fill: theme.colors.textSubtle, size: "24px" })),
                     React.createElement(IconButton, { variant: "text" },

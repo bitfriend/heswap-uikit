@@ -163,7 +163,7 @@ const Menu: React.FC<NavProps> = ({
       />
       <BodyWrapper isPushed={isPushed}>
         <StyledNav isPushed={isPushed} showMenu={showMenu} bgColor={navColor}>
-          <Flex>
+          <Flex pl="40px">
             <IconButton variant="text">
               <FaTelegramPlane fill={theme.colors.textSubtle} size="24px" />
             </IconButton>
