@@ -131,7 +131,7 @@ const Menu: React.FC<NavProps> = ({
         if (currentOffset < refPrevOffset.current) {
           // Has scroll up
           setShowMenu(true);
-          setNavColor('rgb(7, 22, 45)');
+          setNavColor(theme.menu.topBarColor);
         } else {
           // Has scroll down
           setShowMenu(false);
@@ -145,7 +145,7 @@ const Menu: React.FC<NavProps> = ({
     return () => {
       window.removeEventListener("scroll", throttledHandleScroll);
     };
-  }, []);
+  }, [theme.menu.topBarColor]);
 
   return (
     <Wrapper>

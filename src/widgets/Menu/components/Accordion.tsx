@@ -26,7 +26,7 @@ const AccordionContent = styled.div<{ isOpen: boolean; isPushed: boolean; maxHei
   max-height: ${({ isOpen, maxHeight }) => (isOpen ? `${maxHeight}px` : 0)};
   transition: max-height 0.3s ease-out;
   overflow: hidden;
-  border-color: ${({ isOpen, isPushed, theme }) => (isOpen && isPushed ? theme.colors.menuBorder : "transparent")};
+  border-color: ${({ isOpen, isPushed, theme }) => (isOpen && isPushed ? theme.menu.borderColor : "transparent")};
   border-style: solid;
   border-width: 1px 0;
 `;

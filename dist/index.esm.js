@@ -1418,7 +1418,7 @@ var getBottom = function (_a) {
 };
 var DropdownContent = styled.div(templateObject_1$Q || (templateObject_1$Q = __makeTemplateObject(["\n  width: max-content;\n  display: none;\n  flex-direction: column;\n  position: absolute;\n  transform: translate(-50%, 0);\n  left: ", ";\n  bottom: ", ";\n  background-color: ", ";\n  box-shadow: ", ";\n  padding: 16px;\n  max-height: 400px;\n  overflow-y: auto;\n  z-index: ", ";\n  border-radius: ", ";\n"], ["\n  width: max-content;\n  display: none;\n  flex-direction: column;\n  position: absolute;\n  transform: translate(-50%, 0);\n  left: ", ";\n  bottom: ", ";\n  background-color: ", ";\n  box-shadow: ", ";\n  padding: 16px;\n  max-height: 400px;\n  overflow-y: auto;\n  z-index: ", ";\n  border-radius: ", ";\n"])), getLeft, getBottom, function (_a) {
     var theme = _a.theme;
-    return theme.topBar.background;
+    return theme.colors.background;
 }, function (_a) {
     var theme = _a.theme;
     return theme.shadows.level1;
@@ -2939,7 +2939,7 @@ var additionalColors = {
     binance: "#F0B90B",
     overlay: "#452a7a",
 };
-var lightColors = __assign(__assign(__assign({}, baseColors), additionalColors), { background: "#FAF9FA", backgroundDisabled: "#E9EAEB", backgroundAlt: "#FFFFFF", cardBorder: "#E7E3EB", contrast: "#191326", dropdown: "#F6F6F6", dropdownDeep: "#EEEEEE", invertedContrast: "#FFFFFF", input: "#eeeaf4", inputSecondary: "#d7caec", menuBorder: 'rgba(133, 133, 133, 0.1)', tertiary: "#EFF4F5", text: "#280D5F", textDisabled: "#BDC2C4", textSubtle: "#7A6EAA", disabled: "#E9EAEB", gradients: {
+var lightColors = __assign(__assign(__assign({}, baseColors), additionalColors), { background: "#FAF9FA", backgroundDisabled: "#E9EAEB", backgroundAlt: "#FFFFFF", cardBorder: "#E7E3EB", contrast: "#191326", dropdown: "#F6F6F6", dropdownDeep: "#EEEEEE", invertedContrast: "#FFFFFF", input: "#eeeaf4", inputSecondary: "#d7caec", tertiary: "#EFF4F5", text: "#280D5F", textDisabled: "#BDC2C4", textSubtle: "#7A6EAA", disabled: "#E9EAEB", gradients: {
         bubblegum: "linear-gradient(139.73deg, #E5FDFF 0%, #F3EFFF 100%)",
         inverseBubblegum: "linear-gradient(139.73deg, #F3EFFF 0%, #E5FDFF 100%)",
         cardHeader: "linear-gradient(111.68deg, #F2ECF2 0%, #E8F2F6 100%)",
@@ -2948,7 +2948,7 @@ var lightColors = __assign(__assign(__assign({}, baseColors), additionalColors),
         violetAlt: "linear-gradient(180deg, #CBD7EF 0%, #9A9FD0 100%)",
         gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
     } });
-var darkColors = __assign(__assign(__assign({}, baseColors), additionalColors), { secondary: "#9A6AFF", background: "#08060B", backgroundDisabled: "#3c3742", backgroundAlt: "#27262c", cardBorder: "#383241", contrast: "#FFFFFF", dropdown: "#1E1D20", dropdownDeep: "#100C18", invertedContrast: "#191326", input: "#372F47", inputSecondary: "#262130", menuBorder: 'rgba(133, 133, 133, 0.1)', primaryDark: "#0098A1", tertiary: "#353547", text: "#F4EEFF", textDisabled: "#666171", textSubtle: "#B8ADD2", disabled: "#524B63", gradients: {
+var darkColors = __assign(__assign(__assign({}, baseColors), additionalColors), { secondary: "#9A6AFF", background: "#08060B", backgroundDisabled: "#3c3742", backgroundAlt: "#27262c", cardBorder: "#383241", contrast: "#FFFFFF", dropdown: "#1E1D20", dropdownDeep: "#100C18", invertedContrast: "#191326", input: "#372F47", inputSecondary: "#262130", primaryDark: "#0098A1", tertiary: "#353547", text: "#F4EEFF", textDisabled: "#666171", textSubtle: "#B8ADD2", disabled: "#524B63", gradients: {
         bubblegum: "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)",
         inverseBubblegum: "linear-gradient(139.73deg, #3D2A54 0%, #313D5C 100%)",
         cardHeader: "linear-gradient(166.77deg, #3B4155 0%, #3A3045 100%)",
@@ -2958,14 +2958,14 @@ var darkColors = __assign(__assign(__assign({}, baseColors), additionalColors), 
         gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
     } });
 
-var light$6 = {
+var light$7 = {
     background: lightColors.backgroundAlt,
 };
-var dark$6 = {
+var dark$7 = {
     background: darkColors.backgroundAlt,
 };
 
-var light$5 = {
+var light$6 = {
     background: lightColors.backgroundAlt,
     boxShadow: shadows.level1,
     boxShadowActive: shadows.active,
@@ -2979,7 +2979,7 @@ var light$5 = {
     },
     dropShadow: "drop-shadow(0px 1px 4px rgba(25, 19, 38, 0.15))",
 };
-var dark$5 = {
+var dark$6 = {
     background: darkColors.backgroundAlt,
     boxShadow: shadows.level1,
     boxShadowActive: shadows.active,
@@ -2994,46 +2994,44 @@ var dark$5 = {
     dropShadow: "drop-shadow(0px 1px 4px rgba(25, 19, 38, 0.15))",
 };
 
-var light$4 = {
+var light$5 = {
     handleBackground: lightColors.backgroundAlt,
     handleShadow: lightColors.textDisabled,
 };
-var dark$4 = {
+var dark$5 = {
     handleBackground: darkColors.backgroundAlt,
     handleShadow: darkColors.textDisabled,
 };
 
-var light$3 = {
+var light$4 = {
     handleBackground: lightColors.backgroundAlt,
 };
-var dark$3 = {
+var dark$4 = {
     handleBackground: darkColors.backgroundAlt,
 };
 
-var light$2 = {
+var light$3 = {
     handleBackground: lightColors.backgroundAlt,
     checkedHandleColor: lightColors.success,
     uncheckedHandleColor: lightColors.textSubtle
 };
-var dark$2 = {
+var dark$3 = {
     handleBackground: darkColors.backgroundAlt,
     checkedHandleColor: darkColors.success,
     uncheckedHandleColor: darkColors.textSubtle
 };
 
-var lightTopBar = {
-    background: lightColors.backgroundAlt,
+var light$2 = {
+    borderColor: 'rgba(133, 133, 133, 0.1)',
+    topBarColor: lightColors.backgroundAlt,
+    leftBarColor: lightColors.backgroundAlt,
+    leftBarFooterColor: lightColors.backgroundAlt
 };
-var darkTopBar = {
-    background: darkColors.backgroundAlt,
-};
-var lightLeftBar = {
-    background: lightColors.backgroundAlt,
-    footerBackground: lightColors.backgroundAlt,
-};
-var darkLeftBar = {
-    background: darkColors.backgroundAlt,
-    footerBackground: lightColors.backgroundAlt,
+var dark$2 = {
+    borderColor: 'rgba(133, 133, 133, 0.1)',
+    topBarColor: darkColors.backgroundAlt,
+    leftBarColor: darkColors.backgroundAlt,
+    leftBarFooterColor: darkColors.backgroundAlt
 };
 
 var light$1 = {
@@ -3054,9 +3052,9 @@ var dark = {
     boxShadow: "0px 0px 2px rgba(0, 0, 0, 0.2), 0px 4px 12px -8px rgba(14, 14, 44, 0.1)",
 };
 
-var darkTheme = __assign(__assign({}, base), { isDark: true, alert: dark$6, colors: darkColors, card: dark$5, toggle: dark$2, topBar: darkTopBar, leftBar: darkLeftBar, modal: dark$1, heswapToggle: dark$4, radio: dark$3, tooltip: dark });
+var darkTheme = __assign(__assign({}, base), { isDark: true, alert: dark$7, colors: darkColors, card: dark$6, toggle: dark$3, menu: dark$2, modal: dark$1, heswapToggle: dark$5, radio: dark$4, tooltip: dark });
 
-var lightTheme = __assign(__assign({}, base), { isDark: false, alert: light$6, colors: lightColors, card: light$5, toggle: light$2, topBar: lightTopBar, leftBar: lightLeftBar, modal: light$1, heswapToggle: light$4, radio: light$3, tooltip: light });
+var lightTheme = __assign(__assign({}, base), { isDark: false, alert: light$7, colors: lightColors, card: light$6, toggle: light$3, menu: light$2, modal: light$1, heswapToggle: light$5, radio: light$4, tooltip: light });
 
 var Arrow = styled.div(templateObject_1$q || (templateObject_1$q = __makeTemplateObject(["\n  &,\n  &::before {\n    position: absolute;\n    width: 10px;\n    height: 10px;\n    border-radius: 2px;\n    z-index: -1;\n  }\n\n  &::before {\n    content: \"\";\n    transform: rotate(45deg);\n    background: ", ";\n  }\n"], ["\n  &,\n  &::before {\n    position: absolute;\n    width: 10px;\n    height: 10px;\n    border-radius: 2px;\n    z-index: -1;\n  }\n\n  &::before {\n    content: \"\";\n    transform: rotate(45deg);\n    background: ", ";\n  }\n"])), function (_a) {
     var theme = _a.theme;
@@ -3797,7 +3795,7 @@ var AccordionContent = styled.div(templateObject_2$8 || (templateObject_2$8 = __
     return (isOpen ? maxHeight + "px" : 0);
 }, function (_a) {
     var isOpen = _a.isOpen, isPushed = _a.isPushed, theme = _a.theme;
-    return (isOpen && isPushed ? theme.colors.menuBorder : "transparent");
+    return (isOpen && isPushed ? theme.menu.borderColor : "transparent");
 });
 var Accordion = function (_a) {
     var label = _a.label, status = _a.status, icon = _a.icon, isPushed = _a.isPushed, pushNav = _a.pushNav, _b = _a.initialOpenState, initialOpenState = _b === void 0 ? false : _b, children = _a.children, className = _a.className, isActive = _a.isActive;
@@ -3897,7 +3895,7 @@ var SocialLinks$1 = React.memo(SocialLinks, function () { return true; });
 var LangSelector = function (_a) {
     var currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang;
     return (React.createElement(Dropdown, { position: "top-right", target: React.createElement(Button, { variant: "text", startIcon: React.createElement(Icon$17, { color: "textSubtle", width: "24px" }) },
-            React.createElement(Text, { color: "textSubtle" }, currentLang === null || currentLang === void 0 ? void 0 : currentLang.toUpperCase())) }, langs.map(function (lang) { return (React.createElement(MenuButton, { key: lang.locale, fullWidth: true, onClick: function () { return setLang(lang); }, 
+            React.createElement(Text, { color: "textSubtle" }, currentLang === null || currentLang === void 0 ? void 0 : currentLang.toUpperCase())) }, langs.map(function (lang, index) { return (React.createElement(MenuButton, { key: index.toString(), fullWidth: true, onClick: function () { return setLang(lang); }, 
         // Safari fix
         style: { minHeight: "32px", height: "auto" } }, lang.language)); })));
 };
@@ -3905,10 +3903,10 @@ var LangSelector$1 = React.memo(LangSelector, function (prev, next) { return pre
 
 var Container$2 = styled.div(templateObject_1$g || (templateObject_1$g = __makeTemplateObject(["\n  flex: none;\n  padding: 8px 4px;\n  background-color: ", ";\n  border-top: solid 2px ", ";\n"], ["\n  flex: none;\n  padding: 8px 4px;\n  background-color: ", ";\n  border-top: solid 2px ", ";\n"])), function (_a) {
     var theme = _a.theme;
-    return theme.topBar.background;
+    return theme.colors.backgroundAlt;
 }, function (_a) {
     var theme = _a.theme;
-    return theme.colors.menuBorder;
+    return theme.menu.borderColor;
 });
 var SettingsEntry = styled.div(templateObject_2$7 || (templateObject_2$7 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
 var SocialEntry = styled.div(templateObject_3$4 || (templateObject_3$4 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"])), MENU_ENTRY_HEIGHT);
@@ -3934,13 +3932,13 @@ var StyledPanel$1 = styled.div(templateObject_1$f || (templateObject_1$f = __mak
     return (showMenu ? "80px" : 0);
 }, function (_a) {
     var theme = _a.theme;
-    return theme.topBar.background;
+    return theme.colors.backgroundAlt;
 }, function (_a) {
     var isPushed = _a.isPushed;
     return (isPushed ? SIDEBAR_WIDTH_FULL + "px" : 0);
 }, function (_a) {
     var isPushed = _a.isPushed, theme = _a.theme;
-    return (isPushed ? "2px solid " + theme.colors.menuBorder : "none");
+    return (isPushed ? "2px solid " + theme.menu.borderColor : "none");
 }, function (_a) {
     var isPushed = _a.isPushed;
     return (isPushed ? "initial" : "hidden");
@@ -3952,7 +3950,7 @@ var StyledPanel$1 = styled.div(templateObject_1$f || (templateObject_1$f = __mak
     return theme.mediaQueries.nav;
 }, function (_a) {
     var theme = _a.theme;
-    return theme.colors.menuBorder;
+    return theme.menu.borderColor;
 }, function (_a) {
     var isPushed = _a.isPushed;
     return (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) + "px";
@@ -4233,10 +4231,10 @@ var StyledNav$1 = styled.nav(templateObject_2$4 || (templateObject_2$4 = __makeT
     return (showMenu ? 0 : "-" + MENU_HEIGHT + "px");
 }, MENU_HEIGHT, function (_a) {
     var theme = _a.theme;
-    return theme.topBar.background;
+    return theme.colors.backgroundAlt;
 }, function (_a) {
     var theme = _a.theme;
-    return theme.colors.menuBorder;
+    return theme.menu.borderColor;
 });
 var BodyWrapper$1 = styled.div(templateObject_3$3 || (templateObject_3$3 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n"], ["\n  position: relative;\n  display: flex;\n"])));
 var Inner$1 = styled.div(templateObject_4$2 || (templateObject_4$2 = __makeTemplateObject(["\n  flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"], ["\n  flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"])), function (_a) {
@@ -4404,7 +4402,7 @@ var templateObject_1$7;
 
 var Container = styled.div(templateObject_1$6 || (templateObject_1$6 = __makeTemplateObject(["\n  flex: none;\n  margin: 32px 16px;\n  border-radius: 16px;\n  padding: 16px;\n  background-color: ", ";\n  border-top: solid 2px rgba(133, 133, 133, 0.1);\n"], ["\n  flex: none;\n  margin: 32px 16px;\n  border-radius: 16px;\n  padding: 16px;\n  background-color: ", ";\n  border-top: solid 2px rgba(133, 133, 133, 0.1);\n"])), function (_a) {
     var theme = _a.theme;
-    return theme.leftBar.footerBackground;
+    return theme.menu.leftBarFooterColor;
 });
 var RowWrapper = styled.div(templateObject_2$1 || (templateObject_2$1 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n"], ["\n  display: flex;\n  align-items: center;\n"])));
 var IconWrapper = styled.div(templateObject_3$1 || (templateObject_3$1 = __makeTemplateObject(["\n  margin-right: 8px;\n  width: 24px;\n  height: 24px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 8px;\n  background-color: rgb(29, 200, 114);\n"], ["\n  margin-right: 8px;\n  width: 24px;\n  height: 24px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 8px;\n  background-color: rgb(29, 200, 114);\n"])));
@@ -4438,13 +4436,13 @@ var templateObject_1$6, templateObject_2$1, templateObject_3$1;
 
 var StyledPanel = styled.div(templateObject_1$5 || (templateObject_1$5 = __makeTemplateObject(["\n  position: fixed;\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background-color: ", ";\n  width: ", ";\n  height: 100%;\n  transition: padding-top 0.2s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n  ", ";\n\n  ", " {\n    border-right: 2px solid ", ";\n    width: ", ";\n  }\n"], ["\n  position: fixed;\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background-color: ", ";\n  width: ", ";\n  height: 100%;\n  transition: padding-top 0.2s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n  ", ";\n\n  ", " {\n    border-right: 2px solid ", ";\n    width: ", ";\n  }\n"])), function (_a) {
     var theme = _a.theme;
-    return theme.leftBar.background;
+    return theme.menu.leftBarColor;
 }, function (_a) {
     var isPushed = _a.isPushed;
     return (isPushed ? SIDEBAR_WIDTH_FULL + "px" : 0);
 }, function (_a) {
     var isPushed = _a.isPushed, theme = _a.theme;
-    return (isPushed ? "2px solid " + theme.colors.menuBorder : "none");
+    return (isPushed ? "2px solid " + theme.menu.borderColor : "none");
 }, function (_a) {
     var isPushed = _a.isPushed;
     return (isPushed ? "initial" : "hidden");
@@ -4456,7 +4454,7 @@ var StyledPanel = styled.div(templateObject_1$5 || (templateObject_1$5 = __makeT
     return theme.mediaQueries.nav;
 }, function (_a) {
     var theme = _a.theme;
-    return theme.colors.menuBorder;
+    return theme.menu.borderColor;
 }, function (_a) {
     var isPushed = _a.isPushed;
     return (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) + "px";
@@ -4557,7 +4555,7 @@ var Menu = function (_a) {
                 if (currentOffset < refPrevOffset.current) {
                     // Has scroll up
                     setShowMenu(true);
-                    setNavColor('rgb(7, 22, 45)');
+                    setNavColor(theme.menu.topBarColor);
                 }
                 else {
                     // Has scroll down
@@ -4571,7 +4569,7 @@ var Menu = function (_a) {
         return function () {
             window.removeEventListener("scroll", throttledHandleScroll);
         };
-    }, []);
+    }, [theme.menu.topBarColor]);
     return (React.createElement(Wrapper, null,
         React.createElement(Panel, { isPushed: isPushed, isMobile: isMobile, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, pushNav: setIsPushed, links: links }),
         React.createElement(BodyWrapper, { isPushed: isPushed },

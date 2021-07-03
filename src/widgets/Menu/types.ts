@@ -20,13 +20,11 @@ export interface PushedProps {
   pushNav: (isPushed: boolean) => void;
 }
 
-export interface TopBarTheme {
-  background: string;
-}
-
-export interface LeftBarTheme {
-  background: string;
-  footerBackground: string;
+export interface MenuTheme {
+  borderColor: string;
+  topBarColor: string;
+  leftBarColor: string;
+  leftBarFooterColor: string;
 }
 
 export interface LinkStatus {

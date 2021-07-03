@@ -67,7 +67,6 @@ export type Colors = {
   // Additional colors
   binance: string;
   overlay: string;
-  menuBorder: string;
 };
 
 export type ZIndices = {

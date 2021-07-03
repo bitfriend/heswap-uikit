@@ -5,7 +5,7 @@ import { light as lightHeswapToggle } from "../components/HeswapToggle/theme";
 import { light as lightRadio } from "../components/Radio/theme";
 import { light as lightToggle } from "../components/Toggle/theme";
 import { light as lightTooltip } from "../components/Tooltip/theme";
-import { lightTopBar, lightLeftBar } from "../widgets/Menu/theme";
+import { light as lightMenu } from "../widgets/Menu/theme";
 import { light as lightModal } from "../widgets/Modal/theme";
 import base from "./base";
 import { lightColors } from "./colors";
@@ -17,8 +17,7 @@ const lightTheme: DefaultTheme = {
   colors: lightColors,
   card: lightCard,
   toggle: lightToggle,
-  topBar: lightTopBar,
-  leftBar: lightLeftBar,
+  menu: lightMenu,
   modal: lightModal,
   heswapToggle: lightHeswapToggle,
   radio: lightRadio,

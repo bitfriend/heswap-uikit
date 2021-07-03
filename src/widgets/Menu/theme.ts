@@ -1,20 +1,16 @@
 import { darkColors, lightColors } from "../../theme/colors";
-import { TopBarTheme, LeftBarTheme } from "./types";
+import { MenuTheme } from "./types";
 
-export const lightTopBar: TopBarTheme = {
-  background: lightColors.backgroundAlt,
+export const light: MenuTheme = {
+  borderColor: 'rgba(133, 133, 133, 0.1)',
+  topBarColor: lightColors.backgroundAlt,
+  leftBarColor: lightColors.backgroundAlt,
+  leftBarFooterColor: lightColors.backgroundAlt
 };
 
-export const darkTopBar: TopBarTheme = {
-  background: darkColors.backgroundAlt,
-};
-
-export const lightLeftBar: LeftBarTheme = {
-  background: lightColors.backgroundAlt,
-  footerBackground: lightColors.backgroundAlt,
-};
-
-export const darkLeftBar: LeftBarTheme = {
-  background: darkColors.backgroundAlt,
-  footerBackground: lightColors.backgroundAlt,
+export const dark: MenuTheme = {
+  borderColor: 'rgba(133, 133, 133, 0.1)',
+  topBarColor: darkColors.backgroundAlt,
+  leftBarColor: darkColors.backgroundAlt,
+  leftBarFooterColor: darkColors.backgroundAlt
 };
