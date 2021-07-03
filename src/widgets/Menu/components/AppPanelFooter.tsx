@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
 import { AutoRenewIcon } from "../../../components/Svg";
 import { Text } from "../../../components/Text";
 import { PanelProps, PushedProps } from "../types";
@@ -34,34 +34,35 @@ const IconWrapper = styled.div`
 const PanelFooter: React.FC<Props> = ({
   isPushed
 }) => {
+  const theme = useTheme();
   return (
     <Container style={{
       display: isPushed ? 'block' : 'none'
     }}>
-      <Text color="#fff" marginBottom="12px">Live Trading Deals</Text>
+      <Text color={theme.colors.backgroundAlt} marginBottom="12px">Live Trading Deals</Text>
       <RowWrapper style={{ marginBottom: '16px' }}>
         <IconWrapper>
-          <AutoRenewIcon color="#fff" />
+          <AutoRenewIcon color={theme.colors.backgroundAlt} />
         </IconWrapper>
         <div style={{ flex: 1 }}>
-          <Text small color="#fff">Swap</Text>
+          <Text small color={theme.colors.backgroundAlt}>Swap</Text>
           <Text small color="rgb(116, 155, 216)">10:15:16 PM</Text>
         </div>
         <div style={{ flex: 1, textAlign: 'right' }}>
-          <Text small color="#fff">USD/BTC</Text>
+          <Text small color={theme.colors.backgroundAlt}>USD/BTC</Text>
           <Text small color="rgb(29, 200, 114)">$2,198.35</Text>
         </div>
       </RowWrapper>
       <RowWrapper>
         <IconWrapper>
-          <AutoRenewIcon color="#fff" />
+          <AutoRenewIcon color={theme.colors.backgroundAlt} />
         </IconWrapper>
         <div style={{ flex: 1 }}>
-          <Text small color="#fff">Swap</Text>
+          <Text small color={theme.colors.backgroundAlt}>Swap</Text>
           <Text small color="rgb(116, 155, 216)">10:15:16 PM</Text>
         </div>
         <div style={{ flex: 1, textAlign: 'right' }}>
-          <Text small color="#fff">USD/BTC</Text>
+          <Text small color={theme.colors.backgroundAlt}>USD/BTC</Text>
           <Text small color="rgb(29, 200, 114)">$2,198.35</Text>
         </div>
       </RowWrapper>

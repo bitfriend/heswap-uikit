@@ -4322,12 +4322,13 @@ var StyledLink = styled__default['default'](reactRouterDom.Link)(templateObject_
 }, blink);
 var Logo = function (_a) {
     var isPushed = _a.isPushed, href = _a.href;
+    var theme = styled.useTheme();
     var isAbsoluteUrl = href.startsWith("http");
     var innerLogo = (React__default['default'].createElement(React__default['default'].Fragment, null,
         React__default['default'].createElement(Icon$13, { className: "mobile-icon" }),
         React__default['default'].createElement(Flex, { className: "desktop-icon", justifyContent: "center", alignItems: "center" },
             React__default['default'].createElement(Icon$13, { marginRight: isPushed ? '24px' : 0 }),
-            isPushed && (React__default['default'].createElement(Text, { color: "#fff", fontSize: "26px", fontWeight: "600" }, "heswap")))));
+            isPushed && (React__default['default'].createElement(Text, { color: theme.colors.backgroundAlt, fontSize: "26px", fontWeight: "600" }, "heswap")))));
     return (React__default['default'].createElement(Flex, { height: "64px", justifyContent: "center", alignItems: "center" }, isAbsoluteUrl ? (React__default['default'].createElement(StyledLink, { as: "a", href: href, "aria-label": "Heswap home page" }, innerLogo)) : (React__default['default'].createElement(StyledLink, { to: href, "aria-label": "Heswap home page" }, innerLogo))));
 };
 var AppLogo = React__default['default'].memo(Logo, function (prev, next) { return prev.isPushed === next.isPushed; });
@@ -4335,10 +4336,10 @@ var templateObject_1$9, templateObject_2$3;
 
 var rainbowAnimation = styled.keyframes(templateObject_1$8 || (templateObject_1$8 = __makeTemplateObject(["\n  0%,\n  100% {\n    background-position: 0 0;\n  }\n  50% {\n    background-position: 100% 0;\n  }\n"], ["\n  0%,\n  100% {\n    background-position: 0 0;\n  }\n  50% {\n    background-position: 100% 0;\n  }\n"])));
 var LinkLabel = styled__default['default'].div(templateObject_2$2 || (templateObject_2$2 = __makeTemplateObject(["\n  color: ", ";\n  transition: color 0.4s;\n  flex-grow: 1;\n"], ["\n  color: ", ";\n  transition: color 0.4s;\n  flex-grow: 1;\n"])), function (_a) {
-    var isPushed = _a.isPushed;
-    return (isPushed ? "#fff" : "transparent");
+    var isPushed = _a.isPushed, theme = _a.theme;
+    return (isPushed ? theme.colors.backgroundAlt : "transparent");
 });
-var MenuEntry = styled__default['default'].div(templateObject_3$2 || (templateObject_3$2 = __makeTemplateObject(["\n  cursor: pointer;\n  border-radius: 8px;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: ", ";\n  font-size: ", ";\n  background-color: ", ";\n  color: ", ";\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  svg {\n    fill: #fff;\n  }\n\n  &:hover {\n    opacity: 0.75;\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 400% 100%;\n  }\n"], ["\n  cursor: pointer;\n  border-radius: 8px;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: ", ";\n  font-size: ", ";\n  background-color: ", ";\n  color: ", ";\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  svg {\n    fill: #fff;\n  }\n\n  &:hover {\n    opacity: 0.75;\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 400% 100%;\n  }\n"])), MENU_ENTRY_HEIGHT, function (_a) {
+var MenuEntry = styled__default['default'].div(templateObject_3$2 || (templateObject_3$2 = __makeTemplateObject(["\n  cursor: pointer;\n  border-radius: 8px;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: ", ";\n  font-size: ", ";\n  background-color: ", ";\n  color: ", ";\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  svg {\n    fill: ", ";\n  }\n\n  &:hover {\n    opacity: 0.75;\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 400% 100%;\n  }\n"], ["\n  cursor: pointer;\n  border-radius: 8px;\n  display: flex;\n  align-items: center;\n  height: ", "px;\n  padding: ", ";\n  font-size: ", ";\n  background-color: ", ";\n  color: ", ";\n\n  a {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  svg {\n    fill: ", ";\n  }\n\n  &:hover {\n    opacity: 0.75;\n  }\n\n  // Safari fix\n  flex-shrink: 0;\n\n  &.rainbow {\n    background-clip: text;\n    animation: ", " 3s ease-in-out infinite;\n    background: ", ";\n    background-size: 400% 100%;\n  }\n"])), MENU_ENTRY_HEIGHT, function (_a) {
     var secondary = _a.secondary;
     return (secondary ? "0 32px" : "0 16px");
 }, function (_a) {
@@ -4350,6 +4351,9 @@ var MenuEntry = styled__default['default'].div(templateObject_3$2 || (templateOb
 }, function (_a) {
     var theme = _a.theme;
     return theme.colors.textSubtle;
+}, function (_a) {
+    var theme = _a.theme;
+    return theme.colors.backgroundAlt;
 }, rainbowAnimation, function (_a) {
     var theme = _a.theme;
     return theme.colors.gradients.bubblegum;
@@ -4411,27 +4415,28 @@ var RowWrapper = styled__default['default'].div(templateObject_2$1 || (templateO
 var IconWrapper = styled__default['default'].div(templateObject_3$1 || (templateObject_3$1 = __makeTemplateObject(["\n  margin-right: 8px;\n  width: 24px;\n  height: 24px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 8px;\n  background-color: rgb(29, 200, 114);\n"], ["\n  margin-right: 8px;\n  width: 24px;\n  height: 24px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 8px;\n  background-color: rgb(29, 200, 114);\n"])));
 var PanelFooter = function (_a) {
     var isPushed = _a.isPushed;
+    var theme = styled.useTheme();
     return (React__default['default'].createElement(Container, { style: {
             display: isPushed ? 'block' : 'none'
         } },
-        React__default['default'].createElement(Text, { color: "#fff", marginBottom: "12px" }, "Live Trading Deals"),
+        React__default['default'].createElement(Text, { color: theme.colors.backgroundAlt, marginBottom: "12px" }, "Live Trading Deals"),
         React__default['default'].createElement(RowWrapper, { style: { marginBottom: '16px' } },
             React__default['default'].createElement(IconWrapper, null,
-                React__default['default'].createElement(Icon$1t, { color: "#fff" })),
+                React__default['default'].createElement(Icon$1t, { color: theme.colors.backgroundAlt })),
             React__default['default'].createElement("div", { style: { flex: 1 } },
-                React__default['default'].createElement(Text, { small: true, color: "#fff" }, "Swap"),
+                React__default['default'].createElement(Text, { small: true, color: theme.colors.backgroundAlt }, "Swap"),
                 React__default['default'].createElement(Text, { small: true, color: "rgb(116, 155, 216)" }, "10:15:16 PM")),
             React__default['default'].createElement("div", { style: { flex: 1, textAlign: 'right' } },
-                React__default['default'].createElement(Text, { small: true, color: "#fff" }, "USD/BTC"),
+                React__default['default'].createElement(Text, { small: true, color: theme.colors.backgroundAlt }, "USD/BTC"),
                 React__default['default'].createElement(Text, { small: true, color: "rgb(29, 200, 114)" }, "$2,198.35"))),
         React__default['default'].createElement(RowWrapper, null,
             React__default['default'].createElement(IconWrapper, null,
-                React__default['default'].createElement(Icon$1t, { color: "#fff" })),
+                React__default['default'].createElement(Icon$1t, { color: theme.colors.backgroundAlt })),
             React__default['default'].createElement("div", { style: { flex: 1 } },
-                React__default['default'].createElement(Text, { small: true, color: "#fff" }, "Swap"),
+                React__default['default'].createElement(Text, { small: true, color: theme.colors.backgroundAlt }, "Swap"),
                 React__default['default'].createElement(Text, { small: true, color: "rgb(116, 155, 216)" }, "10:15:16 PM")),
             React__default['default'].createElement("div", { style: { flex: 1, textAlign: 'right' } },
-                React__default['default'].createElement(Text, { small: true, color: "#fff" }, "USD/BTC"),
+                React__default['default'].createElement(Text, { small: true, color: theme.colors.backgroundAlt }, "USD/BTC"),
                 React__default['default'].createElement(Text, { small: true, color: "rgb(29, 200, 114)" }, "$2,198.35")))));
 };
 var templateObject_1$6, templateObject_2$1, templateObject_3$1;
@@ -4515,7 +4520,10 @@ var MobileOnlyOverlay = styled__default['default'](Overlay)(templateObject_6 || 
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 });
-var StyledButton = styled__default['default'](Button)(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  color: #fff;\n"], ["\n  color: #fff;\n"])));
+var StyledButton = styled__default['default'](Button)(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  color: ", ";\n"], ["\n  color: ", ";\n"])), function (_a) {
+    var theme = _a.theme;
+    return theme.colors.backgroundAlt;
+});
 var StyledCheck = styled__default['default'](fa.FaCheckCircle)(templateObject_8 || (templateObject_8 = __makeTemplateObject(["\n  margin-right: 8px;\n  fill: ", "\n"], ["\n  margin-right: 8px;\n  fill: ", "\n"])), function (_a) {
     var theme = _a.theme;
     return theme.colors.success;
@@ -4535,6 +4543,7 @@ var Menu = function (_a) {
     var _c = React.useState(true), showMenu = _c[0], setShowMenu = _c[1];
     var _d = React.useState('transparent'), navColor = _d[0], setNavColor = _d[1];
     var refPrevOffset = React.useRef(window.pageYOffset);
+    var theme = styled.useTheme();
     React.useEffect(function () {
         var handleScroll = function () {
             var currentOffset = window.pageYOffset;
@@ -4584,7 +4593,7 @@ var Menu = function (_a) {
                     profile && React__default['default'].createElement(Avatar, { profile: profile })))),
             React__default['default'].createElement(Inner, null, children),
             React__default['default'].createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" })),
-        React__default['default'].createElement(StyledChevron, { isPushed: isPushed, onClick: function () { return setIsPushed(function (value) { return !value; }); } }, isPushed ? (React__default['default'].createElement(fa.FaChevronLeft, { width: "16px", style: { fill: '#fff' } })) : (React__default['default'].createElement(fa.FaChevronRight, { width: "16px", style: { fill: '#fff' } })))));
+        React__default['default'].createElement(StyledChevron, { isPushed: isPushed, onClick: function () { return setIsPushed(function (value) { return !value; }); } }, isPushed ? (React__default['default'].createElement(fa.FaChevronLeft, { width: "16px", style: { fill: theme.colors.backgroundAlt } })) : (React__default['default'].createElement(fa.FaChevronRight, { width: "16px", style: { fill: theme.colors.backgroundAlt } })))));
 };
 var templateObject_1$3, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7, templateObject_8, templateObject_9;
 

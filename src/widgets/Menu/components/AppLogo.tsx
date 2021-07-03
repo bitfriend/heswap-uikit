@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, useTheme } from "styled-components";
 import { Link } from "react-router-dom";
 import { LogoIcon } from "../../../components/Svg";
 import { Flex } from "../../../components/Box";
@@ -48,6 +48,7 @@ const StyledLink = styled(Link)`
 `;
 
 const Logo: React.FC<Props> = ({ isPushed, href }) => {
+  const theme = useTheme();
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
@@ -59,7 +60,7 @@ const Logo: React.FC<Props> = ({ isPushed, href }) => {
       >
         <LogoIcon marginRight={isPushed ? '24px' : 0} />
         {isPushed && (
-          <Text color="#fff" fontSize="26px" fontWeight="600">heswap</Text>
+          <Text color={theme.colors.backgroundAlt} fontSize="26px" fontWeight="600">heswap</Text>
         )}
       </Flex>
     </>

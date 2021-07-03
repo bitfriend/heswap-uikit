@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
 import throttle from "lodash/throttle";
 import {
   FaCheckCircle,
@@ -74,7 +74,7 @@ const MobileOnlyOverlay = styled(Overlay)`
 `;
 
 const StyledButton = styled(Button)`
-  color: #fff;
+  color: ${({ theme }) => theme.colors.backgroundAlt};
 `;
 
 const StyledCheck = styled(FaCheckCircle)`
@@ -114,6 +114,7 @@ const Menu: React.FC<NavProps> = ({
   const [showMenu, setShowMenu] = useState(true);
   const [navColor, setNavColor] = useState('transparent');
   const refPrevOffset = useRef(window.pageYOffset);
+  const theme = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -196,9 +197,9 @@ const Menu: React.FC<NavProps> = ({
       </BodyWrapper>
       <StyledChevron isPushed={isPushed} onClick={() => setIsPushed(value => !value)}>
         {isPushed ? (
-          <FaChevronLeft width="16px" style={{ fill: '#fff' }} />
+          <FaChevronLeft width="16px" style={{ fill: theme.colors.backgroundAlt }} />
         ) : (
-          <FaChevronRight width="16px" style={{ fill: '#fff' }} />
+          <FaChevronRight width="16px" style={{ fill: theme.colors.backgroundAlt }} />
         )}
       </StyledChevron>
     </Wrapper>

@@ -21,7 +21,7 @@ const rainbowAnimation = keyframes`
 `;
 
 const LinkLabel = styled.div<{ isPushed: boolean }>`
-  color: ${({ isPushed }) => (isPushed ? "#fff" : "transparent")};
+  color: ${({ isPushed, theme }) => (isPushed ? theme.colors.backgroundAlt : "transparent")};
   transition: color 0.4s;
   flex-grow: 1;
 `;
@@ -45,7 +45,7 @@ const MenuEntry = styled.div<Props>`
   }
 
   svg {
-    fill: #fff;
+    fill: ${({ theme }) => theme.colors.backgroundAlt};
   }
 
   &:hover {
