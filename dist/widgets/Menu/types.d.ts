@@ -20,7 +20,7 @@ export interface MenuTheme {
     borderColor: string;
     topBarColor: string;
     leftBarColor: string;
-    leftBarFooterColor: string;
+    itemColor: string;
 }
 export interface LinkStatus {
     text: string;

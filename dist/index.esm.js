@@ -3029,13 +3029,13 @@ var light$2 = {
     borderColor: 'rgba(133, 133, 133, 0.1)',
     topBarColor: lightColors.backgroundAlt,
     leftBarColor: lightColors.backgroundAlt,
-    leftBarFooterColor: lightColors.backgroundAlt
+    itemColor: lightColors.backgroundAlt
 };
 var dark$2 = {
     borderColor: 'rgba(133, 133, 133, 0.1)',
     topBarColor: darkColors.backgroundAlt,
     leftBarColor: darkColors.backgroundAlt,
-    leftBarFooterColor: darkColors.backgroundAlt
+    itemColor: darkColors.backgroundAlt
 };
 
 var light$1 = {
@@ -4406,7 +4406,7 @@ var templateObject_1$7;
 
 var Container = styled.div(templateObject_1$6 || (templateObject_1$6 = __makeTemplateObject(["\n  flex: none;\n  margin: 32px 16px;\n  border-radius: 16px;\n  padding: 16px;\n  background-color: ", ";\n  border-top: solid 2px rgba(133, 133, 133, 0.1);\n"], ["\n  flex: none;\n  margin: 32px 16px;\n  border-radius: 16px;\n  padding: 16px;\n  background-color: ", ";\n  border-top: solid 2px rgba(133, 133, 133, 0.1);\n"])), function (_a) {
     var theme = _a.theme;
-    return theme.menu.leftBarFooterColor;
+    return theme.menu.itemColor;
 });
 var RowWrapper = styled.div(templateObject_2$1 || (templateObject_2$1 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n"], ["\n  display: flex;\n  align-items: center;\n"])));
 var IconWrapper = styled.div(templateObject_3$1 || (templateObject_3$1 = __makeTemplateObject(["\n  margin-right: 8px;\n  width: 24px;\n  height: 24px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 8px;\n  background-color: rgb(29, 200, 114);\n"], ["\n  margin-right: 8px;\n  width: 24px;\n  height: 24px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 8px;\n  background-color: rgb(29, 200, 114);\n"])));

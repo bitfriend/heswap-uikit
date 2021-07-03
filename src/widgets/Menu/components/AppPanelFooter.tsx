@@ -11,7 +11,7 @@ const Container = styled.div`
   margin: 32px 16px;
   border-radius: 16px;
   padding: 16px;
-  background-color: ${({ theme }) => theme.menu.leftBarFooterColor};
+  background-color: ${({ theme }) => theme.menu.itemColor};
   border-top: solid 2px rgba(133, 133, 133, 0.1);
 `;
 

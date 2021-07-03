@@ -324,7 +324,7 @@ export const ThemeInversion: React.FC = () => {
     <>
       <Text>Tooltips have inverted theme</Text>
       <Toggle />
-      <BalanceInput value="1.0" currencyValue="~623.45 USD" placeholder="0.0" />
+      <BalanceInput value="1.0" currencyValue="~623.45 USD" placeholder="0.0" onUserInput={value => console.warn(value)} />
     </>
   );
   const { targetRef, tooltip } = useTooltip(tooltipContent, { placement: "bottom" });
@@ -333,7 +333,7 @@ export const ThemeInversion: React.FC = () => {
       <div style={{ flex: "1" }}>
         <Text>Current theme looks like this</Text>
         <Toggle />
-        <BalanceInput value="1.0" currencyValue="~623.45 USD" placeholder="0.0" />
+        <BalanceInput value="1.0" currencyValue="~623.45 USD" placeholder="0.0" onUserInput={value => console.warn(value)} />
       </div>
       <div style={{ flex: "1", textAlign: "center" }}>
         <span ref={targetRef}>
