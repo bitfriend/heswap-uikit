@@ -165,16 +165,16 @@ const Menu: React.FC<NavProps> = ({
         <StyledNav isPushed={isPushed} showMenu={showMenu} bgColor={navColor}>
           <Flex>
             <IconButton variant="text">
-              <FaTelegramPlane fill="rgb(116, 155, 216)" size="24px" />
+              <FaTelegramPlane fill={theme.colors.textSubtle} size="24px" />
             </IconButton>
             <IconButton variant="text">
-              <FaTwitter fill="rgb(116, 155, 216)" size="24px" />
+              <FaTwitter fill={theme.colors.textSubtle} size="24px" />
             </IconButton>
             <IconButton variant="text">
-              <FaMediumM fill="rgb(116, 155, 216)" size="24px" />
+              <FaMediumM fill={theme.colors.textSubtle} size="24px" />
             </IconButton>
             <IconButton variant="text">
-              <FaYoutube fill="rgb(116, 155, 216)" size="24px" />
+              <FaYoutube fill={theme.colors.textSubtle} size="24px" />
             </IconButton>
           </Flex>
           {!!login && !!logout && (
