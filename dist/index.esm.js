@@ -4498,12 +4498,9 @@ var AppUserBlock = React.memo(UserBlock, function (prevProps, nextProps) {
 var templateObject_1$4;
 
 var Wrapper = styled.div(templateObject_1$3 || (templateObject_1$3 = __makeTemplateObject(["\n  position: relative;\n  width: 100%;\n"], ["\n  position: relative;\n  width: 100%;\n"])));
-var BodyWrapper = styled.div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  ", " {\n    left: ", ";\n    max-width: ", ";\n    transition: left 0.2s, max-width 0.2s;\n  }\n"], ["\n  position: relative;\n  display: flex;\n  ", " {\n    left: ", ";\n    max-width: ", ";\n    transition: left 0.2s, max-width 0.2s;\n  }\n"])), function (_a) {
+var BodyWrapper = styled.div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  display: flex;\n  ", " {\n    position: absolute;\n    right: 0;\n    width: ", ";\n    transition: width 0.2s;\n  }\n"], ["\n  display: flex;\n  ", " {\n    position: absolute;\n    right: 0;\n    width: ", ";\n    transition: width 0.2s;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.nav;
-}, function (_a) {
-    var isPushed = _a.isPushed;
-    return (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) + "px";
 }, function (_a) {
     var isPushed = _a.isPushed;
     return "calc(100% - " + (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) + "px)";
@@ -4519,8 +4516,8 @@ var StyledNav = styled.nav(templateObject_3 || (templateObject_3 = __makeTemplat
     return bgColor;
 });
 var StyledFlex = styled(Flex)(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  flex: 1;\n  justify-content: flex-end;\n  align-items: center;\n"], ["\n  flex: 1;\n  justify-content: flex-end;\n  align-items: center;\n"])));
-var Inner = styled.div(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n  flex-grow: 1;\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n  position: relative;\n"], ["\n  flex-grow: 1;\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n  position: relative;\n"])));
-var MobileOnlyOverlay = styled(Overlay)(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  position: fixed;\n  height: 100%;\n\n  ", " {\n    display: none;\n  }\n"], ["\n  position: fixed;\n  height: 100%;\n\n  ", " {\n    display: none;\n  }\n"])), function (_a) {
+var Inner = styled.div(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n  flex-grow: 1;\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n"], ["\n  flex-grow: 1;\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n"])));
+var MobileOnlyOverlay = styled(Overlay)(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  position: fixed;\n  height: 100%;\n  ", " {\n    display: none;\n  }\n"], ["\n  position: fixed;\n  height: 100%;\n  ", " {\n    display: none;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 });
@@ -4532,7 +4529,7 @@ var StyledCheck = styled(FaCheckCircle)(templateObject_8 || (templateObject_8 = 
     var theme = _a.theme;
     return theme.colors.success;
 });
-var StyledChevron = styled(IconButton)(templateObject_9 || (templateObject_9 = __makeTemplateObject(["\n  width: 32px;\n  height: 32px;\n  z-index: 30; /* z-index of top bar is 20 */\n  position: fixed;\n  ", " {\n    left: ", ";\n    top: 12px;\n    transition: left 0.2s;\n  }\n"], ["\n  width: 32px;\n  height: 32px;\n  z-index: 30; /* z-index of top bar is 20 */\n  position: fixed;\n  ", " {\n    left: ", ";\n    top: 12px;\n    transition: left 0.2s;\n  }\n"])), function (_a) {
+var StyledChevron = styled(IconButton)(templateObject_9 || (templateObject_9 = __makeTemplateObject(["\n  width: 32px;\n  height: 32px;\n  z-index: 30; /* z-index of top bar is 20 */\n  ", " {\n    position: fixed;\n    left: ", ";\n    top: 12px;\n    transition: left 0.2s;\n  }\n"], ["\n  width: 32px;\n  height: 32px;\n  z-index: 30; /* z-index of top bar is 20 */\n  ", " {\n    position: fixed;\n    left: ", ";\n    top: 12px;\n    transition: left 0.2s;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 }, function (_a) {

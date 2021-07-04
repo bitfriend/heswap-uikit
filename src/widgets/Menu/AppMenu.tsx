@@ -26,12 +26,12 @@ const Wrapper = styled.div`
 `;
 
 const BodyWrapper = styled.div<{ isPushed: boolean }>`
-  position: relative;
   display: flex;
   ${({ theme }) => theme.mediaQueries.nav} {
-    left: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
-    max-width: ${({ isPushed }) => `calc(100% - ${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px)`};
-    transition: left 0.2s, max-width 0.2s;
+    position: absolute;
+    right: 0;
+    width: ${({ isPushed }) => `calc(100% - ${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px)`};
+    transition: width 0.2s;
   }
 `;
 
@@ -61,13 +61,11 @@ const Inner = styled.div`
   flex-grow: 1;
   transform: translate3d(0, 0, 0);
   max-width: 100%;
-  position: relative;
 `;
 
 const MobileOnlyOverlay = styled(Overlay)`
   position: fixed;
   height: 100%;
-
   ${({ theme }) => theme.mediaQueries.nav} {
     display: none;
   }
@@ -86,8 +84,8 @@ const StyledChevron = styled(IconButton)<{ isPushed: boolean }>`
   width: 32px;
   height: 32px;
   z-index: 30; /* z-index of top bar is 20 */
-  position: fixed;
   ${({ theme }) => theme.mediaQueries.nav} {
+    position: fixed;
     left: ${({ isPushed }) => `${(isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) - 16}px`};
     top: 12px;
     transition: left 0.2s;
