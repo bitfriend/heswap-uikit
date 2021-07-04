@@ -34,6 +34,9 @@ declare const _default: {
     zIndices: {
         dropdown: number;
         modal: number;
+        topBar: number;
+        leftBar: number;
+        menuChevron: number;
     };
 };
 export default _default;

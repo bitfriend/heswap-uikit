@@ -23,7 +23,7 @@ const StyledPanel = styled.div<{ isPushed: boolean }>`
   height: 100%;
   transition: padding-top 0.2s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   border-right: ${({ isPushed, theme }) => (isPushed ? `2px solid ${theme.menu.borderColor}` : "none")};
-  z-index: 11;
+  z-index: ${({ theme }) => theme.zIndices.leftBar};
   overflow: ${({ isPushed }) => (isPushed ? "initial" : "hidden")};
   transform: translate3d(0, 0, 0);
   ${({ isPushed }) => !isPushed && "white-space: nowrap;"};

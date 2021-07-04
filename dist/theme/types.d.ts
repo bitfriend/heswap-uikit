@@ -63,4 +63,7 @@ export declare type Colors = {
 export declare type ZIndices = {
     dropdown: number;
     modal: number;
+    topBar: number;
+    leftBar: number;
+    menuChevron: number;
 };

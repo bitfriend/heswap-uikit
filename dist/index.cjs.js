@@ -2738,6 +2738,9 @@ var radii = {
 var zIndices = {
     dropdown: 10,
     modal: 100,
+    topBar: 20,
+    leftBar: 30,
+    menuChevron: 40
 };
 var base = {
     siteWidth: 1200,
@@ -4456,7 +4459,7 @@ var PanelFooter = function (_a) {
 };
 var templateObject_1$6, templateObject_2$1, templateObject_3$1;
 
-var StyledPanel = styled__default['default'].div(templateObject_1$5 || (templateObject_1$5 = __makeTemplateObject(["\n  position: fixed;\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background-color: ", ";\n  width: ", ";\n  height: 100%;\n  transition: padding-top 0.2s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n  ", ";\n\n  ", " {\n    border-right: 2px solid ", ";\n    width: ", ";\n  }\n"], ["\n  position: fixed;\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background-color: ", ";\n  width: ", ";\n  height: 100%;\n  transition: padding-top 0.2s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n  ", ";\n\n  ", " {\n    border-right: 2px solid ", ";\n    width: ", ";\n  }\n"])), function (_a) {
+var StyledPanel = styled__default['default'].div(templateObject_1$5 || (templateObject_1$5 = __makeTemplateObject(["\n  position: fixed;\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background-color: ", ";\n  width: ", ";\n  height: 100%;\n  transition: padding-top 0.2s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  border-right: ", ";\n  z-index: ", ";\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n  ", ";\n\n  ", " {\n    border-right: 2px solid ", ";\n    width: ", ";\n  }\n"], ["\n  position: fixed;\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background-color: ", ";\n  width: ", ";\n  height: 100%;\n  transition: padding-top 0.2s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  border-right: ", ";\n  z-index: ", ";\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n  ", ";\n\n  ", " {\n    border-right: 2px solid ", ";\n    width: ", ";\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.menu.leftBarColor;
 }, function (_a) {
@@ -4465,6 +4468,9 @@ var StyledPanel = styled__default['default'].div(templateObject_1$5 || (template
 }, function (_a) {
     var isPushed = _a.isPushed, theme = _a.theme;
     return (isPushed ? "2px solid " + theme.menu.borderColor : "none");
+}, function (_a) {
+    var theme = _a.theme;
+    return theme.zIndices.leftBar;
 }, function (_a) {
     var isPushed = _a.isPushed;
     return (isPushed ? "initial" : "hidden");
@@ -4519,15 +4525,18 @@ var BodyWrapper = styled__default['default'].div(templateObject_2 || (templateOb
     var isPushed = _a.isPushed;
     return "calc(100% - " + (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) + "px)";
 });
-var StyledNav = styled__default['default'].nav(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  position: fixed;\n  top: ", ";\n  right: 0; /* when left sidebar is collapsed/expanded, rightmost element should be not shaked */\n  transition: top 0.2s, width 0.2s;\n  display: flex;\n  flex-direction: row-reverse; /* when left sidebar is collapsed/expanded, rightmost element should be not shaked */\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: calc(100% - ", "px);\n  height: ", "px;\n  background-color: ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  top: ", ";\n  right: 0; /* when left sidebar is collapsed/expanded, rightmost element should be not shaked */\n  transition: top 0.2s, width 0.2s;\n  display: flex;\n  flex-direction: row-reverse; /* when left sidebar is collapsed/expanded, rightmost element should be not shaked */\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: calc(100% - ", "px);\n  height: ", "px;\n  background-color: ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
+var StyledNav = styled__default['default'].nav(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  position: fixed;\n  top: ", ";\n  right: 0; /* when left sidebar is collapsed/expanded, rightmost element should be not shaked */\n  transition: top 0.2s, width 0.2s;\n  display: flex;\n  flex-direction: row-reverse; /* when left sidebar is collapsed/expanded, rightmost element should be not shaked */\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: ", "\n  height: ", "px;\n  background-color: ", ";\n  z-index: ", ";\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  top: ", ";\n  right: 0; /* when left sidebar is collapsed/expanded, rightmost element should be not shaked */\n  transition: top 0.2s, width 0.2s;\n  display: flex;\n  flex-direction: row-reverse; /* when left sidebar is collapsed/expanded, rightmost element should be not shaked */\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: ", "\n  height: ", "px;\n  background-color: ", ";\n  z-index: ", ";\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
     var showMenu = _a.showMenu;
     return (showMenu ? 0 : "-" + MENU_HEIGHT + "px");
 }, function (_a) {
-    var isPushed = _a.isPushed;
-    return (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED);
+    var isMobile = _a.isMobile, isPushed = _a.isPushed;
+    return isMobile ? '100%' : "calc(100% - " + (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) + "px)";
 }, MENU_HEIGHT, function (_a) {
     var bgColor = _a.bgColor;
     return bgColor;
+}, function (_a) {
+    var theme = _a.theme;
+    return theme.zIndices.topBar;
 });
 var StyledFlex = styled__default['default'](Flex)(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  flex: 1;\n  justify-content: flex-end;\n  align-items: center;\n"], ["\n  flex: 1;\n  justify-content: flex-end;\n  align-items: center;\n"])));
 var Inner = styled__default['default'].div(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n  flex-grow: 1;\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n"], ["\n  flex-grow: 1;\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n"])));
@@ -4543,7 +4552,10 @@ var StyledCheck = styled__default['default'](fa.FaCheckCircle)(templateObject_8 
     var theme = _a.theme;
     return theme.colors.success;
 });
-var StyledChevron = styled__default['default'](IconButton)(templateObject_9 || (templateObject_9 = __makeTemplateObject(["\n  width: 32px;\n  height: 32px;\n  z-index: 30; /* z-index of top bar is 20 */\n  ", " {\n    position: fixed;\n    left: ", ";\n    top: 12px;\n    transition: left 0.2s;\n  }\n"], ["\n  width: 32px;\n  height: 32px;\n  z-index: 30; /* z-index of top bar is 20 */\n  ", " {\n    position: fixed;\n    left: ", ";\n    top: 12px;\n    transition: left 0.2s;\n  }\n"])), function (_a) {
+var StyledChevron = styled__default['default'](IconButton)(templateObject_9 || (templateObject_9 = __makeTemplateObject(["\n  width: 32px;\n  height: 32px;\n  z-index: ", ";\n  ", " {\n    position: fixed;\n    left: ", ";\n    top: 12px;\n    transition: left 0.2s;\n  }\n"], ["\n  width: 32px;\n  height: 32px;\n  z-index: ", ";\n  ", " {\n    position: fixed;\n    left: ", ";\n    top: 12px;\n    transition: left 0.2s;\n  }\n"])), function (_a) {
+    var theme = _a.theme;
+    return theme.zIndices.menuChevron;
+}, function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 }, function (_a) {
@@ -4592,7 +4604,7 @@ var Menu = function (_a) {
     return (React__default['default'].createElement(Wrapper, null,
         React__default['default'].createElement(Panel, { isPushed: isPushed, isMobile: isMobile, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, pushNav: setIsPushed, links: links }),
         React__default['default'].createElement(BodyWrapper, { isPushed: isPushed },
-            React__default['default'].createElement(StyledNav, { isPushed: isPushed, showMenu: showMenu, bgColor: navColor },
+            React__default['default'].createElement(StyledNav, { isMobile: isMobile, isPushed: isPushed, showMenu: showMenu, bgColor: navColor },
                 !!login && !!logout && (React__default['default'].createElement(StyledFlex, null,
                     React__default['default'].createElement(StyledButton, { variant: "text", startIcon: React__default['default'].createElement(StyledCheck, null) }, "Certik Audit"),
                     React__default['default'].createElement(AppUserBlock, { account: account, login: login, logout: logout }),

@@ -35,7 +35,7 @@ const BodyWrapper = styled.div<{ isPushed: boolean }>`
   }
 `;
 
-const StyledNav = styled.nav<{ isPushed: boolean, showMenu: boolean, bgColor: string }>`
+const StyledNav = styled.nav<{ isMobile: boolean, isPushed: boolean, showMenu: boolean, bgColor: string }>`
   position: fixed;
   top: ${({ showMenu }) => (showMenu ? 0 : `-${MENU_HEIGHT}px`)};
   right: 0; /* when left sidebar is collapsed/expanded, rightmost element should be not shaked */
@@ -46,10 +46,10 @@ const StyledNav = styled.nav<{ isPushed: boolean, showMenu: boolean, bgColor: st
   align-items: center;
   padding-left: 8px;
   padding-right: 16px;
-  width: calc(100% - ${({ isPushed }) => (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED)}px);
+  width: ${({ isMobile, isPushed }) => isMobile ? '100%' : `calc(100% - ${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px)`}
   height: ${MENU_HEIGHT}px;
   background-color: ${({ bgColor }) => bgColor};
-  z-index: 20;
+  z-index: ${({ theme }) => theme.zIndices.topBar};
   transform: translate3d(0, 0, 0);
 `;
 
@@ -85,7 +85,7 @@ const StyledCheck = styled(FaCheckCircle)`
 const StyledChevron = styled(IconButton)<{ isPushed: boolean }>`
   width: 32px;
   height: 32px;
-  z-index: 30; /* z-index of top bar is 20 */
+  z-index: ${({ theme }) => theme.zIndices.menuChevron};
   ${({ theme }) => theme.mediaQueries.nav} {
     position: fixed;
     left: ${({ isPushed }) => `${(isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) - 16}px`};
@@ -162,7 +162,7 @@ const Menu: React.FC<NavProps> = ({
         links={links}
       />
       <BodyWrapper isPushed={isPushed}>
-        <StyledNav isPushed={isPushed} showMenu={showMenu} bgColor={navColor}>
+        <StyledNav isMobile={isMobile} isPushed={isPushed} showMenu={showMenu} bgColor={navColor}>
           {!!login && !!logout && (
             <StyledFlex>
               <StyledButton variant="text" startIcon={<StyledCheck />}>
