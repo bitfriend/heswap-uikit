@@ -35,7 +35,7 @@ const MenuEntry = styled.div<Props>`
   padding: ${({ secondary }) => (secondary ? "0 32px" : "0 16px")};
   font-size: ${({ secondary }) => (secondary ? "14px" : "16px")};
   background-color: ${({ isActive, theme }) => (isActive ? theme.colors.inputFocusedBorder : "transparent")};
-  color: ${({ theme }) => theme.colors.textSubtle};
+  color: ${({ theme }) => theme.colors.backgroundAlt};
 
   a {
     display: flex;
@@ -49,11 +49,11 @@ const MenuEntry = styled.div<Props>`
   }
 
   &:hover {
-    color: rgb(116, 155, 216) !important;
+    color: ${({ theme }) => theme.colors.textSubtle};
   }
 
   &:hover svg {
-    fill: rgb(116, 155, 216) !important;
+    fill: ${({ theme }) => theme.colors.textSubtle};
   }
 
   // Safari fix
