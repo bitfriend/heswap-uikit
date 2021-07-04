@@ -46,7 +46,7 @@ const StyledNav = styled.nav<{ isMobile: boolean, isPushed: boolean, showMenu: b
   align-items: center;
   padding-left: 8px;
   padding-right: 16px;
-  width: ${({ isMobile, isPushed }) => isMobile ? '100%' : `calc(100% - ${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px)`}
+  width: ${({ isMobile, isPushed }) => isMobile ? '100%' : `calc(100% - ${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px)`};
   height: ${MENU_HEIGHT}px;
   background-color: ${({ bgColor }) => bgColor};
   z-index: ${({ theme }) => theme.zIndices.topBar};
