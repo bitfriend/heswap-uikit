@@ -40,6 +40,7 @@ const StyledNav = styled.nav<{ isPushed: boolean, showMenu: boolean, bgColor: st
   top: ${({ showMenu }) => (showMenu ? 0 : `-${MENU_HEIGHT}px`)};
   transition: top 0.2s;
   display: flex;
+  flex-direction: row-reverse; /* when left sidebar is collapsed/expanded, rightmost element should be not shaked */
   justify-content: space-between;
   align-items: center;
   padding-left: 8px;
@@ -161,6 +162,15 @@ const Menu: React.FC<NavProps> = ({
       />
       <BodyWrapper isPushed={isPushed}>
         <StyledNav isPushed={isPushed} showMenu={showMenu} bgColor={navColor}>
+          {!!login && !!logout && (
+            <StyledFlex>
+              <StyledButton variant="text" startIcon={<StyledCheck />}>
+                Certik Audit
+              </StyledButton>
+              <AppUserBlock account={account} login={login} logout={logout} />
+              {profile && <Avatar profile={profile} />}
+            </StyledFlex>
+          )}
           {isMobile ? (
             <StyledChevron isPushed={isPushed} onClick={() => setIsPushed(value => !value)}>
               {isPushed ? (
@@ -184,15 +194,6 @@ const Menu: React.FC<NavProps> = ({
                 <FaYoutube fill={theme.colors.textSubtle} size="24px" />
               </IconButton>
             </Flex>
-          )}
-          {!!login && !!logout && (
-            <StyledFlex>
-              <StyledButton variant="text" startIcon={<StyledCheck />}>
-                Certik Audit
-              </StyledButton>
-              <AppUserBlock account={account} login={login} logout={logout} />
-              {profile && <Avatar profile={profile} />}
-            </StyledFlex>
           )}
         </StyledNav>
         <Inner>

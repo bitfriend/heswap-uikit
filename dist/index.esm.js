@@ -4505,7 +4505,7 @@ var BodyWrapper = styled.div(templateObject_2 || (templateObject_2 = __makeTempl
     var isPushed = _a.isPushed;
     return "calc(100% - " + (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) + "px)";
 });
-var StyledNav = styled.nav(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  position: fixed;\n  top: ", ";\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: calc(100% - ", "px);\n  height: ", "px;\n  background-color: ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  top: ", ";\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: calc(100% - ", "px);\n  height: ", "px;\n  background-color: ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
+var StyledNav = styled.nav(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  position: fixed;\n  top: ", ";\n  transition: top 0.2s;\n  display: flex;\n  flex-direction: row-reverse; /* when left sidebar is collapsed/expanded, rightmost element should be not shaked */\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: calc(100% - ", "px);\n  height: ", "px;\n  background-color: ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  top: ", ";\n  transition: top 0.2s;\n  display: flex;\n  flex-direction: row-reverse; /* when left sidebar is collapsed/expanded, rightmost element should be not shaked */\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: calc(100% - ", "px);\n  height: ", "px;\n  background-color: ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
     var showMenu = _a.showMenu;
     return (showMenu ? 0 : "-" + MENU_HEIGHT + "px");
 }, function (_a) {
@@ -4579,6 +4579,10 @@ var Menu = function (_a) {
         React.createElement(Panel, { isPushed: isPushed, isMobile: isMobile, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, pushNav: setIsPushed, links: links }),
         React.createElement(BodyWrapper, { isPushed: isPushed },
             React.createElement(StyledNav, { isPushed: isPushed, showMenu: showMenu, bgColor: navColor },
+                !!login && !!logout && (React.createElement(StyledFlex, null,
+                    React.createElement(StyledButton, { variant: "text", startIcon: React.createElement(StyledCheck, null) }, "Certik Audit"),
+                    React.createElement(AppUserBlock, { account: account, login: login, logout: logout }),
+                    profile && React.createElement(Avatar, { profile: profile }))),
                 isMobile ? (React.createElement(StyledChevron, { isPushed: isPushed, onClick: function () { return setIsPushed(function (value) { return !value; }); } }, isPushed ? (React.createElement(FaChevronLeft, { width: "16px", style: { fill: theme.colors.backgroundAlt } })) : (React.createElement(FaChevronRight, { width: "16px", style: { fill: theme.colors.backgroundAlt } })))) : (React.createElement(Flex, { pl: "40px" },
                     React.createElement(IconButton, { variant: "text" },
                         React.createElement(FaTelegramPlane, { fill: theme.colors.textSubtle, size: "24px" })),
@@ -4587,11 +4591,7 @@ var Menu = function (_a) {
                     React.createElement(IconButton, { variant: "text" },
                         React.createElement(FaMediumM, { fill: theme.colors.textSubtle, size: "24px" })),
                     React.createElement(IconButton, { variant: "text" },
-                        React.createElement(FaYoutube, { fill: theme.colors.textSubtle, size: "24px" })))),
-                !!login && !!logout && (React.createElement(StyledFlex, null,
-                    React.createElement(StyledButton, { variant: "text", startIcon: React.createElement(StyledCheck, null) }, "Certik Audit"),
-                    React.createElement(AppUserBlock, { account: account, login: login, logout: logout }),
-                    profile && React.createElement(Avatar, { profile: profile })))),
+                        React.createElement(FaYoutube, { fill: theme.colors.textSubtle, size: "24px" }))))),
             React.createElement(Inner, null, children),
             React.createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" })),
         !isMobile && (React.createElement(StyledChevron, { isPushed: isPushed, onClick: function () { return setIsPushed(function (value) { return !value; }); } }, isPushed ? (React.createElement(FaChevronLeft, { width: "16px", style: { fill: theme.colors.backgroundAlt } })) : (React.createElement(FaChevronRight, { width: "16px", style: { fill: theme.colors.backgroundAlt } }))))));

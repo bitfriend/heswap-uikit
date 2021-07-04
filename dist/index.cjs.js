@@ -4519,7 +4519,7 @@ var BodyWrapper = styled__default['default'].div(templateObject_2 || (templateOb
     var isPushed = _a.isPushed;
     return "calc(100% - " + (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) + "px)";
 });
-var StyledNav = styled__default['default'].nav(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  position: fixed;\n  top: ", ";\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: calc(100% - ", "px);\n  height: ", "px;\n  background-color: ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  top: ", ";\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: calc(100% - ", "px);\n  height: ", "px;\n  background-color: ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
+var StyledNav = styled__default['default'].nav(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  position: fixed;\n  top: ", ";\n  transition: top 0.2s;\n  display: flex;\n  flex-direction: row-reverse; /* when left sidebar is collapsed/expanded, rightmost element should be not shaked */\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: calc(100% - ", "px);\n  height: ", "px;\n  background-color: ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  top: ", ";\n  transition: top 0.2s;\n  display: flex;\n  flex-direction: row-reverse; /* when left sidebar is collapsed/expanded, rightmost element should be not shaked */\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: calc(100% - ", "px);\n  height: ", "px;\n  background-color: ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
     var showMenu = _a.showMenu;
     return (showMenu ? 0 : "-" + MENU_HEIGHT + "px");
 }, function (_a) {
@@ -4593,6 +4593,10 @@ var Menu = function (_a) {
         React__default['default'].createElement(Panel, { isPushed: isPushed, isMobile: isMobile, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, pushNav: setIsPushed, links: links }),
         React__default['default'].createElement(BodyWrapper, { isPushed: isPushed },
             React__default['default'].createElement(StyledNav, { isPushed: isPushed, showMenu: showMenu, bgColor: navColor },
+                !!login && !!logout && (React__default['default'].createElement(StyledFlex, null,
+                    React__default['default'].createElement(StyledButton, { variant: "text", startIcon: React__default['default'].createElement(StyledCheck, null) }, "Certik Audit"),
+                    React__default['default'].createElement(AppUserBlock, { account: account, login: login, logout: logout }),
+                    profile && React__default['default'].createElement(Avatar, { profile: profile }))),
                 isMobile ? (React__default['default'].createElement(StyledChevron, { isPushed: isPushed, onClick: function () { return setIsPushed(function (value) { return !value; }); } }, isPushed ? (React__default['default'].createElement(fa.FaChevronLeft, { width: "16px", style: { fill: theme.colors.backgroundAlt } })) : (React__default['default'].createElement(fa.FaChevronRight, { width: "16px", style: { fill: theme.colors.backgroundAlt } })))) : (React__default['default'].createElement(Flex, { pl: "40px" },
                     React__default['default'].createElement(IconButton, { variant: "text" },
                         React__default['default'].createElement(fa.FaTelegramPlane, { fill: theme.colors.textSubtle, size: "24px" })),
@@ -4601,11 +4605,7 @@ var Menu = function (_a) {
                     React__default['default'].createElement(IconButton, { variant: "text" },
                         React__default['default'].createElement(fa.FaMediumM, { fill: theme.colors.textSubtle, size: "24px" })),
                     React__default['default'].createElement(IconButton, { variant: "text" },
-                        React__default['default'].createElement(fa.FaYoutube, { fill: theme.colors.textSubtle, size: "24px" })))),
-                !!login && !!logout && (React__default['default'].createElement(StyledFlex, null,
-                    React__default['default'].createElement(StyledButton, { variant: "text", startIcon: React__default['default'].createElement(StyledCheck, null) }, "Certik Audit"),
-                    React__default['default'].createElement(AppUserBlock, { account: account, login: login, logout: logout }),
-                    profile && React__default['default'].createElement(Avatar, { profile: profile })))),
+                        React__default['default'].createElement(fa.FaYoutube, { fill: theme.colors.textSubtle, size: "24px" }))))),
             React__default['default'].createElement(Inner, null, children),
             React__default['default'].createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" })),
         !isMobile && (React__default['default'].createElement(StyledChevron, { isPushed: isPushed, onClick: function () { return setIsPushed(function (value) { return !value; }); } }, isPushed ? (React__default['default'].createElement(fa.FaChevronLeft, { width: "16px", style: { fill: theme.colors.backgroundAlt } })) : (React__default['default'].createElement(fa.FaChevronRight, { width: "16px", style: { fill: theme.colors.backgroundAlt } }))))));
