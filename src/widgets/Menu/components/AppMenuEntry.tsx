@@ -49,7 +49,11 @@ const MenuEntry = styled.div<Props>`
   }
 
   &:hover {
-    opacity: 0.75;
+    color: rgb(116, 155, 216) !important;
+  }
+
+  &:hover svg {
+    fill: rgb(116, 155, 216) !important;
   }
 
   // Safari fix
