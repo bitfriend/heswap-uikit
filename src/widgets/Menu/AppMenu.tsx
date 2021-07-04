@@ -163,26 +163,33 @@ const Menu: React.FC<NavProps> = ({
       />
       <BodyWrapper isPushed={isPushed}>
         <StyledNav isPushed={isPushed} showMenu={showMenu} bgColor={navColor}>
-          <Flex pl="40px">
-            <IconButton variant="text">
-              <FaTelegramPlane fill={theme.colors.textSubtle} size="24px" />
-            </IconButton>
-            <IconButton variant="text">
-              <FaTwitter fill={theme.colors.textSubtle} size="24px" />
-            </IconButton>
-            <IconButton variant="text">
-              <FaMediumM fill={theme.colors.textSubtle} size="24px" />
-            </IconButton>
-            <IconButton variant="text">
-              <FaYoutube fill={theme.colors.textSubtle} size="24px" />
-            </IconButton>
-          </Flex>
+          {isMobile ? (
+            <StyledChevron isPushed={isPushed} onClick={() => setIsPushed(value => !value)}>
+              {isPushed ? (
+                <FaChevronLeft width="16px" style={{ fill: theme.colors.backgroundAlt }} />
+              ) : (
+                <FaChevronRight width="16px" style={{ fill: theme.colors.backgroundAlt }} />
+              )}
+            </StyledChevron>
+          ) : (
+            <Flex pl="40px">
+              <IconButton variant="text">
+                <FaTelegramPlane fill={theme.colors.textSubtle} size="24px" />
+              </IconButton>
+              <IconButton variant="text">
+                <FaTwitter fill={theme.colors.textSubtle} size="24px" />
+              </IconButton>
+              <IconButton variant="text">
+                <FaMediumM fill={theme.colors.textSubtle} size="24px" />
+              </IconButton>
+              <IconButton variant="text">
+                <FaYoutube fill={theme.colors.textSubtle} size="24px" />
+              </IconButton>
+            </Flex>
+          )}
           {!!login && !!logout && (
             <StyledFlex>
-              <StyledButton
-                variant="text"
-                startIcon={<StyledCheck />}
-              >
+              <StyledButton variant="text" startIcon={<StyledCheck />}>
                 Certik Audit
               </StyledButton>
               <AppUserBlock account={account} login={login} logout={logout} />
@@ -195,13 +202,15 @@ const Menu: React.FC<NavProps> = ({
         </Inner>
         <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" />
       </BodyWrapper>
-      <StyledChevron isPushed={isPushed} onClick={() => setIsPushed(value => !value)}>
-        {isPushed ? (
-          <FaChevronLeft width="16px" style={{ fill: theme.colors.backgroundAlt }} />
-        ) : (
-          <FaChevronRight width="16px" style={{ fill: theme.colors.backgroundAlt }} />
-        )}
-      </StyledChevron>
+      {!isMobile && (
+        <StyledChevron isPushed={isPushed} onClick={() => setIsPushed(value => !value)}>
+          {isPushed ? (
+            <FaChevronLeft width="16px" style={{ fill: theme.colors.backgroundAlt }} />
+          ) : (
+            <FaChevronRight width="16px" style={{ fill: theme.colors.backgroundAlt }} />
+          )}
+        </StyledChevron>
+      )}
     </Wrapper>
   );
 };

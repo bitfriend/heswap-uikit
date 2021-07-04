@@ -9,7 +9,7 @@ import { createPortal } from 'react-dom';
 import { usePopper } from 'react-popper';
 import throttle from 'lodash/throttle';
 import { Link as Link$1, NavLink, useLocation } from 'react-router-dom';
-import { FaCheckCircle, FaTelegramPlane, FaTwitter, FaMediumM, FaYoutube, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { FaCheckCircle, FaChevronLeft, FaChevronRight, FaTelegramPlane, FaTwitter, FaMediumM, FaYoutube } from 'react-icons/fa';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 /*! *****************************************************************************
@@ -4582,7 +4582,7 @@ var Menu = function (_a) {
         React.createElement(Panel, { isPushed: isPushed, isMobile: isMobile, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, pushNav: setIsPushed, links: links }),
         React.createElement(BodyWrapper, { isPushed: isPushed },
             React.createElement(StyledNav, { isPushed: isPushed, showMenu: showMenu, bgColor: navColor },
-                React.createElement(Flex, { pl: "40px" },
+                isMobile ? (React.createElement(StyledChevron, { isPushed: isPushed, onClick: function () { return setIsPushed(function (value) { return !value; }); } }, isPushed ? (React.createElement(FaChevronLeft, { width: "16px", style: { fill: theme.colors.backgroundAlt } })) : (React.createElement(FaChevronRight, { width: "16px", style: { fill: theme.colors.backgroundAlt } })))) : (React.createElement(Flex, { pl: "40px" },
                     React.createElement(IconButton, { variant: "text" },
                         React.createElement(FaTelegramPlane, { fill: theme.colors.textSubtle, size: "24px" })),
                     React.createElement(IconButton, { variant: "text" },
@@ -4590,14 +4590,14 @@ var Menu = function (_a) {
                     React.createElement(IconButton, { variant: "text" },
                         React.createElement(FaMediumM, { fill: theme.colors.textSubtle, size: "24px" })),
                     React.createElement(IconButton, { variant: "text" },
-                        React.createElement(FaYoutube, { fill: theme.colors.textSubtle, size: "24px" }))),
+                        React.createElement(FaYoutube, { fill: theme.colors.textSubtle, size: "24px" })))),
                 !!login && !!logout && (React.createElement(StyledFlex, null,
                     React.createElement(StyledButton, { variant: "text", startIcon: React.createElement(StyledCheck, null) }, "Certik Audit"),
                     React.createElement(AppUserBlock, { account: account, login: login, logout: logout }),
                     profile && React.createElement(Avatar, { profile: profile })))),
             React.createElement(Inner, null, children),
             React.createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" })),
-        React.createElement(StyledChevron, { isPushed: isPushed, onClick: function () { return setIsPushed(function (value) { return !value; }); } }, isPushed ? (React.createElement(FaChevronLeft, { width: "16px", style: { fill: theme.colors.backgroundAlt } })) : (React.createElement(FaChevronRight, { width: "16px", style: { fill: theme.colors.backgroundAlt } })))));
+        !isMobile && (React.createElement(StyledChevron, { isPushed: isPushed, onClick: function () { return setIsPushed(function (value) { return !value; }); } }, isPushed ? (React.createElement(FaChevronLeft, { width: "16px", style: { fill: theme.colors.backgroundAlt } })) : (React.createElement(FaChevronRight, { width: "16px", style: { fill: theme.colors.backgroundAlt } }))))));
 };
 var templateObject_1$3, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7, templateObject_8, templateObject_9;
 

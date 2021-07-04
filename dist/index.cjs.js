@@ -4596,7 +4596,7 @@ var Menu = function (_a) {
         React__default['default'].createElement(Panel, { isPushed: isPushed, isMobile: isMobile, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, pushNav: setIsPushed, links: links }),
         React__default['default'].createElement(BodyWrapper, { isPushed: isPushed },
             React__default['default'].createElement(StyledNav, { isPushed: isPushed, showMenu: showMenu, bgColor: navColor },
-                React__default['default'].createElement(Flex, { pl: "40px" },
+                isMobile ? (React__default['default'].createElement(StyledChevron, { isPushed: isPushed, onClick: function () { return setIsPushed(function (value) { return !value; }); } }, isPushed ? (React__default['default'].createElement(fa.FaChevronLeft, { width: "16px", style: { fill: theme.colors.backgroundAlt } })) : (React__default['default'].createElement(fa.FaChevronRight, { width: "16px", style: { fill: theme.colors.backgroundAlt } })))) : (React__default['default'].createElement(Flex, { pl: "40px" },
                     React__default['default'].createElement(IconButton, { variant: "text" },
                         React__default['default'].createElement(fa.FaTelegramPlane, { fill: theme.colors.textSubtle, size: "24px" })),
                     React__default['default'].createElement(IconButton, { variant: "text" },
@@ -4604,14 +4604,14 @@ var Menu = function (_a) {
                     React__default['default'].createElement(IconButton, { variant: "text" },
                         React__default['default'].createElement(fa.FaMediumM, { fill: theme.colors.textSubtle, size: "24px" })),
                     React__default['default'].createElement(IconButton, { variant: "text" },
-                        React__default['default'].createElement(fa.FaYoutube, { fill: theme.colors.textSubtle, size: "24px" }))),
+                        React__default['default'].createElement(fa.FaYoutube, { fill: theme.colors.textSubtle, size: "24px" })))),
                 !!login && !!logout && (React__default['default'].createElement(StyledFlex, null,
                     React__default['default'].createElement(StyledButton, { variant: "text", startIcon: React__default['default'].createElement(StyledCheck, null) }, "Certik Audit"),
                     React__default['default'].createElement(AppUserBlock, { account: account, login: login, logout: logout }),
                     profile && React__default['default'].createElement(Avatar, { profile: profile })))),
             React__default['default'].createElement(Inner, null, children),
             React__default['default'].createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" })),
-        React__default['default'].createElement(StyledChevron, { isPushed: isPushed, onClick: function () { return setIsPushed(function (value) { return !value; }); } }, isPushed ? (React__default['default'].createElement(fa.FaChevronLeft, { width: "16px", style: { fill: theme.colors.backgroundAlt } })) : (React__default['default'].createElement(fa.FaChevronRight, { width: "16px", style: { fill: theme.colors.backgroundAlt } })))));
+        !isMobile && (React__default['default'].createElement(StyledChevron, { isPushed: isPushed, onClick: function () { return setIsPushed(function (value) { return !value; }); } }, isPushed ? (React__default['default'].createElement(fa.FaChevronLeft, { width: "16px", style: { fill: theme.colors.backgroundAlt } })) : (React__default['default'].createElement(fa.FaChevronRight, { width: "16px", style: { fill: theme.colors.backgroundAlt } }))))));
 };
 var templateObject_1$3, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7, templateObject_8, templateObject_9;
 
