@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useLocation } from "react-router-dom";
 import { SvgProps } from "../../../components/Svg";
 import * as IconModule from "../icons";
-import Accordion from "./Accordion";
+import Accordion from "./AppAccordion";
 import { MenuEntry, LinkLabel, LinkStatus } from "./AppMenuEntry";
 import MenuLink from "./MenuLink";
 import { PanelProps, PushedProps } from "../types";
