@@ -46,6 +46,7 @@ const MenuEntry = styled.div<Props>`
 
   svg {
     fill: ${({ theme }) => theme.colors.backgroundAlt};
+    transition: fill 0.4s;
   }
 
   &:hover {
