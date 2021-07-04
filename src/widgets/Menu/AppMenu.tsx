@@ -38,6 +38,7 @@ const BodyWrapper = styled.div<{ isPushed: boolean }>`
 const StyledNav = styled.nav<{ isPushed: boolean, showMenu: boolean, bgColor: string }>`
   position: fixed;
   top: ${({ showMenu }) => (showMenu ? 0 : `-${MENU_HEIGHT}px`)};
+  right: 0; /* when left sidebar is collapsed/expanded, rightmost element should be not shaked */
   transition: top 0.2s;
   display: flex;
   flex-direction: row-reverse; /* when left sidebar is collapsed/expanded, rightmost element should be not shaked */
