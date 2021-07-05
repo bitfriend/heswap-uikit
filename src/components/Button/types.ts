@@ -47,4 +47,8 @@ export interface BaseButtonProps extends LayoutProps, SpaceProps {
   endIcon?: ReactNode;
 }
 
+export interface IconButtonProps extends BaseButtonProps {
+  width?: string;
+}
+
 export type ButtonProps<P extends ElementType = "button"> = PolymorphicComponentProps<P, BaseButtonProps>;

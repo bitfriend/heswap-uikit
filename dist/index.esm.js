@@ -270,10 +270,17 @@ Button.defaultProps = {
     disabled: false,
 };
 
-var IconButton = styled(Button)(templateObject_1$15 || (templateObject_1$15 = __makeTemplateObject(["\n  padding: 0;\n  width: ", ";\n"], ["\n  padding: 0;\n  width: ", ";\n"])), function (_a) {
-    var scale = _a.scale;
-    return (scale === "sm" ? "32px" : "48px");
-});
+var getWidth = function (props) {
+    var width = props.width, scale = props.scale;
+    if (!width) {
+        if (scale === 'sm' || scale === 'xs') {
+            return '32px';
+        }
+        return '48px';
+    }
+    return width;
+};
+var IconButton = styled(Button)(templateObject_1$15 || (templateObject_1$15 = __makeTemplateObject(["\n  padding: 0;\n  width: ", ";\n"], ["\n  padding: 0;\n  width: ", ";\n"])), getWidth);
 var templateObject_1$15;
 
 var Icon$1A = function (props) {
