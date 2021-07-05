@@ -4477,7 +4477,7 @@ var PanelFooter = function (_a) {
                 React.createElement(Text, { small: true, color: theme.colors.textSubtle }, "10:15:16 PM")),
             React.createElement("div", { style: { flex: 1, textAlign: 'right' } },
                 React.createElement(Text, { small: true, color: theme.colors.backgroundAlt }, "USD/BTC"),
-                React.createElement(Text, { small: true, color: theme.colors.textSubtle }, "$2,198.35")))));
+                React.createElement(Text, { small: true, color: theme.colors.success }, "$2,198.35")))));
 };
 var templateObject_1$6, templateObject_2$1, templateObject_3$1;
 

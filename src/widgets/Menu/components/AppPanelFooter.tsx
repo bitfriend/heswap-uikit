@@ -63,7 +63,7 @@ const PanelFooter: React.FC<Props> = ({
         </div>
         <div style={{ flex: 1, textAlign: 'right' }}>
           <Text small color={theme.colors.backgroundAlt}>USD/BTC</Text>
-          <Text small color={theme.colors.textSubtle}>$2,198.35</Text>
+          <Text small color={theme.colors.success}>$2,198.35</Text>
         </div>
       </RowWrapper>
     </Container>
