@@ -1257,14 +1257,12 @@ var StyledButtonMenu = styled.div(templateObject_1$Z || (templateObject_1$Z = __
 var ButtonMenu$1 = function (_a) {
     var _b = _a.activeIndex, activeIndex = _b === void 0 ? 0 : _b, _c = _a.scale, scale = _c === void 0 ? scales$8.MD : _c, _d = _a.variant, variant = _d === void 0 ? variants$5.PRIMARY : _d, onItemClick = _a.onItemClick, children = _a.children, props = __rest(_a, ["activeIndex", "scale", "variant", "onItemClick", "children"]);
     return (React.createElement(StyledButtonMenu, __assign({ variant: variant }, props), Children.map(children, function (child, index) {
-        console.log(child);
-        var childProps = {
+        return cloneElement(child, {
             isActive: activeIndex === index,
             onClick: onItemClick ? function () { return onItemClick(index); } : undefined,
             scale: scale,
             variant: variant,
-        };
-        return cloneElement(child, childProps);
+        });
     })));
 };
 var templateObject_1$Z;
