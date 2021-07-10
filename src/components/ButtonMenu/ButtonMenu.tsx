@@ -30,7 +30,7 @@ const StyledButtonMenu = styled.div<StyledButtonMenuProps>`
 `;
 
 const ButtonMenu: React.FC<ButtonMenuProps> = ({
-  // activeIndex = 0,
+  activeIndex = 0,
   scale = scales.MD,
   variant = variants.PRIMARY,
   onItemClick,
@@ -40,12 +40,14 @@ const ButtonMenu: React.FC<ButtonMenuProps> = ({
   return (
     <StyledButtonMenu variant={variant} {...props}>
       {Children.map(children, (child: ReactElement, index) => {
-        return cloneElement(child, {
-          // isActive: activeIndex === index,
+        console.log(child)
+        const childProps = {
+          isActive: activeIndex === index,
           onClick: onItemClick ? () => onItemClick(index) : undefined,
           scale,
           variant,
-        });
+        }
+        return cloneElement(child, childProps);
       })}
     </StyledButtonMenu>
   );

@@ -1255,18 +1255,16 @@ var getBorderColor = function (_a) {
 };
 var StyledButtonMenu = styled.div(templateObject_1$Z || (templateObject_1$Z = __makeTemplateObject(["\n  background-color: ", ";\n  border-radius: 16px;\n  display: inline-flex;\n  border: 1px solid ", ";\n\n  & > button + button,\n  & > a + a {\n    margin-left: 2px; // To avoid focus shadow overlap\n  }\n  ", "\n"], ["\n  background-color: ", ";\n  border-radius: 16px;\n  display: inline-flex;\n  border: 1px solid ", ";\n\n  & > button + button,\n  & > a + a {\n    margin-left: 2px; // To avoid focus shadow overlap\n  }\n  ", "\n"])), getBackgroundColor, getBorderColor, space);
 var ButtonMenu$1 = function (_a) {
-    var 
-    // activeIndex = 0,
-    _b = _a.scale, 
-    // activeIndex = 0,
-    scale = _b === void 0 ? scales$8.MD : _b, _c = _a.variant, variant = _c === void 0 ? variants$5.PRIMARY : _c, onItemClick = _a.onItemClick, children = _a.children, props = __rest(_a, ["scale", "variant", "onItemClick", "children"]);
+    var _b = _a.activeIndex, activeIndex = _b === void 0 ? 0 : _b, _c = _a.scale, scale = _c === void 0 ? scales$8.MD : _c, _d = _a.variant, variant = _d === void 0 ? variants$5.PRIMARY : _d, onItemClick = _a.onItemClick, children = _a.children, props = __rest(_a, ["activeIndex", "scale", "variant", "onItemClick", "children"]);
     return (React.createElement(StyledButtonMenu, __assign({ variant: variant }, props), Children.map(children, function (child, index) {
-        return cloneElement(child, {
-            // isActive: activeIndex === index,
+        console.log(child);
+        var childProps = {
+            isActive: activeIndex === index,
             onClick: onItemClick ? function () { return onItemClick(index); } : undefined,
             scale: scale,
             variant: variant,
-        });
+        };
+        return cloneElement(child, childProps);
     })));
 };
 var templateObject_1$Z;
