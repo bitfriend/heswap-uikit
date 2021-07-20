@@ -1,8 +1,4 @@
-export { default as BnbIcon } from "./BNB";
-export { default as BtcbIcon } from "./BTCB";
-export { default as BusdIcon } from "./BUSD";
 export { default as DiceIcon } from "./Dice";
-export { default as EthIcon } from "./ETH";
 export { default as FarmIcon } from "./Farm";
 export { default as GroupsIcon } from "./Groups";
 export { default as HamburgerIcon } from "./Hamburger";
@@ -10,7 +6,6 @@ export { default as HamburgerCloseIcon } from "./HamburgerClose";
 export { default as HomeIcon } from "./Home";
 export { default as IfoIcon } from "./Ifo";
 export { default as InfoIcon } from "./Info";
-export { default as LkcpIcon } from "./LKCP";
 export { default as LogoIcon } from "./Logo";
 export { default as MoonIcon } from "./Moon";
 export { default as MoreIcon } from "./More";
