@@ -3240,12 +3240,9 @@ var useTooltip = function (content, options) {
     };
 };
 
-var ModalHeader = styled.div(templateObject_1$q || (templateObject_1$q = __makeTemplateObject(["\n  align-items: center;\n  background: ", ";\n  display: flex;\n  padding: 32px 32px 24px;\n  color: ", ";\n"], ["\n  align-items: center;\n  background: ", ";\n  display: flex;\n  padding: 32px 32px 24px;\n  color: ", ";\n"])), function (_a) {
+var ModalHeader = styled.div(templateObject_1$q || (templateObject_1$q = __makeTemplateObject(["\n  align-items: center;\n  background: ", ";\n  display: flex;\n  padding: 32px 32px 24px;\n"], ["\n  align-items: center;\n  background: ", ";\n  display: flex;\n  padding: 32px 32px 24px;\n"])), function (_a) {
     var background = _a.background;
     return background || "transparent";
-}, function (_a) {
-    var theme = _a.theme;
-    return theme.menu.topBarColor;
 });
 var ModalTitle = styled(Flex)(templateObject_2$c || (templateObject_2$c = __makeTemplateObject(["\n  align-items: center;\n  flex: 1;\n"], ["\n  align-items: center;\n  flex: 1;\n"])));
 var ModalBody = styled(Flex)(templateObject_3$6 || (templateObject_3$6 = __makeTemplateObject(["\n  flex-direction: column;\n  max-height: 90vh;\n  overflow-y: auto;\n  padding: 0 24px 24px;\n"], ["\n  flex-direction: column;\n  max-height: 90vh;\n  overflow-y: auto;\n  padding: 0 24px 24px;\n"])));
@@ -3285,7 +3282,7 @@ var Modal = function (_a) {
         React.createElement(ModalHeader, { background: getThemeValue("colors." + headerBackground, headerBackground)(theme) },
             React.createElement(ModalTitle, null,
                 onBack && React.createElement(ModalBackButton, { onBack: onBack }),
-                React.createElement(Heading, null, title)),
+                React.createElement(Heading, { color: theme.menu.topBarColor }, title)),
             !hideCloseButton && React.createElement(ModalCloseButton, { onDismiss: onDismiss })),
         React.createElement(ModalBody, { p: bodyPadding }, children)));
 };

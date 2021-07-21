@@ -11,7 +11,6 @@ export const ModalHeader = styled.div<{ background?: string }>`
   background: ${({ background }) => background || "transparent"};
   display: flex;
   padding: 32px 32px 24px;
-  color: ${({ theme }) => theme.menu.topBarColor};
 `;
 
 export const ModalTitle = styled(Flex)`
