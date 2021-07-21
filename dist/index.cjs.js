@@ -3254,26 +3254,30 @@ var useTooltip = function (content, options) {
     };
 };
 
-var ModalHeader = styled__default['default'].div(templateObject_1$q || (templateObject_1$q = __makeTemplateObject(["\n  align-items: center;\n  background: ", ";\n  border-bottom: 1px solid ", ";\n  display: flex;\n  padding: 12px 24px;\n"], ["\n  align-items: center;\n  background: ", ";\n  border-bottom: 1px solid ", ";\n  display: flex;\n  padding: 12px 24px;\n"])), function (_a) {
+var ModalHeader = styled__default['default'].div(templateObject_1$q || (templateObject_1$q = __makeTemplateObject(["\n  align-items: center;\n  background: ", ";\n  border-bottom: 1px solid ", ";\n  display: flex;\n  padding: 32px 32px 24px;\n  color: ", ";\n"], ["\n  align-items: center;\n  background: ", ";\n  border-bottom: 1px solid ", ";\n  display: flex;\n  padding: 32px 32px 24px;\n  color: ", ";\n"])), function (_a) {
     var background = _a.background;
     return background || "transparent";
 }, function (_a) {
     var theme = _a.theme;
     return theme.colors.cardBorder;
+}, function (_a) {
+    var theme = _a.theme;
+    return theme.menu.topBarColor;
 });
 var ModalTitle = styled__default['default'](Flex)(templateObject_2$c || (templateObject_2$c = __makeTemplateObject(["\n  align-items: center;\n  flex: 1;\n"], ["\n  align-items: center;\n  flex: 1;\n"])));
 var ModalBody = styled__default['default'](Flex)(templateObject_3$6 || (templateObject_3$6 = __makeTemplateObject(["\n  flex-direction: column;\n  max-height: 90vh;\n  overflow-y: auto;\n"], ["\n  flex-direction: column;\n  max-height: 90vh;\n  overflow-y: auto;\n"])));
 var ModalCloseButton = function (_a) {
     var onDismiss = _a.onDismiss;
+    var theme = styled.useTheme();
     return (React__default['default'].createElement(IconButton, { variant: "text", onClick: onDismiss, "aria-label": "Close the dialog" },
-        React__default['default'].createElement(Icon$1f, { color: "primary" })));
+        React__default['default'].createElement(Icon$1f, { color: theme.menu.leftBarColor })));
 };
 var ModalBackButton = function (_a) {
     var onBack = _a.onBack;
     return (React__default['default'].createElement(IconButton, { variant: "text", onClick: onBack, "area-label": "go back", mr: "8px" },
         React__default['default'].createElement(Icon$1A, { color: "primary" })));
 };
-var ModalContainer = styled__default['default'](Box)(templateObject_4$4 || (templateObject_4$4 = __makeTemplateObject(["\n  overflow: hidden;\n  background: ", ";\n  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);\n  border: 1px solid ", ";\n  border-radius: 32px;\n  width: 100%;\n  max-height: 100vh;\n  z-index: ", ";\n\n  ", " {\n    width: auto;\n    min-width: ", ";\n    max-width: 100%;\n  }\n"], ["\n  overflow: hidden;\n  background: ", ";\n  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);\n  border: 1px solid ", ";\n  border-radius: 32px;\n  width: 100%;\n  max-height: 100vh;\n  z-index: ", ";\n\n  ", " {\n    width: auto;\n    min-width: ", ";\n    max-width: 100%;\n  }\n"])), function (_a) {
+var ModalContainer = styled__default['default'](Box)(templateObject_4$4 || (templateObject_4$4 = __makeTemplateObject(["\n  overflow: hidden;\n  background: ", ";\n  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);\n  border: 1px solid ", ";\n  border-radius: 16px;\n  width: 100%;\n  max-height: 100vh;\n  z-index: ", ";\n\n  ", " {\n    width: auto;\n    min-width: ", ";\n    max-width: 100%;\n  }\n"], ["\n  overflow: hidden;\n  background: ", ";\n  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);\n  border: 1px solid ", ";\n  border-radius: 16px;\n  width: 100%;\n  max-height: 100vh;\n  z-index: ", ";\n\n  ", " {\n    width: auto;\n    min-width: ", ";\n    max-width: 100%;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.modal.background;
 }, function (_a) {
@@ -4130,7 +4134,10 @@ var WalletCard = function (_a) {
             login(walletConfig.connectorId);
             window.localStorage.setItem(connectorLocalStorageKey, walletConfig.connectorId);
             onDismiss();
-        }, style: { justifyContent: "space-between" }, mb: mb, id: "wallet-connect-" + title.toLocaleLowerCase() },
+        }, style: {
+            justifyContent: "space-between",
+            borderRadius: "8px"
+        }, mb: mb, id: "wallet-connect-" + title.toLocaleLowerCase() },
         React__default['default'].createElement(Text, { bold: true, color: "primary", mr: "16px" }, title),
         React__default['default'].createElement(Icon, { width: "32px" })));
 };
