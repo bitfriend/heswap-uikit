@@ -14,8 +14,6 @@ interface Props {
 
 const HelpLink = styled(Link)`
   display: flex;
-  align-self: center;
-  align-items: center;
   margin-top: 24px;
 `;
 

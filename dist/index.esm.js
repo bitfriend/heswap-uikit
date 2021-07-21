@@ -3240,27 +3240,24 @@ var useTooltip = function (content, options) {
     };
 };
 
-var ModalHeader = styled.div(templateObject_1$q || (templateObject_1$q = __makeTemplateObject(["\n  align-items: center;\n  background: ", ";\n  border-bottom: 1px solid ", ";\n  display: flex;\n  padding: 32px 32px 24px;\n  color: ", ";\n"], ["\n  align-items: center;\n  background: ", ";\n  border-bottom: 1px solid ", ";\n  display: flex;\n  padding: 32px 32px 24px;\n  color: ", ";\n"])), function (_a) {
+var ModalHeader = styled.div(templateObject_1$q || (templateObject_1$q = __makeTemplateObject(["\n  align-items: center;\n  background: ", ";\n  display: flex;\n  padding: 32px 32px 24px;\n  color: ", ";\n"], ["\n  align-items: center;\n  background: ", ";\n  display: flex;\n  padding: 32px 32px 24px;\n  color: ", ";\n"])), function (_a) {
     var background = _a.background;
     return background || "transparent";
-}, function (_a) {
-    var theme = _a.theme;
-    return theme.colors.cardBorder;
 }, function (_a) {
     var theme = _a.theme;
     return theme.menu.topBarColor;
 });
 var ModalTitle = styled(Flex)(templateObject_2$c || (templateObject_2$c = __makeTemplateObject(["\n  align-items: center;\n  flex: 1;\n"], ["\n  align-items: center;\n  flex: 1;\n"])));
-var ModalBody = styled(Flex)(templateObject_3$6 || (templateObject_3$6 = __makeTemplateObject(["\n  flex-direction: column;\n  max-height: 90vh;\n  overflow-y: auto;\n"], ["\n  flex-direction: column;\n  max-height: 90vh;\n  overflow-y: auto;\n"])));
+var ModalBody = styled(Flex)(templateObject_3$6 || (templateObject_3$6 = __makeTemplateObject(["\n  flex-direction: column;\n  max-height: 90vh;\n  overflow-y: auto;\n  padding: 0 24px 24px;\n"], ["\n  flex-direction: column;\n  max-height: 90vh;\n  overflow-y: auto;\n  padding: 0 24px 24px;\n"])));
 var ModalCloseButton = function (_a) {
     var onDismiss = _a.onDismiss;
     var theme = useTheme();
-    return (React.createElement(IconButton, { variant: "text", onClick: onDismiss, "aria-label": "Close the dialog" },
+    return (React.createElement(IconButton, { variant: "text", onClick: onDismiss, "aria-label": "Close the dialog", width: "24px", height: "24px" },
         React.createElement(Icon$1f, { color: theme.menu.leftBarColor })));
 };
 var ModalBackButton = function (_a) {
     var onBack = _a.onBack;
-    return (React.createElement(IconButton, { variant: "text", onClick: onBack, "area-label": "go back", mr: "8px" },
+    return (React.createElement(IconButton, { variant: "text", onClick: onBack, "area-label": "go back", mr: "8px", width: "24px", height: "24px" },
         React.createElement(Icon$1A, { color: "primary" })));
 };
 var ModalContainer = styled(Box)(templateObject_4$4 || (templateObject_4$4 = __makeTemplateObject(["\n  overflow: hidden;\n  background: ", ";\n  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);\n  border: 1px solid ", ";\n  border-radius: 16px;\n  width: 100%;\n  max-height: 100vh;\n  z-index: ", ";\n\n  ", " {\n    width: auto;\n    min-width: ", ";\n    max-width: 100%;\n  }\n"], ["\n  overflow: hidden;\n  background: ", ";\n  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);\n  border: 1px solid ", ";\n  border-radius: 16px;\n  width: 100%;\n  max-height: 100vh;\n  z-index: ", ";\n\n  ", " {\n    width: auto;\n    min-width: ", ";\n    max-width: 100%;\n  }\n"])), function (_a) {
@@ -4128,7 +4125,7 @@ var WalletCard = function (_a) {
         React.createElement(Icon, { width: "32px" })));
 };
 
-var HelpLink = styled(Link)(templateObject_1$f || (templateObject_1$f = __makeTemplateObject(["\n  display: flex;\n  align-self: center;\n  align-items: center;\n  margin-top: 24px;\n"], ["\n  display: flex;\n  align-self: center;\n  align-items: center;\n  margin-top: 24px;\n"])));
+var HelpLink = styled(Link)(templateObject_1$f || (templateObject_1$f = __makeTemplateObject(["\n  display: flex;\n  margin-top: 24px;\n"], ["\n  display: flex;\n  margin-top: 24px;\n"])));
 var ConnectModal = function (_a) {
     var login = _a.login, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b;
     return (React.createElement(Modal, { title: "Connect to a wallet", onDismiss: onDismiss },
