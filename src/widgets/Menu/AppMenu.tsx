@@ -95,6 +95,7 @@ const StyledChevron = styled(IconButton)<{ isPushed: boolean }>`
 `;
 
 const Menu: React.FC<NavProps> = ({
+  logoTitle,
   account,
   login,
   logout,
@@ -150,6 +151,7 @@ const Menu: React.FC<NavProps> = ({
   return (
     <Wrapper>
       <AppPanel
+        logoTitle={logoTitle}
         isPushed={isPushed}
         isMobile={isMobile}
         isDark={isDark}

@@ -51,6 +51,7 @@ export interface PanelProps {
     links: Array<MenuEntry>;
 }
 export interface NavProps extends PanelProps {
+    logoTitle?: string;
     account?: string;
     login?: Login;
     profile?: Profile;

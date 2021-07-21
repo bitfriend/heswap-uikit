@@ -4330,14 +4330,14 @@ var StyledLink = styled(Link$1)(templateObject_2$4 || (templateObject_2$4 = __ma
     return theme.mediaQueries.nav;
 }, blink);
 var Logo = function (_a) {
-    var isPushed = _a.isPushed, href = _a.href;
+    var logoTitle = _a.logoTitle, isPushed = _a.isPushed, href = _a.href;
     var theme = useTheme();
     var isAbsoluteUrl = href.startsWith("http");
     var innerLogo = (React.createElement(React.Fragment, null,
         React.createElement(Icon$14, { className: "mobile-icon" }),
         React.createElement(Flex, { className: "desktop-icon", justifyContent: "center", alignItems: "center" },
             React.createElement(Icon$14, { marginRight: isPushed ? '24px' : 0 }),
-            isPushed && (React.createElement(Text, { color: theme.colors.backgroundAlt, fontSize: "26px", fontWeight: "600" }, "heswap")))));
+            isPushed && (React.createElement(Text, { color: theme.colors.backgroundAlt, fontSize: "26px", fontWeight: "600" }, logoTitle || 'heswap')))));
     return (React.createElement(Flex, { height: "64px", justifyContent: "center", alignItems: "center" }, isAbsoluteUrl ? (React.createElement(StyledLink, { as: "a", href: href, "aria-label": "Heswap home page" }, innerLogo)) : (React.createElement(StyledLink, { to: href, "aria-label": "Heswap home page" }, innerLogo))));
 };
 var AppLogo = React.memo(Logo, function (prev, next) { return prev.isPushed === next.isPushed; });
@@ -4529,11 +4529,11 @@ var StyledPanel = styled.div(templateObject_1$5 || (templateObject_1$5 = __makeT
 });
 var Panel = function (props) {
     var _a;
-    var isPushed = props.isPushed, links = props.links;
+    var logoTitle = props.logoTitle, isPushed = props.isPushed, links = props.links;
     // Find the home link if provided
     var homeLink = links.find(function (link) { return link.label === "Home"; });
     return (React.createElement(StyledPanel, { isPushed: isPushed },
-        React.createElement(AppLogo, { isPushed: isPushed, href: (_a = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _a !== void 0 ? _a : "/" }),
+        React.createElement(AppLogo, { logoTitle: logoTitle, isPushed: isPushed, href: (_a = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _a !== void 0 ? _a : "/" }),
         React.createElement(PanelBody, __assign({}, props)),
         React.createElement(PanelFooter, __assign({}, props))));
 };
@@ -4603,7 +4603,7 @@ var StyledChevron = styled(IconButton)(templateObject_9 || (templateObject_9 = _
     return (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) - 16 + "px";
 });
 var Menu = function (_a) {
-    var account = _a.account, login = _a.login, logout = _a.logout, isDark = _a.isDark, toggleTheme = _a.toggleTheme, langs = _a.langs, setLang = _a.setLang, currentLang = _a.currentLang, cakePriceUsd = _a.cakePriceUsd, links = _a.links, profile = _a.profile, children = _a.children;
+    var logoTitle = _a.logoTitle, account = _a.account, login = _a.login, logout = _a.logout, isDark = _a.isDark, toggleTheme = _a.toggleTheme, langs = _a.langs, setLang = _a.setLang, currentLang = _a.currentLang, cakePriceUsd = _a.cakePriceUsd, links = _a.links, profile = _a.profile, children = _a.children;
     var isXl = useMatchBreakpoints().isXl;
     var isMobile = isXl === false;
     var _b = useState(!isMobile), isPushed = _b[0], setIsPushed = _b[1];
@@ -4642,7 +4642,7 @@ var Menu = function (_a) {
         };
     }, [theme.menu.topBarColor]);
     return (React.createElement(Wrapper, null,
-        React.createElement(Panel, { isPushed: isPushed, isMobile: isMobile, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, pushNav: setIsPushed, links: links }),
+        React.createElement(Panel, { logoTitle: logoTitle, isPushed: isPushed, isMobile: isMobile, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, pushNav: setIsPushed, links: links }),
         React.createElement(BodyWrapper, { isPushed: isPushed },
             React.createElement(StyledNav, { isMobile: isMobile, isPushed: isPushed, showMenu: showMenu, bgColor: navColor },
                 !!login && !!logout && (React.createElement(StyledFlex, null,

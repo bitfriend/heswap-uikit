@@ -6,6 +6,7 @@ import { Flex } from "../../../components/Box";
 import { Text } from "../../../components/Text";
 
 interface Props {
+  logoTitle?: string;
   isPushed: boolean;
   href: string;
 }
@@ -47,7 +48,7 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const Logo: React.FC<Props> = ({ isPushed, href }) => {
+const Logo: React.FC<Props> = ({ logoTitle, isPushed, href }) => {
   const theme = useTheme();
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
@@ -60,7 +61,7 @@ const Logo: React.FC<Props> = ({ isPushed, href }) => {
       >
         <LogoIcon marginRight={isPushed ? '24px' : 0} />
         {isPushed && (
-          <Text color={theme.colors.backgroundAlt} fontSize="26px" fontWeight="600">heswap</Text>
+          <Text color={theme.colors.backgroundAlt} fontSize="26px" fontWeight="600">{logoTitle || 'heswap'}</Text>
         )}
       </Flex>
     </>

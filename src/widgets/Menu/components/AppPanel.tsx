@@ -7,6 +7,7 @@ import { SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "../config";
 import { PanelProps, PushedProps } from "../types";
 
 interface Props extends PanelProps, PushedProps {
+  logoTitle?: string;
   isMobile: boolean;
 }
 
@@ -35,7 +36,7 @@ const StyledPanel = styled.div<{ isPushed: boolean }>`
 `;
 
 const Panel: React.FC<Props> = (props) => {
-  const { isPushed, links } = props;
+  const { logoTitle, isPushed, links } = props;
 
   // Find the home link if provided
   const homeLink = links.find((link) => link.label === "Home");
@@ -43,6 +44,7 @@ const Panel: React.FC<Props> = (props) => {
   return (
     <StyledPanel isPushed={isPushed}>
       <AppLogo
+        logoTitle={logoTitle}
         isPushed={isPushed}
         href={homeLink?.href ?? "/"}
       />
