@@ -71,6 +71,7 @@ export type Colors = {
   // Additional colors
   binance: string;
   overlay: string;
+  inputBorder: string;
   inputFocusedBorder: string;
 };
 

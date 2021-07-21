@@ -61,6 +61,7 @@ export declare type Colors = {
     gradients: Gradients;
     binance: string;
     overlay: string;
+    inputBorder: string;
     inputFocusedBorder: string;
 };
 export declare type ZIndices = {
