@@ -2973,7 +2973,7 @@ var lightColors = __assign(__assign(__assign({}, baseColors), additionalColors),
         gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
         pageHeader: "linear-gradient(180deg, #00695c, #26a69a)",
         slickDotLoading: "linear-gradient(270deg, #4fd15a, #03ac0e)",
-        homeCard: "linear-gradient(235deg, rgb(51, 111, 245) 4.05%, rgba(17, 81, 225, 0.32) 103.52%)",
+        cardDiagonal: "linear-gradient(235deg, rgb(51, 111, 245) 4.05%, rgba(17, 81, 225, 0.32) 103.52%)",
     } });
 var darkColors = __assign(__assign(__assign({}, baseColors), additionalColors), { secondary: "#9A6AFF", background: "#08060B", backgroundDisabled: "#3c3742", backgroundAlt: "#27262c", cardBorder: "#383241", contrast: "#FFFFFF", dropdown: "#1E1D20", dropdownDeep: "#100C18", invertedContrast: "#191326", input: "#372F47", inputBorder: "#262130", inputFocusedBorder: "rgb(18, 99, 241)", inputSecondary: "#262130", primaryDark: "#0098A1", tertiary: "#353547", text: "#F4EEFF", textDisabled: "#666171", textSubtle: "#B8ADD2", disabled: "#524B63", gradients: {
         bubblegum: "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)",
@@ -2985,7 +2985,7 @@ var darkColors = __assign(__assign(__assign({}, baseColors), additionalColors), 
         gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
         pageHeader: "linear-gradient(180deg, #00695c, #26a69a)",
         slickDotLoading: "linear-gradient(270deg, #4fd15a, #03ac0e)",
-        homeCard: "linear-gradient(235deg, rgb(51, 111, 245) 4.05%, rgba(17, 81, 225, 0.32) 103.52%)",
+        cardDiagonal: "linear-gradient(235deg, rgb(51, 111, 245) 4.05%, rgba(17, 81, 225, 0.32) 103.52%)",
     } });
 
 var light$7 = {

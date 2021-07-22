@@ -33,7 +33,7 @@ export declare type Gradients = {
     gold: string;
     pageHeader: string;
     slickDotLoading: string;
-    homeCard: string;
+    cardDiagonal: string;
 };
 export declare type Colors = {
     primary: string;

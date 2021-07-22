@@ -45,7 +45,7 @@ export const lightColors: Colors = {
     gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
     pageHeader: "linear-gradient(180deg, #00695c, #26a69a)",
     slickDotLoading: "linear-gradient(270deg, #4fd15a, #03ac0e)",
-    homeCard: "linear-gradient(235deg, rgb(51, 111, 245) 4.05%, rgba(17, 81, 225, 0.32) 103.52%)",
+    cardDiagonal: "linear-gradient(235deg, rgb(51, 111, 245) 4.05%, rgba(17, 81, 225, 0.32) 103.52%)",
   },
 };
 
@@ -81,6 +81,6 @@ export const darkColors: Colors = {
     gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
     pageHeader: "linear-gradient(180deg, #00695c, #26a69a)",
     slickDotLoading: "linear-gradient(270deg, #4fd15a, #03ac0e)",
-    homeCard: "linear-gradient(235deg, rgb(51, 111, 245) 4.05%, rgba(17, 81, 225, 0.32) 103.52%)",
+    cardDiagonal: "linear-gradient(235deg, rgb(51, 111, 245) 4.05%, rgba(17, 81, 225, 0.32) 103.52%)",
   },
 };
