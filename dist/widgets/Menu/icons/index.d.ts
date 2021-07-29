@@ -1,3 +1,4 @@
+export { default as BankIcon } from "./Bank";
 export { default as DiceIcon } from "./Dice";
 export { default as FarmIcon } from "./Farm";
 export { default as GroupsIcon } from "./Groups";
