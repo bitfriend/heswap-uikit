@@ -3381,15 +3381,15 @@ var useModal = function (modal, closeOnOverlayClick) {
 };
 
 var Icon$q = function (props) {
-    return (React__default['default'].createElement(Svg, __assign({ viewBox: "0 0 24 24" }, props),
-        React__default['default'].createElement("g", { transform: "translate(0, 24) scale(0.004687,-0.004687)", fill: "#000000", stroke: "none" },
+    return (React__default['default'].createElement(Svg, __assign({ viewBox: "-4 -4 28 28" }, props),
+        React__default['default'].createElement("g", { transform: "translate(-4, 24) scale(0.004687,-0.004687)" },
             React__default['default'].createElement("path", { d: "M2470 5106 c-141 -55 -2362 -1063 -2390 -1085 -19 -15 -45 -47 -58 -72 -20 -37 -23 -55 -20 -121 3 -66 7 -82 33 -120 36 -50 82 -84 135 -98 25 -7 840 -9 2411 -8 l2374 3 41 22 c83 44 124 116 124 216 0 76 -27 136 -80 178 -19 15 -568 267 -1220 560 -1131 509 -1188 533 -1250 536 -37 1 -80 -3 -100 -11z" }),
             React__default['default'].createElement("path", { d: "M460 3383 c-53 -36 -70 -90 -46 -147 19 -45 55 -68 117 -74 l49 -5 0 -1036 0 -1037 -76 -11 c-97 -14 -147 -47 -187 -123 -25 -49 -28 -63 -25 -127 3 -60 8 -78 34 -115 34 -49 81 -83 133 -98 24 -6 749 -10 2102 -10 2253 0 2108 -4 2185 55 47 36 84 117 84 184 -1 130 -89 221 -228 237 l-62 7 0 1038 0 1039 35 0 c20 0 50 6 68 14 89 37 93 169 6 213 -19 10 -471 13 -2094 13 -1935 0 -2072 -1 -2095 -17z m1280 -1263 l0 -1040 -345 0 -345 0 0 1040 0 1040 345 0 345 0 0 -1040z m1160 0 l0 -1040 -345 0 -345 0 0 1040 0 1040 345 0 345 0 0 -1040z m1170 0 l0 -1040 -345 0 -345 0 0 1040 0 1040 345 0 345 0 0 -1040z" }),
             React__default['default'].createElement("path", { d: "M146 455 c-87 -31 -146 -119 -146 -220 0 -99 49 -177 135 -216 38 -18 133 -19 2423 -19 2632 0 2419 -5 2491 63 63 60 87 155 61 247 -14 52 -67 109 -124 136 l-51 24 -2375 -1 c-1994 0 -2381 -2 -2414 -14z" }))));
 };
 
-var Icon$p = function (props) { return (React__default['default'].createElement(Svg, __assign({ viewBox: "0 0 24 24" }, props),
-    React__default['default'].createElement("g", { transform: "translate(0, 24) scale(0.1, -0.1)", fill: "#000000", stroke: "none" },
+var Icon$p = function (props) { return (React__default['default'].createElement(Svg, __assign({ viewBox: "-4 -4 28 28" }, props),
+    React__default['default'].createElement("g", { transform: "translate(-4, 24) scale(0.1, -0.1)" },
         React__default['default'].createElement("path", { d: "M65 216 l-50 -23 53 -27 52 -26 52 26 52 26 -34 18 c-58 29 -73 30 -125 6z" }),
         React__default['default'].createElement("path", { d: "M0 121 l0 -59 55 -30 55 -30 0 68 0 68 -49 21 c-27 11 -52 21 -55 21 -3 0 -6 -27 -6 -59z m97 -13 c-3 -8 -6 -5 -6 6 -1 11 2 17 5 13 3 -3 4 -12 1 -19z m-27 -14 c0 -8 -5 -12 -10 -9 -6 4 -8 11 -5 16 9 14 15 11 15 -7z m-30 -20 c0 -8 -5 -12 -10 -9 -6 4 -8 11 -5 16 9 14 15 11 15 -7z" }),
         React__default['default'].createElement("path", { d: "M178 157 l-48 -21 0 -68 0 -69 53 28 52 28 3 63 c2 34 -1 62 -5 61 -4 -1 -29 -10 -55 -22z m-18 -47 c0 -5 -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10 -10z m50 -25 c0 -8 -4 -15 -10 -15 -5 0 -10 7 -10 15 0 8 5 15 10 15 6 0 10 -7 10 -15z" })))); };
