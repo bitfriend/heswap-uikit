@@ -32,7 +32,6 @@ export declare type Gradients = {
     violetAlt: string;
     gold: string;
     pageHeader: string;
-    diceHeader: string;
     slickDotLoading: string;
     cardDiagonal: string;
 };
