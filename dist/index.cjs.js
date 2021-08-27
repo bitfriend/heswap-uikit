@@ -3302,7 +3302,7 @@ var Modal = function (_a) {
         React__default['default'].createElement(ModalHeader, { background: getThemeValue("colors." + headerBackground, headerBackground)(theme) },
             React__default['default'].createElement(ModalTitle, null,
                 onBack && React__default['default'].createElement(ModalBackButton, { onBack: onBack }),
-                React__default['default'].createElement(Heading, { color: theme.menu.topBarColor }, title)),
+                React__default['default'].createElement(Heading, { color: theme.colors.text }, title)),
             !hideCloseButton && React__default['default'].createElement(ModalCloseButton, { onDismiss: onDismiss })),
         React__default['default'].createElement(ModalBody, { p: bodyPadding }, children)));
 };
