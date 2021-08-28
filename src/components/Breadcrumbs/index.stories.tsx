@@ -1,7 +1,7 @@
 import React from "react";
 import Text from "../Text/Text";
 import Link from "../Link/Link";
-import LogoIcon from "../Svg/Icons/Logo";
+import LogoIcon from "../../widgets/Menu/icons/Logo";
 import WonIcon from "../Svg/Icons/Won";
 import BreadCrumbs from "./Breadcrumbs";
 
