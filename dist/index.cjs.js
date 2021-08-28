@@ -4848,6 +4848,7 @@ exports.MedalTealIcon = Icon$$;
 exports.Menu = Menu$1;
 exports.MenuAvatar = Avatar;
 exports.MenuIcons = IconModule;
+exports.MenuLink = MenuLink;
 exports.Message = Message;
 exports.MetamaskIcon = Icon$_;
 exports.MinusIcon = Icon$Z;
