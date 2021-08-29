@@ -3530,8 +3530,8 @@ var IconModule = /*#__PURE__*/Object.freeze({
     HamburgerCloseIcon: Icon$l,
     HomeIcon: Icon$k,
     IfoIcon: Icon$j,
-    MenuInfoIcon: Icon$i,
-    MenuLogoIcon: LogoWithText,
+    InfoIcon: Icon$i,
+    LogoIcon: LogoWithText,
     MoonIcon: Icon$h,
     MoreIcon: Icon$g,
     NftIcon: Icon$f,
@@ -4502,7 +4502,6 @@ exports.MedalSilverIcon = Icon$_;
 exports.MedalTealIcon = Icon$Z;
 exports.Menu = Menu;
 exports.MenuAvatar = Avatar;
-exports.MenuIcons = IconModule;
 exports.MenuLink = MenuLink;
 exports.Message = Message;
 exports.MetamaskIcon = Icon$Y;
