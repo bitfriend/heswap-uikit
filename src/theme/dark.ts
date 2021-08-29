@@ -1,7 +1,7 @@
 import { DefaultTheme } from "styled-components";
 import { dark as darkAlert } from "../components/Alert/theme";
 import { dark as darkCard } from "../components/Card/theme";
-import { dark as darkHeswapToggle } from "../components/HeswapToggle/theme";
+import { dark as darkLuckyChipToggle } from "../components/LuckyChipToggle/theme";
 import { dark as darkRadio } from "../components/Radio/theme";
 import { dark as darkToggle } from "../components/Toggle/theme";
 import { dark as darkMenu } from "../widgets/Menu/theme";
@@ -19,7 +19,7 @@ const darkTheme: DefaultTheme = {
   toggle: darkToggle,
   menu: darkMenu,
   modal: darkModal,
-  heswapToggle: darkHeswapToggle,
+  luckychipToggle: darkLuckyChipToggle,
   radio: darkRadio,
   tooltip: darkTooltip,
 };

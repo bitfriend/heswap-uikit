@@ -136,11 +136,11 @@ it("renders ConnectModal correctly", () => {
       box-shadow: none;
     }
 
-    .c7:hover:not(:disabled):not(.heswap-button--disabled):not(.heswap-button--disabled):not(:active) {
+    .c7:hover:not(:disabled):not(.luckychip-button--disabled):not(.luckychip-button--disabled):not(:active) {
       opacity: 0.65;
     }
 
-    .c7:active:not(:disabled):not(.heswap-button--disabled):not(.heswap-button--disabled) {
+    .c7:active:not(:disabled):not(.luckychip-button--disabled):not(.luckychip-button--disabled) {
       opacity: 0.85;
       -webkit-transform: translateY(1px);
       -ms-transform: translateY(1px);
@@ -149,7 +149,7 @@ it("renders ConnectModal correctly", () => {
     }
 
     .c7:disabled,
-    .c7.heswap-button--disabled {
+    .c7.luckychip-button--disabled {
       background-color: #E9EAEB;
       border-color: #E9EAEB;
       box-shadow: none;
@@ -195,11 +195,11 @@ it("renders ConnectModal correctly", () => {
       margin-bottom: 8px;
     }
 
-    .c12:hover:not(:disabled):not(.heswap-button--disabled):not(.heswap-button--disabled):not(:active) {
+    .c12:hover:not(:disabled):not(.luckychip-button--disabled):not(.luckychip-button--disabled):not(:active) {
       opacity: 0.65;
     }
 
-    .c12:active:not(:disabled):not(.heswap-button--disabled):not(.heswap-button--disabled) {
+    .c12:active:not(:disabled):not(.luckychip-button--disabled):not(.luckychip-button--disabled) {
       opacity: 0.85;
       -webkit-transform: translateY(1px);
       -ms-transform: translateY(1px);
@@ -208,7 +208,7 @@ it("renders ConnectModal correctly", () => {
     }
 
     .c12:disabled,
-    .c12.heswap-button--disabled {
+    .c12.luckychip-button--disabled {
       background-color: #E9EAEB;
       border-color: #E9EAEB;
       box-shadow: none;
@@ -254,11 +254,11 @@ it("renders ConnectModal correctly", () => {
       margin-bottom: 0;
     }
 
-    .c15:hover:not(:disabled):not(.heswap-button--disabled):not(.heswap-button--disabled):not(:active) {
+    .c15:hover:not(:disabled):not(.luckychip-button--disabled):not(.luckychip-button--disabled):not(:active) {
       opacity: 0.65;
     }
 
-    .c15:active:not(:disabled):not(.heswap-button--disabled):not(.heswap-button--disabled) {
+    .c15:active:not(:disabled):not(.luckychip-button--disabled):not(.luckychip-button--disabled) {
       opacity: 0.85;
       -webkit-transform: translateY(1px);
       -ms-transform: translateY(1px);
@@ -267,7 +267,7 @@ it("renders ConnectModal correctly", () => {
     }
 
     .c15:disabled,
-    .c15.heswap-button--disabled {
+    .c15.luckychip-button--disabled {
       background-color: #E9EAEB;
       border-color: #E9EAEB;
       box-shadow: none;
@@ -779,7 +779,7 @@ it("renders ConnectModal correctly", () => {
           <a
             class="c16 c17 c18"
             color="primary"
-            href="https://docs.heswap.finance/get-started/connection-guide"
+            href="https://docs.luckychip.finance/get-started/connection-guide"
             rel="noreferrer noopener"
             target="_blank"
           >

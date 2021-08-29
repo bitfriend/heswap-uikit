@@ -1,13 +1,13 @@
 import { AlertTheme } from "../components/Alert/types";
 import { CardTheme } from "../components/Card/types";
-import { HeswapToggleTheme } from "../components/HeswapToggle/types";
+import { LuckyChipToggleTheme } from "../components/LuckyChipToggle/types";
 import { RadioTheme } from "../components/Radio/types";
 import { ToggleTheme } from "../components/Toggle/types";
 import { TooltipTheme } from "../components/Tooltip/types";
 import type { MenuTheme } from "../widgets/Menu/types";
 import { ModalTheme } from "../widgets/Modal/types";
 import { Colors, Breakpoints, MediaQueries, Spacing, Shadows, Radii, ZIndices } from "./types";
-export interface HeswapTheme {
+export interface LuckyChipTheme {
     siteWidth: number;
     isDark: boolean;
     alert: AlertTheme;
@@ -15,7 +15,7 @@ export interface HeswapTheme {
     card: CardTheme;
     menu: MenuTheme;
     modal: ModalTheme;
-    heswapToggle: HeswapToggleTheme;
+    luckychipToggle: LuckyChipToggleTheme;
     radio: RadioTheme;
     toggle: ToggleTheme;
     tooltip: TooltipTheme;

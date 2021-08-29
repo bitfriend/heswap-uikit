@@ -1,6 +1,6 @@
 import { InputHTMLAttributes } from "react";
 
-export type HeswapToggleTheme = {
+export type LuckyChipToggleTheme = {
   handleBackground: string;
   handleShadow: string;
 };
@@ -12,7 +12,7 @@ export const scales = {
 
 export type Scales = typeof scales[keyof typeof scales];
 
-export interface HeswapToggleProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface LuckyChipToggleProps extends InputHTMLAttributes<HTMLInputElement> {
   scale?: Scales;
   checked?: boolean;
 }
@@ -26,13 +26,13 @@ export interface InputProps {
 }
 
 export const scaleKeys = {
-  heswapSize: "heswapSize",
+  luckychipSize: "luckychipSize",
   travelDistance: "travelDistance",
   toggleHeight: "toggleHeight",
   toggleWidth: "toggleWidth",
-  heswapThickness: "heswapThickness",
-  heswapTwoOffset: "heswapTwoOffset",
-  heswapThreeOffset: "heswapThreeOffset",
+  luckychipThickness: "luckychipThickness",
+  luckychipTwoOffset: "luckychipTwoOffset",
+  luckychipThreeOffset: "luckychipThreeOffset",
   butterTop: "butterTop",
   butterLeft: "butterLeft",
   butterWidth: "butterWidth",

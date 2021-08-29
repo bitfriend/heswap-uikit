@@ -15,7 +15,7 @@ const getDisabledStyles = ({ $isLoading, theme }: TransientButtonProps) => {
   if ($isLoading === true) {
     return `
       &:disabled,
-      &.heswap-button--disabled {
+      &.luckychip-button--disabled {
         cursor: not-allowed;
       }
     `;
@@ -23,7 +23,7 @@ const getDisabledStyles = ({ $isLoading, theme }: TransientButtonProps) => {
 
   return `
     &:disabled,
-    &.heswap-button--disabled {
+    &.luckychip-button--disabled {
       background-color: ${theme.colors.backgroundDisabled};
       border-color: ${theme.colors.backgroundDisabled};
       box-shadow: none;
@@ -60,11 +60,11 @@ const StyledButton = styled.button<BaseButtonProps>`
   outline: 0;
   transition: background-color 0.2s, opacity 0.2s;
 
-  &:hover:not(:disabled):not(.heswap-button--disabled):not(.heswap-button--disabled):not(:active) {
+  &:hover:not(:disabled):not(.luckychip-button--disabled):not(.luckychip-button--disabled):not(:active) {
     opacity: 0.65;
   }
 
-  &:active:not(:disabled):not(.heswap-button--disabled):not(.heswap-button--disabled) {
+  &:active:not(:disabled):not(.luckychip-button--disabled):not(.luckychip-button--disabled) {
     opacity: 0.85;
     transform: translateY(1px);
     box-shadow: none;

@@ -16,7 +16,7 @@ export * from "./components/Layouts";
 export * from "./components/Link";
 export * from "./components/Message";
 export * from "./components/NotificationDot";
-export * from "./components/HeswapToggle";
+export * from "./components/LuckyChipToggle";
 export * from "./components/Overlay";
 export * from "./components/Progress";
 export * from "./components/Radio";

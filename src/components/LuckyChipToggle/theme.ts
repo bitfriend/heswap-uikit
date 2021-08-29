@@ -1,12 +1,12 @@
 import { darkColors, lightColors } from "../../theme/colors";
-import { HeswapToggleTheme } from "./types";
+import { LuckyChipToggleTheme } from "./types";
 
-export const light: HeswapToggleTheme = {
+export const light: LuckyChipToggleTheme = {
   handleBackground: lightColors.backgroundAlt,
   handleShadow: lightColors.textDisabled,
 };
 
-export const dark: HeswapToggleTheme = {
+export const dark: LuckyChipToggleTheme = {
   handleBackground: darkColors.backgroundAlt,
   handleShadow: darkColors.textDisabled,
 };

@@ -64,11 +64,11 @@ it("renders correctly", () => {
       color: white;
     }
 
-    .c1:hover:not(:disabled):not(.heswap-button--disabled):not(.heswap-button--disabled):not(:active) {
+    .c1:hover:not(:disabled):not(.luckychip-button--disabled):not(.luckychip-button--disabled):not(:active) {
       opacity: 0.65;
     }
 
-    .c1:active:not(:disabled):not(.heswap-button--disabled):not(.heswap-button--disabled) {
+    .c1:active:not(:disabled):not(.luckychip-button--disabled):not(.luckychip-button--disabled) {
       opacity: 0.85;
       -webkit-transform: translateY(1px);
       -ms-transform: translateY(1px);
@@ -77,7 +77,7 @@ it("renders correctly", () => {
     }
 
     .c1:disabled,
-    .c1.heswap-button--disabled {
+    .c1.luckychip-button--disabled {
       background-color: #E9EAEB;
       border-color: #E9EAEB;
       box-shadow: none;
@@ -121,11 +121,11 @@ it("renders correctly", () => {
       color: #1FC7D4;
     }
 
-    .c2:hover:not(:disabled):not(.heswap-button--disabled):not(.heswap-button--disabled):not(:active) {
+    .c2:hover:not(:disabled):not(.luckychip-button--disabled):not(.luckychip-button--disabled):not(:active) {
       opacity: 0.65;
     }
 
-    .c2:active:not(:disabled):not(.heswap-button--disabled):not(.heswap-button--disabled) {
+    .c2:active:not(:disabled):not(.luckychip-button--disabled):not(.luckychip-button--disabled) {
       opacity: 0.85;
       -webkit-transform: translateY(1px);
       -ms-transform: translateY(1px);
@@ -134,7 +134,7 @@ it("renders correctly", () => {
     }
 
     .c2:disabled,
-    .c2.heswap-button--disabled {
+    .c2.luckychip-button--disabled {
       background-color: #E9EAEB;
       border-color: #E9EAEB;
       box-shadow: none;

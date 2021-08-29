@@ -1,19 +1,19 @@
 import styled from "styled-components";
-import { scales, HeswapToggleProps, HandleProps, InputProps, ScaleKeys } from "./types";
+import { scales, LuckyChipToggleProps, HandleProps, InputProps, ScaleKeys } from "./types";
 
 const scaleKeyValues = {
   sm: {
-    heswapSize: "16px", // The size of a heswap (the handle)
-    travelDistance: "16px", // How far heswaps should travel horizontally
+    luckychipSize: "16px", // The size of a luckychip (the handle)
+    travelDistance: "16px", // How far luckychips should travel horizontally
     toggleHeight: "20px", // General Height and
     toggleWidth: "36px", // Width of a toggle box
-    heswapThickness: "1px", // Bottom shadow of a heswap
-    heswapTwoOffset: "0px", // Heswaps don't look good when they are concentric
-    heswapThreeOffset: "-3px", // so heswap 2 and 3 are shifted a little bit
+    luckychipThickness: "1px", // Bottom shadow of a luckychip
+    luckychipTwoOffset: "0px", // luckychips don't look good when they are concentric
+    luckychipThreeOffset: "-3px", // so luckychip 2 and 3 are shifted a little bit
     butterTop: "3px", // Fine adjustments for butter position
     butterLeft: "10px",
     butterWidth: "6px", // Widht and
-    butterHeight: "5px", // Height of a butter block on top of heswaps
+    butterHeight: "5px", // Height of a butter block on top of luckychips
     butterThickness: "0.5px", // Shadow on the bottom of the butter block
     butterRadius: "2px", // Rounded corners for the butter
     butterSmearOneTop: "10px", // There is melted butter
@@ -22,13 +22,13 @@ const scaleKeyValues = {
     butterSmearTwoRight: "2.5px", // these values adjust the position of it
   },
   md: {
-    heswapSize: "32px",
+    luckychipSize: "32px",
     travelDistance: "34px",
     toggleHeight: "40px",
     toggleWidth: "72px",
-    heswapThickness: "2px",
-    heswapTwoOffset: "-3px",
-    heswapThreeOffset: "-8px",
+    luckychipThickness: "2px",
+    luckychipTwoOffset: "-3px",
+    luckychipThreeOffset: "-8px",
     butterTop: "3px",
     butterLeft: "16px",
     butterWidth: "12px",
@@ -44,11 +44,11 @@ const scaleKeyValues = {
 
 const getScale =
   (property: ScaleKeys) =>
-  ({ scale = scales.MD }: HeswapToggleProps) => {
+  ({ scale = scales.MD }: LuckyChipToggleProps) => {
     return scaleKeyValues[scale][property];
   };
 
-export const HeswapStack = styled.div<HandleProps>`
+export const LuckyChipStack = styled.div<HandleProps>`
   position: relative;
   display: inline-block;
 
@@ -56,43 +56,43 @@ export const HeswapStack = styled.div<HandleProps>`
     content: none;
   }
 
-  .heswaps {
+  .luckychips {
     transition: 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
-  .heswap {
+  .luckychip {
     background: #e27c31;
     border-radius: 50%;
-    width: ${getScale("heswapSize")};
-    height: ${getScale("heswapSize")};
+    width: ${getScale("luckychipSize")};
+    height: ${getScale("luckychipSize")};
     position: absolute;
     transition: 0.4s ease;
     top: 2px;
     left: 4px;
-    box-shadow: 0 ${getScale("heswapThickness")} 0 ${getScale("heswapThickness")} #fbbe7c;
+    box-shadow: 0 ${getScale("luckychipThickness")} 0 ${getScale("luckychipThickness")} #fbbe7c;
   }
 
-  .heswap:nth-child(1) {
-    background: ${({ theme }) => theme.heswapToggle.handleBackground};
-    box-shadow: 0 ${getScale("heswapThickness")} 0 ${getScale("heswapThickness")}
-      ${({ theme }) => theme.heswapToggle.handleShadow};
+  .luckychip:nth-child(1) {
+    background: ${({ theme }) => theme.luckychipToggle.handleBackground};
+    box-shadow: 0 ${getScale("luckychipThickness")} 0 ${getScale("luckychipThickness")}
+      ${({ theme }) => theme.luckychipToggle.handleShadow};
   }
 
-  .heswap:nth-child(2) {
+  .luckychip:nth-child(2) {
     left: 0;
-    top: ${getScale("heswapTwoOffset")};
+    top: ${getScale("luckychipTwoOffset")};
     transform: scale(0);
     transition: 0.2s ease 0.2s;
   }
 
-  .heswap:nth-child(3) {
-    top: ${getScale("heswapThreeOffset")};
+  .luckychip:nth-child(3) {
+    top: ${getScale("luckychipThreeOffset")};
     transform: scale(0);
     transition: 0.2s ease 0.2s;
   }
 
-  .heswap:nth-child(3):before,
-  .heswap:nth-child(3):after {
+  .luckychip:nth-child(3):before,
+  .luckychip:nth-child(3):after {
     content: "";
     position: absolute;
     background: #ef8927;
@@ -101,12 +101,12 @@ export const HeswapStack = styled.div<HandleProps>`
     height: 20%;
   }
 
-  .heswap:nth-child(3):before {
+  .luckychip:nth-child(3):before {
     top: ${getScale("butterSmearOneTop")};
     left: ${getScale("butterSmearOneLeft")};
   }
 
-  .heswap:nth-child(3):after {
+  .luckychip:nth-child(3):after {
     top: ${getScale("butterSmearTwoTop")};
     right: ${getScale("butterSmearTwoRight")};
   }
@@ -125,7 +125,7 @@ export const HeswapStack = styled.div<HandleProps>`
   }
 `;
 
-export const HeswapInput = styled.input<InputProps>`
+export const LuckyChipInput = styled.input<InputProps>`
   height: 40px;
   left: 0;
   opacity: 0;
@@ -137,22 +137,22 @@ export const HeswapInput = styled.input<InputProps>`
     box-shadow: ${({ theme }) => theme.shadows.focus};
   }
 
-  &:checked + label .heswaps {
+  &:checked + label .luckychips {
     transform: translateX(${getScale("travelDistance")});
   }
 
-  &:checked + label .heswap:nth-child(1) {
+  &:checked + label .luckychip:nth-child(1) {
     background: #e27c31;
-    box-shadow: 0 ${getScale("heswapThickness")} 0 ${getScale("heswapThickness")} #fbbe7c;
+    box-shadow: 0 ${getScale("luckychipThickness")} 0 ${getScale("luckychipThickness")} #fbbe7c;
     transition-delay: 0.2s;
   }
 
-  &:checked + label .heswap:nth-child(2) {
+  &:checked + label .luckychip:nth-child(2) {
     transform: scale(1);
     transition-delay: 0.2s;
   }
 
-  &:checked + label .heswap:nth-child(3) {
+  &:checked + label .luckychip:nth-child(3) {
     transform: scale(1);
     transition-delay: 0.4s;
   }
@@ -163,7 +163,7 @@ export const HeswapInput = styled.input<InputProps>`
   }
 `;
 
-export const HeswapLabel = styled.label<HeswapToggleProps>`
+export const LuckyChipLabel = styled.label<LuckyChipToggleProps>`
   width: ${getScale("toggleWidth")};
   height: ${getScale("toggleHeight")};
   background: ${({ theme, checked }) => theme.colors[checked ? "success" : "input"]};

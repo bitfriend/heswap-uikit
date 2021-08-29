@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import PanIcon from "./PanIcon";
-import HeswapIcon from "./HeswapIcon";
+import LuckyChipIcon from "./LuckyChipIcon";
 import { SpinnerProps } from "./types";
 
 const rotate = keyframes`
@@ -29,7 +29,7 @@ const Container = styled.div`
   position: relative;
 `;
 
-const RotatingHeswapIcon = styled(HeswapIcon)`
+const RotatingLuckyChipIcon = styled(LuckyChipIcon)`
   position: absolute;
   top: 0;
   left: 0;
@@ -45,7 +45,7 @@ const FloatingPanIcon = styled(PanIcon)`
 const Spinner: React.FC<SpinnerProps> = ({ size = 128 }) => {
   return (
     <Container>
-      <RotatingHeswapIcon width={`${size * 0.5}px`} />
+      <RotatingLuckyChipIcon width={`${size * 0.5}px`} />
       <FloatingPanIcon width={`${size}px`} />
     </Container>
   );

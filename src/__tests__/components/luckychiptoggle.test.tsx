@@ -1,11 +1,11 @@
 import React from "react";
 import { renderWithTheme } from "../../testHelpers";
-import HeswapToggle from "../../components/HeswapToggle/HeswapToggle";
+import LuckyChipToggle from "../../components/LuckyChipToggle/LuckyChipToggle";
 
 const handleChange = jest.fn();
 
 it("renders correctly", () => {
-  const { asFragment } = renderWithTheme(<HeswapToggle checked onChange={handleChange} scale="md" />);
+  const { asFragment } = renderWithTheme(<LuckyChipToggle checked onChange={handleChange} scale="md" />);
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       .c0 {
@@ -17,12 +17,12 @@ it("renders correctly", () => {
       content: none;
     }
 
-    .c0 .heswaps {
+    .c0 .luckychips {
       -webkit-transition: 0.6s cubic-bezier(0.175,0.885,0.32,1.275);
       transition: 0.6s cubic-bezier(0.175,0.885,0.32,1.275);
     }
 
-    .c0 .heswap {
+    .c0 .luckychip {
       background: #e27c31;
       border-radius: 50%;
       width: 32px;
@@ -35,12 +35,12 @@ it("renders correctly", () => {
       box-shadow: 0 2px 0 2px #fbbe7c;
     }
 
-    .c0 .heswap:nth-child(1) {
+    .c0 .luckychip:nth-child(1) {
       background: #FFFFFF;
       box-shadow: 0 2px 0 2px #BDC2C4;
     }
 
-    .c0 .heswap:nth-child(2) {
+    .c0 .luckychip:nth-child(2) {
       left: 0;
       top: -3px;
       -webkit-transform: scale(0);
@@ -50,7 +50,7 @@ it("renders correctly", () => {
       transition: 0.2s ease 0.2s;
     }
 
-    .c0 .heswap:nth-child(3) {
+    .c0 .luckychip:nth-child(3) {
       top: -8px;
       -webkit-transform: scale(0);
       -ms-transform: scale(0);
@@ -59,8 +59,8 @@ it("renders correctly", () => {
       transition: 0.2s ease 0.2s;
     }
 
-    .c0 .heswap:nth-child(3):before,
-    .c0 .heswap:nth-child(3):after {
+    .c0 .luckychip:nth-child(3):before,
+    .c0 .luckychip:nth-child(3):after {
       content: "";
       position: absolute;
       background: #ef8927;
@@ -69,12 +69,12 @@ it("renders correctly", () => {
       height: 20%;
     }
 
-    .c0 .heswap:nth-child(3):before {
+    .c0 .luckychip:nth-child(3):before {
       top: 20px;
       left: 5px;
     }
 
-    .c0 .heswap:nth-child(3):after {
+    .c0 .luckychip:nth-child(3):after {
       top: 22px;
       right: 5px;
     }
@@ -108,20 +108,20 @@ it("renders correctly", () => {
       box-shadow: 0px 0px 0px 1px #7645D9,0px 0px 0px 4px rgba(118,69,217,0.6);
     }
 
-    .c1:checked + label .heswaps {
+    .c1:checked + label .luckychips {
       -webkit-transform: translateX(34px);
       -ms-transform: translateX(34px);
       transform: translateX(34px);
     }
 
-    .c1:checked + label .heswap:nth-child(1) {
+    .c1:checked + label .luckychip:nth-child(1) {
       background: #e27c31;
       box-shadow: 0 2px 0 2px #fbbe7c;
       -webkit-transition-delay: 0.2s;
       transition-delay: 0.2s;
     }
 
-    .c1:checked + label .heswap:nth-child(2) {
+    .c1:checked + label .luckychip:nth-child(2) {
       -webkit-transform: scale(1);
       -ms-transform: scale(1);
       transform: scale(1);
@@ -129,7 +129,7 @@ it("renders correctly", () => {
       transition-delay: 0.2s;
     }
 
-    .c1:checked + label .heswap:nth-child(3) {
+    .c1:checked + label .luckychip:nth-child(3) {
       -webkit-transform: scale(1);
       -ms-transform: scale(1);
       transform: scale(1);
@@ -168,26 +168,26 @@ it("renders correctly", () => {
         <input
           checked=""
           class="c1"
-          id="heswap-toggle"
+          id="luckychip-toggle"
           scale="md"
           type="checkbox"
         />
         <label
           class="c2"
-          for="heswap-toggle"
+          for="luckychip-toggle"
           scale="md"
         >
           <div
-            class="heswaps"
+            class="luckychips"
           >
             <div
-              class="heswap"
+              class="luckychip"
             />
             <div
-              class="heswap"
+              class="luckychip"
             />
             <div
-              class="heswap"
+              class="luckychip"
             />
             <div
               class="butter"
@@ -200,7 +200,7 @@ it("renders correctly", () => {
 });
 
 it("renders correctly scale sm", () => {
-  const { asFragment } = renderWithTheme(<HeswapToggle checked onChange={handleChange} scale="sm" />);
+  const { asFragment } = renderWithTheme(<LuckyChipToggle checked onChange={handleChange} scale="sm" />);
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       .c0 {
@@ -212,12 +212,12 @@ it("renders correctly scale sm", () => {
       content: none;
     }
 
-    .c0 .heswaps {
+    .c0 .luckychips {
       -webkit-transition: 0.6s cubic-bezier(0.175,0.885,0.32,1.275);
       transition: 0.6s cubic-bezier(0.175,0.885,0.32,1.275);
     }
 
-    .c0 .heswap {
+    .c0 .luckychip {
       background: #e27c31;
       border-radius: 50%;
       width: 16px;
@@ -230,12 +230,12 @@ it("renders correctly scale sm", () => {
       box-shadow: 0 1px 0 1px #fbbe7c;
     }
 
-    .c0 .heswap:nth-child(1) {
+    .c0 .luckychip:nth-child(1) {
       background: #FFFFFF;
       box-shadow: 0 1px 0 1px #BDC2C4;
     }
 
-    .c0 .heswap:nth-child(2) {
+    .c0 .luckychip:nth-child(2) {
       left: 0;
       top: 0px;
       -webkit-transform: scale(0);
@@ -245,7 +245,7 @@ it("renders correctly scale sm", () => {
       transition: 0.2s ease 0.2s;
     }
 
-    .c0 .heswap:nth-child(3) {
+    .c0 .luckychip:nth-child(3) {
       top: -3px;
       -webkit-transform: scale(0);
       -ms-transform: scale(0);
@@ -254,8 +254,8 @@ it("renders correctly scale sm", () => {
       transition: 0.2s ease 0.2s;
     }
 
-    .c0 .heswap:nth-child(3):before,
-    .c0 .heswap:nth-child(3):after {
+    .c0 .luckychip:nth-child(3):before,
+    .c0 .luckychip:nth-child(3):after {
       content: "";
       position: absolute;
       background: #ef8927;
@@ -264,12 +264,12 @@ it("renders correctly scale sm", () => {
       height: 20%;
     }
 
-    .c0 .heswap:nth-child(3):before {
+    .c0 .luckychip:nth-child(3):before {
       top: 10px;
       left: 2.5px;
     }
 
-    .c0 .heswap:nth-child(3):after {
+    .c0 .luckychip:nth-child(3):after {
       top: 11px;
       right: 2.5px;
     }
@@ -303,20 +303,20 @@ it("renders correctly scale sm", () => {
       box-shadow: 0px 0px 0px 1px #7645D9,0px 0px 0px 4px rgba(118,69,217,0.6);
     }
 
-    .c1:checked + label .heswaps {
+    .c1:checked + label .luckychips {
       -webkit-transform: translateX(16px);
       -ms-transform: translateX(16px);
       transform: translateX(16px);
     }
 
-    .c1:checked + label .heswap:nth-child(1) {
+    .c1:checked + label .luckychip:nth-child(1) {
       background: #e27c31;
       box-shadow: 0 1px 0 1px #fbbe7c;
       -webkit-transition-delay: 0.2s;
       transition-delay: 0.2s;
     }
 
-    .c1:checked + label .heswap:nth-child(2) {
+    .c1:checked + label .luckychip:nth-child(2) {
       -webkit-transform: scale(1);
       -ms-transform: scale(1);
       transform: scale(1);
@@ -324,7 +324,7 @@ it("renders correctly scale sm", () => {
       transition-delay: 0.2s;
     }
 
-    .c1:checked + label .heswap:nth-child(3) {
+    .c1:checked + label .luckychip:nth-child(3) {
       -webkit-transform: scale(1);
       -ms-transform: scale(1);
       transform: scale(1);
@@ -363,26 +363,26 @@ it("renders correctly scale sm", () => {
         <input
           checked=""
           class="c1"
-          id="heswap-toggle"
+          id="luckychip-toggle"
           scale="sm"
           type="checkbox"
         />
         <label
           class="c2"
-          for="heswap-toggle"
+          for="luckychip-toggle"
           scale="sm"
         >
           <div
-            class="heswaps"
+            class="luckychips"
           >
             <div
-              class="heswap"
+              class="luckychip"
             />
             <div
-              class="heswap"
+              class="luckychip"
             />
             <div
-              class="heswap"
+              class="luckychip"
             />
             <div
               class="butter"

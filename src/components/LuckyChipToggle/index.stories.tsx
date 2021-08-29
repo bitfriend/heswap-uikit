@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import HeswapToggle from "./HeswapToggle";
+import LuckyChipToggle from "./LuckyChipToggle";
 
 export default {
-  title: "Components/HeswapToggle",
-  component: HeswapToggle,
+  title: "Components/LuckyChipToggle",
+  component: LuckyChipToggle,
 };
 
 export const Default: React.FC = () => {
@@ -14,10 +14,10 @@ export const Default: React.FC = () => {
   return (
     <>
       <div style={{ marginBottom: "32px" }}>
-        <HeswapToggle checked={isChecked} onChange={toggle} />
+        <LuckyChipToggle checked={isChecked} onChange={toggle} />
       </div>
       <div>
-        <HeswapToggle checked={isChecked} onChange={toggle} scale="sm" />
+        <LuckyChipToggle checked={isChecked} onChange={toggle} scale="sm" />
       </div>
     </>
   );
