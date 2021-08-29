@@ -31,9 +31,6 @@ export declare type Gradients = {
     violet: string;
     violetAlt: string;
     gold: string;
-    pageHeader: string;
-    slickDotLoading: string;
-    cardDiagonal: string;
 };
 export declare type Colors = {
     primary: string;

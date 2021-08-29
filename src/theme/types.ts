@@ -36,9 +36,6 @@ export type Gradients = {
   violet: string;
   violetAlt: string;
   gold: string;
-  pageHeader: string;
-  slickDotLoading: string;
-  cardDiagonal: string;
 };
 
 export type Colors = {
