@@ -3006,14 +3006,14 @@ var darkColors = __assign(__assign(__assign({}, baseColors), additionalColors), 
         cardDiagonal: "linear-gradient(235deg, rgb(51, 111, 245) 4.05%, rgba(17, 81, 225, 0.32) 103.52%)",
     } });
 
-var light$7 = {
+var light$6 = {
     background: lightColors.backgroundAlt,
 };
-var dark$7 = {
+var dark$6 = {
     background: darkColors.backgroundAlt,
 };
 
-var light$6 = {
+var light$5 = {
     background: lightColors.backgroundAlt,
     boxShadow: shadows.level1,
     boxShadowActive: shadows.active,
@@ -3027,7 +3027,7 @@ var light$6 = {
     },
     dropShadow: "drop-shadow(" + shadows.step + ")",
 };
-var dark$6 = {
+var dark$5 = {
     background: darkColors.backgroundAlt,
     boxShadow: shadows.level1,
     boxShadowActive: shadows.active,
@@ -3042,49 +3042,40 @@ var dark$6 = {
     dropShadow: "drop-shadow(" + shadows.step + ")",
 };
 
-var light$5 = {
+var light$4 = {
     handleBackground: lightColors.backgroundAlt,
     handleShadow: lightColors.textDisabled,
 };
-var dark$5 = {
+var dark$4 = {
     handleBackground: darkColors.backgroundAlt,
     handleShadow: darkColors.textDisabled,
 };
 
-var light$4 = {
+var light$3 = {
     handleBackground: lightColors.backgroundAlt,
 };
-var dark$4 = {
+var dark$3 = {
     handleBackground: darkColors.backgroundAlt,
 };
 
-var light$3 = {
+var light$2 = {
     handleBackground: lightColors.backgroundAlt,
     checkedHandleColor: lightColors.success,
     uncheckedHandleColor: lightColors.textSubtle
 };
-var dark$3 = {
+var dark$2 = {
     handleBackground: darkColors.backgroundAlt,
     checkedHandleColor: darkColors.success,
     uncheckedHandleColor: darkColors.textSubtle
 };
 
-var light$2 = {
-    borderColor: 'rgba(133, 133, 133, 0.1)',
-    topBarColor: lightColors.backgroundAlt,
-    leftBarColor: lightColors.backgroundAlt,
-};
-var dark$2 = {
-    borderColor: 'rgba(133, 133, 133, 0.1)',
-    topBarColor: darkColors.backgroundAlt,
-    leftBarColor: darkColors.backgroundAlt,
-};
-
 var light$1 = {
     background: lightColors.backgroundAlt,
+    close: lightColors.background,
 };
 var dark$1 = {
     background: darkColors.backgroundAlt,
+    close: darkColors.background,
 };
 
 var light = {
@@ -3098,9 +3089,9 @@ var dark = {
     boxShadow: "0px 0px 2px rgba(0, 0, 0, 0.2), 0px 4px 12px -8px rgba(14, 14, 44, 0.1)",
 };
 
-var darkTheme = __assign(__assign({}, base), { isDark: true, alert: dark$7, colors: darkColors, card: dark$6, toggle: dark$3, menu: dark$2, modal: dark$1, luckychipToggle: dark$5, radio: dark$4, tooltip: dark });
+var darkTheme = __assign(__assign({}, base), { isDark: true, alert: dark$6, colors: darkColors, card: dark$5, toggle: dark$2, modal: dark$1, luckychipToggle: dark$4, radio: dark$3, tooltip: dark });
 
-var lightTheme = __assign(__assign({}, base), { isDark: false, alert: light$7, colors: lightColors, card: light$6, toggle: light$3, menu: light$2, modal: light$1, luckychipToggle: light$5, radio: light$4, tooltip: light });
+var lightTheme = __assign(__assign({}, base), { isDark: false, alert: light$6, colors: lightColors, card: light$5, toggle: light$2, modal: light$1, luckychipToggle: light$4, radio: light$3, tooltip: light });
 
 var Arrow = styled__default['default'].div(templateObject_1$i || (templateObject_1$i = __makeTemplateObject(["\n  &,\n  &::before {\n    position: absolute;\n    width: 10px;\n    height: 10px;\n    border-radius: 2px;\n    z-index: -1;\n  }\n\n  &::before {\n    content: \"\";\n    transform: rotate(45deg);\n    background: ", ";\n  }\n"], ["\n  &,\n  &::before {\n    position: absolute;\n    width: 10px;\n    height: 10px;\n    border-radius: 2px;\n    z-index: -1;\n  }\n\n  &::before {\n    content: \"\";\n    transform: rotate(45deg);\n    background: ", ";\n  }\n"])), function (_a) {
     var theme = _a.theme;
@@ -3288,7 +3279,7 @@ var ModalCloseButton = function (_a) {
     var onDismiss = _a.onDismiss;
     var theme = styled.useTheme();
     return (React__default['default'].createElement(IconButton, { variant: "text", onClick: onDismiss, "aria-label": "Close the dialog", width: "24px", height: "24px" },
-        React__default['default'].createElement(Icon$1g, { color: theme.menu.leftBarColor })));
+        React__default['default'].createElement(Icon$1g, { color: theme.modal.close })));
 };
 var ModalBackButton = function (_a) {
     var onBack = _a.onBack;
@@ -3835,8 +3826,8 @@ var AccordionContent = styled__default['default'].div(templateObject_2$4 || (tem
     var isOpen = _a.isOpen, maxHeight = _a.maxHeight;
     return (isOpen ? maxHeight + "px" : 0);
 }, function (_a) {
-    var isOpen = _a.isOpen, isPushed = _a.isPushed, theme = _a.theme;
-    return (isOpen && isPushed ? theme.menu.borderColor : "transparent");
+    var isOpen = _a.isOpen, isPushed = _a.isPushed;
+    return (isOpen && isPushed ? "rgba(133, 133, 133, 0.1)" : "transparent");
 });
 var Accordion = function (_a) {
     var label = _a.label, status = _a.status, icon = _a.icon, isPushed = _a.isPushed, pushNav = _a.pushNav, _b = _a.initialOpenState, initialOpenState = _b === void 0 ? false : _b, children = _a.children, className = _a.className, isActive = _a.isActive;
@@ -3942,12 +3933,9 @@ var LangSelector = function (_a) {
 };
 var LangSelector$1 = React__default['default'].memo(LangSelector, function (prev, next) { return prev.currentLang === next.currentLang; });
 
-var Container = styled__default['default'].div(templateObject_1$9 || (templateObject_1$9 = __makeTemplateObject(["\n  flex: none;\n  padding: 8px 4px;\n  background-color: ", ";\n  border-top: solid 2px ", ";\n"], ["\n  flex: none;\n  padding: 8px 4px;\n  background-color: ", ";\n  border-top: solid 2px ", ";\n"])), function (_a) {
+var Container = styled__default['default'].div(templateObject_1$9 || (templateObject_1$9 = __makeTemplateObject(["\n  flex: none;\n  padding: 8px 4px;\n  background-color: ", ";\n  border-top: solid 2px rgba(133, 133, 133, 0.1);\n"], ["\n  flex: none;\n  padding: 8px 4px;\n  background-color: ", ";\n  border-top: solid 2px rgba(133, 133, 133, 0.1);\n"])), function (_a) {
     var theme = _a.theme;
     return theme.colors.backgroundAlt;
-}, function (_a) {
-    var theme = _a.theme;
-    return theme.menu.borderColor;
 });
 var SettingsEntry = styled__default['default'].div(templateObject_2$3 || (templateObject_2$3 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
 var SocialEntry = styled__default['default'].div(templateObject_3$1 || (templateObject_3$1 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"])), MENU_ENTRY_HEIGHT);
@@ -3968,7 +3956,7 @@ var PanelFooter = function (_a) {
 };
 var templateObject_1$9, templateObject_2$3, templateObject_3$1;
 
-var StyledPanel = styled__default['default'].div(templateObject_1$8 || (templateObject_1$8 = __makeTemplateObject(["\n  position: fixed;\n  padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background-color: ", ";\n  width: ", ";\n  height: 100%;\n  transition: padding-top 0.2s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n  ", ";\n\n  ", " {\n    border-right: 2px solid ", ";\n    width: ", ";\n  }\n"], ["\n  position: fixed;\n  padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background-color: ", ";\n  width: ", ";\n  height: 100%;\n  transition: padding-top 0.2s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n  ", ";\n\n  ", " {\n    border-right: 2px solid ", ";\n    width: ", ";\n  }\n"])), function (_a) {
+var StyledPanel = styled__default['default'].div(templateObject_1$8 || (templateObject_1$8 = __makeTemplateObject(["\n  position: fixed;\n  padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background-color: ", ";\n  width: ", ";\n  height: 100%;\n  transition: padding-top 0.2s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n  ", ";\n\n  ", " {\n    border-right: 2px solid rgba(133, 133, 133, 0.1);\n    width: ", ";\n  }\n"], ["\n  position: fixed;\n  padding-top: ", ";\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  flex-shrink: 0;\n  background-color: ", ";\n  width: ", ";\n  height: 100%;\n  transition: padding-top 0.2s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  border-right: ", ";\n  z-index: 11;\n  overflow: ", ";\n  transform: translate3d(0, 0, 0);\n  ", ";\n\n  ", " {\n    border-right: 2px solid rgba(133, 133, 133, 0.1);\n    width: ", ";\n  }\n"])), function (_a) {
     var showMenu = _a.showMenu;
     return (showMenu ? "80px" : 0);
 }, function (_a) {
@@ -3978,8 +3966,8 @@ var StyledPanel = styled__default['default'].div(templateObject_1$8 || (template
     var isPushed = _a.isPushed;
     return (isPushed ? SIDEBAR_WIDTH_FULL + "px" : 0);
 }, function (_a) {
-    var isPushed = _a.isPushed, theme = _a.theme;
-    return (isPushed ? "2px solid " + theme.menu.borderColor : "none");
+    var isPushed = _a.isPushed;
+    return (isPushed ? "2px solid rgba(133, 133, 133, 0.1)" : "none");
 }, function (_a) {
     var isPushed = _a.isPushed;
     return (isPushed ? "initial" : "hidden");
@@ -3989,9 +3977,6 @@ var StyledPanel = styled__default['default'].div(templateObject_1$8 || (template
 }, function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.nav;
-}, function (_a) {
-    var theme = _a.theme;
-    return theme.menu.borderColor;
 }, function (_a) {
     var isPushed = _a.isPushed;
     return (isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED) + "px";
@@ -4270,15 +4255,12 @@ var Avatar = function (_a) {
 var templateObject_1$4, templateObject_2$1;
 
 var Wrapper = styled__default['default'].div(templateObject_1$3 || (templateObject_1$3 = __makeTemplateObject(["\n  position: relative;\n  width: 100%;\n"], ["\n  position: relative;\n  width: 100%;\n"])));
-var StyledNav = styled__default['default'].nav(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  position: fixed;\n  top: ", ";\n  left: 0;\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  border-bottom: solid 2px ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  top: ", ";\n  left: 0;\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  border-bottom: solid 2px ", ";\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
+var StyledNav = styled__default['default'].nav(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  position: fixed;\n  top: ", ";\n  left: 0;\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  border-bottom: solid 2px rgba(133, 133, 133, 0.1);\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  top: ", ";\n  left: 0;\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  border-bottom: solid 2px rgba(133, 133, 133, 0.1);\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
     var showMenu = _a.showMenu;
     return (showMenu ? 0 : "-" + MENU_HEIGHT + "px");
 }, MENU_HEIGHT, function (_a) {
     var theme = _a.theme;
     return theme.colors.backgroundAlt;
-}, function (_a) {
-    var theme = _a.theme;
-    return theme.menu.borderColor;
 });
 var BodyWrapper = styled__default['default'].div(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n"], ["\n  position: relative;\n  display: flex;\n"])));
 var Inner = styled__default['default'].div(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"], ["\n  flex-grow: 1;\n  margin-top: ", ";\n  transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);\n  transform: translate3d(0, 0, 0);\n  max-width: 100%;\n\n  ", " {\n    margin-left: ", ";\n    max-width: ", ";\n  }\n"])), function (_a) {

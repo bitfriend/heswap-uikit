@@ -4,7 +4,6 @@ import { LuckyChipToggleTheme } from "../components/LuckyChipToggle/types";
 import { RadioTheme } from "../components/Radio/types";
 import { ToggleTheme } from "../components/Toggle/types";
 import { TooltipTheme } from "../components/Tooltip/types";
-import type { MenuTheme } from "../widgets/Menu/types";
 import { ModalTheme } from "../widgets/Modal/types";
 import { Colors, Breakpoints, MediaQueries, Spacing, Shadows, Radii, ZIndices } from "./types";
 export interface LuckyChipTheme {
@@ -13,7 +12,6 @@ export interface LuckyChipTheme {
     alert: AlertTheme;
     colors: Colors;
     card: CardTheme;
-    menu: MenuTheme;
     modal: ModalTheme;
     luckychipToggle: LuckyChipToggleTheme;
     radio: RadioTheme;

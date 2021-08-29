@@ -20,12 +20,6 @@ export interface PushedProps {
   pushNav: (isPushed: boolean) => void;
 }
 
-export interface MenuTheme {
-  borderColor: string;
-  topBarColor: string;
-  leftBarColor: string;
-}
-
 export interface LinkStatus {
   text: string;
   color: keyof Colors;

@@ -29,7 +29,7 @@ export const ModalCloseButton: React.FC<{ onDismiss: ModalProps["onDismiss"] }> 
   const theme = useTheme();
   return (
     <IconButton variant="text" onClick={onDismiss} aria-label="Close the dialog" width="24px" height="24px">
-      <CloseIcon color={theme.menu.leftBarColor} />
+      <CloseIcon color={theme.modal.close} />
     </IconButton>
   );
 };

@@ -2,6 +2,7 @@ import { BoxProps } from "../../components/Box";
 
 export interface ModalTheme {
   background: string;
+  close: string;
 }
 
 export type Handler = () => void;

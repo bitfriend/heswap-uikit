@@ -1,6 +1,7 @@
 import { BoxProps } from "../../components/Box";
 export interface ModalTheme {
     background: string;
+    close: string;
 }
 export declare type Handler = () => void;
 export interface InjectedProps {
