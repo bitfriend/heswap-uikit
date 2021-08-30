@@ -30,7 +30,7 @@ const getScale =
   };
 
 export const Handle = styled.div<HandleProps>`
-  background-color: ${({ theme, checked }) => theme.toggle[checked ? "checkedHandleColor" : "uncheckedHandleColor"]};
+  background-color: ${({ theme, checked }) => theme.toggle[checked ? "checkedHandle" : "uncheckedHandle"]};
   border-radius: 50%;
   cursor: pointer;
   height: ${getScale("handleHeight")};

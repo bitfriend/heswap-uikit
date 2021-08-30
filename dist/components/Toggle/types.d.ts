@@ -1,8 +1,8 @@
 import { InputHTMLAttributes } from "react";
 export declare type ToggleTheme = {
     handleBackground: string;
-    checkedHandleColor: string;
-    uncheckedHandleColor: string;
+    checkedHandle: string;
+    uncheckedHandle: string;
 };
 export declare const scales: {
     readonly SM: "sm";

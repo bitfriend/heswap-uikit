@@ -2682,7 +2682,7 @@ var getScale = function (property) {
 };
 var Handle = styled.div(templateObject_1$j || (templateObject_1$j = __makeTemplateObject(["\n  background-color: ", ";\n  border-radius: 50%;\n  cursor: pointer;\n  height: ", ";\n  left: ", ";\n  position: absolute;\n  top: ", ";\n  transition: left 200ms ease-in;\n  width: ", ";\n  z-index: 1;\n"], ["\n  background-color: ", ";\n  border-radius: 50%;\n  cursor: pointer;\n  height: ", ";\n  left: ", ";\n  position: absolute;\n  top: ", ";\n  transition: left 200ms ease-in;\n  width: ", ";\n  z-index: 1;\n"])), function (_a) {
     var theme = _a.theme, checked = _a.checked;
-    return theme.toggle[checked ? "checkedHandleColor" : "uncheckedHandleColor"];
+    return theme.toggle[checked ? "checkedHandle" : "uncheckedHandle"];
 }, getScale("handleHeight"), getScale("handleLeft"), getScale("handleTop"), getScale("handleWidth"));
 var Input = styled.input(templateObject_2$9 || (templateObject_2$9 = __makeTemplateObject(["\n  cursor: pointer;\n  opacity: 0;\n  height: 100%;\n  position: absolute;\n  width: 100%;\n  z-index: 3;\n\n  &:checked + ", " {\n    left: ", ";\n  }\n"], ["\n  cursor: pointer;\n  opacity: 0;\n  height: 100%;\n  position: absolute;\n  width: 100%;\n  z-index: 3;\n\n  &:checked + ", " {\n    left: ", ";\n  }\n"])), Handle, getScale("checkedLeft"));
 var StyledToggle = styled.div(templateObject_3$4 || (templateObject_3$4 = __makeTemplateObject(["\n  align-items: center;\n  background-color: ", ";\n  border-radius: 24px;\n  box-shadow: ", ";\n  cursor: pointer;\n  display: inline-flex;\n  height: ", ";\n  position: relative;\n  transition: background-color 200ms;\n  width: ", ";\n"], ["\n  align-items: center;\n  background-color: ", ";\n  border-radius: 24px;\n  box-shadow: ", ";\n  cursor: pointer;\n  display: inline-flex;\n  height: ", ";\n  position: relative;\n  transition: background-color 200ms;\n  width: ", ";\n"])), function (_a) {
@@ -3040,13 +3040,13 @@ var dark$3 = {
 
 var light$2 = {
     handleBackground: lightColors.backgroundAlt,
-    checkedHandleColor: lightColors.success,
-    uncheckedHandleColor: lightColors.textSubtle
+    checkedHandle: lightColors.success,
+    uncheckedHandle: lightColors.textSubtle
 };
 var dark$2 = {
     handleBackground: darkColors.backgroundAlt,
-    checkedHandleColor: darkColors.success,
-    uncheckedHandleColor: darkColors.textSubtle
+    checkedHandle: darkColors.success,
+    uncheckedHandle: darkColors.textSubtle
 };
 
 var light$1 = {
